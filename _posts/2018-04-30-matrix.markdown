@@ -154,8 +154,8 @@ def bbox2centroid(bboxes):
 
 可以看到我特地给出了，预测 Bounding Box 数量和真实 Bounding Box 数量不一致的情况，所以这个时候如果不小心，非常容易出现矩阵的维度不匹配的情况那就毁掉了所有的计算。
 
-所以我们可以用上面的例子来帮助思考，首先求中心的坐标，这样，原来的 $ N \times 4 $ 矩阵和 $ M \times 4 $ 矩阵就变成了
-$ N \times 2 $ 矩阵和 $ M \times 2 $ 矩阵。
+所以我们可以用上面的例子来帮助思考，首先求中心的坐标，这样，原来的 $$ N \times 4 $$ 矩阵和 $$ M \times 4 $$ 矩阵就变成了
+$$ N \times 2 $$ 矩阵和 $$ M \times 2 $$ 矩阵。
 
 #### `numpy` 的 `numpy.newaxis`
 
@@ -265,7 +265,7 @@ def compute_score_detail_by_centroid(pred_bbox, gt_bbox, tolerence=(2, 2)):
 
 下面一步步解释下这个函数
 
-(1) `pred_c = bbox2centroid(pred_bbox)` 和 `gt_c = bbox2centroid(gt_bbox)` 就是求 Bounding Box 的中心，在我们的例子中，做完这步操作， `pred_c` 是 $ 3 \times 2 $ 矩阵 而 `gt_c` 是 $ 2 \times 2 $ 矩阵。
+(1) `pred_c = bbox2centroid(pred_bbox)` 和 `gt_c = bbox2centroid(gt_bbox)` 就是求 Bounding Box 的中心，在我们的例子中，做完这步操作， `pred_c` 是 $$ 3 \times 2 $$ 矩阵 而 `gt_c` 是 $$ 2 \times 2 $$ 矩阵。
 
 其中 `pred_c`是
 
@@ -282,13 +282,13 @@ def compute_score_detail_by_centroid(pred_bbox, gt_bbox, tolerence=(2, 2)):
  [6.5 1.5]]
 ```
 
-(2) `pred_c[:, None]` 将 $ 3 \times 2 $ 矩阵 扩展为 $ 3 \times 1 \times 2 $ 矩阵
+(2) `pred_c[:, None]` 将 $$ 3 \times 2 $$ 矩阵 扩展为 $$ 3 \times 1 \times 2 $$ 矩阵
 
-(3) `pred_c[:, None] - gt_c` 是  $ 3 \times 1 \times 2 $ 矩阵 减去 $ 2 \times 2 $ 矩阵， 在数学上这是没有定义的，因为数学要求矩阵减法操作必须维度相同，但是在 `numpy` 中，其实是把 $ 3 \times 1 \times 2 $ 矩阵作为 3 个 $ 1 \times 2 $ 矩阵分别先扩充为 $ 2 \times 2 $ 矩阵 再和$ 2 \times 2 $ 的 `gt_c` 矩阵做减法。
+(3) `pred_c[:, None] - gt_c` 是  $$ 3 \times 1 \times 2 $$ 矩阵 减去 $$ 2 \times 2 $$ 矩阵， 在数学上这是没有定义的，因为数学要求矩阵减法操作必须维度相同，但是在 `numpy` 中，其实是把 $$ 3 \times 1 \times 2 $$ 矩阵作为 3 个 $$ 1 \times 2 $$ 矩阵分别先扩充为 $$ 2 \times 2 $$ 矩阵 再和$$ 2 \times 2 $$ 的 `gt_c` 矩阵做减法。
 
 也就是`numpy` 尽力将不能做的减法操作以第一个维度（你也可以指定其他维度）做减法操作。
 
-所以这步结束我们得到一个  $ 3 \times 2 \times 2 $ 矩阵，沿着第一个维度，其中每一个小的 $ 2 \times 2 $ 矩阵都是预测的 Bounding Box 和真实的 Bounding Box 的中心差值。
+所以这步结束我们得到一个  $$ 3 \times 2 \times 2 $$ 矩阵，沿着第一个维度，其中每一个小的 $$ 2 \times 2 $$ 矩阵都是预测的 Bounding Box 和真实的 Bounding Box 的中心差值。
 
 具体的结果如下：
 
@@ -332,7 +332,7 @@ def compute_score_detail_by_centroid(pred_bbox, gt_bbox, tolerence=(2, 2)):
 ```
 
 
-(4) `(diffs < tolerence).all(2)` 这步就是把上面求出来的 $ 3 \times 2 \times 2 $ 矩阵 和 我们允许的误差矩阵(`(2, 2)`)做比较，如果小于误差计作`True`，否则计作 `False`。但是这样结束之后我们得到一个$ 3 \times 2 \times 2 $ 的布尔(Boolean)矩阵。
+(4) `(diffs < tolerence).all(2)` 这步就是把上面求出来的 $$ 3 \times 2 \times 2 $$ 矩阵 和 我们允许的误差矩阵(`(2, 2)`)做比较，如果小于误差计作`True`，否则计作 `False`。但是这样结束之后我们得到一个$$ 3 \times 2 \times 2 $$ 的布尔(Boolean)矩阵。
 
 ```bash
 [[[ True False]
@@ -351,7 +351,7 @@ def compute_score_detail_by_centroid(pred_bbox, gt_bbox, tolerence=(2, 2)):
 
 那么第三个轴是哪个轴？
 
-其实在我们说 差值布尔矩阵是 $ 3 \times 2 \times 2 $ 矩阵 就说明了第三个元素是第二个 2 ，也就是对于布尔矩阵沿着每个小列做操作。正好就是对于每个x轴中心误差和y轴中心误差做逻辑`AND`操作。通过这个操作之后，我们发现现在布尔矩阵变成，
+其实在我们说 差值布尔矩阵是 $$ 3 \times 2 \times 2 $$ 矩阵 就说明了第三个元素是第二个 2 ，也就是对于布尔矩阵沿着每个小列做操作。正好就是对于每个x轴中心误差和y轴中心误差做逻辑`AND`操作。通过这个操作之后，我们发现现在布尔矩阵变成，
 
 ```bash
 
@@ -360,7 +360,7 @@ def compute_score_detail_by_centroid(pred_bbox, gt_bbox, tolerence=(2, 2)):
  [False False]]
 
 ```
-现在是 $ 3 \times 2 $ 的矩阵了，相当于沿着第三个轴塌缩了。
+现在是 $$ 3 \times 2 $$ 的矩阵了，相当于沿着第三个轴塌缩了。
 
 现在的结果就是，对于我们的每一个预测(一共 3 个预测)我们分别和真实值( 两个真实值 )做对比，得到一个判断结果分别是 `True` 还是`False`，我们可以看到第二个预测 Bounding Box 和第一个真实 Bounding Box 是吻合的。结合我们的图，会发现正好是右下角重合的两个矩形。
 
@@ -372,11 +372,11 @@ def compute_score_detail_by_centroid(pred_bbox, gt_bbox, tolerence=(2, 2)):
 
 可以看到在得到中心坐标后，我们的问题是
 
-> $ N \times 2 $ 的预测矩阵和 $ M \times 2 $ 真实值矩阵的差是不是在允许的范围内。
+> $$ N \times 2 $$ 的预测矩阵和 $$ M \times 2 $$ 真实值矩阵的差是不是在允许的范围内。
 
-所以在扩展一个维度后，变成$ N \times 1 \times 2 $ 的扩展预测矩阵和 $ M \times 2 $ 真实值矩阵做差。然后对于每一个预测 Bounding Box 的中心，一共是$ N $ 个，在新扩展的维度上和 $ M \times 2 $ 真实值矩阵做差。所以每一个预测 Bounding Box 的中心 ( $ 1 \times 2 $ ) 先扩展成 $ M \times 2 $,就是把单一行复制为 $ M $行,得到每行元素相同的一个 $ M \times 2 $ 矩阵, 再和 $ M \times 2 $ 真实值矩阵做差。
+所以在扩展一个维度后，变成$$ N \times 1 \times 2 $$ 的扩展预测矩阵和 $$ M \times 2 $$ 真实值矩阵做差。然后对于每一个预测 Bounding Box 的中心，一共是$$ N $$ 个，在新扩展的维度上和 $$ M \times 2 $$ 真实值矩阵做差。所以每一个预测 Bounding Box 的中心 ( $$ 1 \times 2 $$ ) 先扩展成 $$ M \times 2 $$,就是把单一行复制为 $$ M $$行,得到每行元素相同的一个 $$ M \times 2 $$ 矩阵, 再和 $$ M \times 2 $$ 真实值矩阵做差。
 
-所以我们到的布尔矩阵是 $ N \times M \times 2 $ 的矩阵，其中第三个轴的第一个布尔元素代表 X 方向是不是在误差内，第二个布尔元素代表 Y 方向是不是在误差范围内，然后再沿着第三个轴做`all`操作，所以我们得到 $ N \times M $ 的矩阵,其中每一行都是代表一个预测 Bounding Box 的中心 是不是和 $ M $ 个真实 Bounding Box 的中心重合。
+所以我们到的布尔矩阵是 $$ N \times M \times 2 $$ 的矩阵，其中第三个轴的第一个布尔元素代表 X 方向是不是在误差内，第二个布尔元素代表 Y 方向是不是在误差范围内，然后再沿着第三个轴做`all`操作，所以我们得到 $$ N \times M $$ 的矩阵,其中每一行都是代表一个预测 Bounding Box 的中心 是不是和 $$ M $$ 个真实 Bounding Box 的中心重合。
 
 所以 `x1` 得到`N`中的`True`数目而`x2`得到`M`中的`True`数目。所以结合上面 precision(准确率) 和 recall(召回率) 的定义，我们知道 `x1` 就是 precision(准确率) 而 `x2`就是 recall(召回率)。
 
