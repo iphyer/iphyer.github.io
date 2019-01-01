@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2018 食物总结"
+title: "2018食物总结"
 date: 2018-12-31 22:37
 comments: true
 categories: 美国生活
