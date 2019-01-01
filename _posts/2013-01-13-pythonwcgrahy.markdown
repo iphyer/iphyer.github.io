@@ -6,7 +6,7 @@ comments: true
 categories: Python
 ---
 
-#前言
+# 前言
 
 这篇的主要程序部分和“Python编程9——Python分析葛底斯堡演讲的词频统计”完全一样，就是多引入了两个库，同时多做了一个做图函数。
 
@@ -14,7 +14,7 @@ categories: Python
 
 <!--more-->
 
-#程序
+# 程序
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #getttsburg addresss analysis

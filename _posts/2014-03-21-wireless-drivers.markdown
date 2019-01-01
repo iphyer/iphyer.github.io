@@ -6,13 +6,13 @@ comments: true
 categories: Linux 
 ---
 
-#无线驱动安装更新
+# 无线驱动安装更新
 
 我发现再从换了新的电脑，就从来没有正常使用过无线驱动。非常郁闷。今天因为觉得无法再拖延了，到了教学楼总是需要使用无线的，所以花了一个晚上的时间Google了一会解决方法，现在总结如下。
 
 <!--more-->
 
-##查看自己的无线网卡类型
+## 查看自己的无线网卡类型
 
 `lspci | grep Network`
 
@@ -30,7 +30,7 @@ categories: Linux
 
 所以[How do I install RALink 3290?](http://askubuntu.com/questions/226381/how-do-i-install-ralink-3290)上面给出的方案其实非常方便，就是先按更新内核在安装一个无线网卡驱动。
 
-##升级Ubuntu内核
+## 升级Ubuntu内核
 
 [给Ubuntu 13.04, 12.10, 12.04以及Linux Mint 15, 14, 13升级最新的内核](http://tweetyf.org/2013/05/upgrade_kernel_ubuntu_limuxmint.html)当然他的版本安装的特别新，本着稳定第一的原则我之选择了3.8的内核。
 
@@ -50,12 +50,12 @@ dpkg -i *.deb
 update-grub
 ```
 
-##下载相应驱动
+## 下载相应驱动
 
 ```bash
 git clone git://git.kernel.org/pub/scm/linux/kernel/git/dwmw2/linux-firmware.git
 sudo cp linux-firmware/rt3290.bin /lib/firmware
 ```
 
-###重启搞定
+### 重启搞定
 

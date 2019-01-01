@@ -6,7 +6,7 @@ comments: true
 categories: Python
 ---
 
-#前言
+# 前言
 
 这里是实现0～100之内数字输出全部的完美数，所谓完美数也就是这个数的所有因子的和等于这个数。
 
@@ -19,7 +19,7 @@ categories: Python
 
 <!--more-->
 
-#程序
+# 程序
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #the programe is judging whether the number is perfect

@@ -6,14 +6,14 @@ comments: true
 categories: Python
 ---
 
-#前言
+# 前言
 
 这是今年的实习的计划中的一个，进行了一个USpatent的搜索和调查。
 这里代码基于Python和SQLite。
 
 <!--more-->
 
-#代码
+# 代码
 
 ```python
 

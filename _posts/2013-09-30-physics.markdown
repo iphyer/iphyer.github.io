@@ -6,7 +6,7 @@ comments: true
 categories: physics
 ---
 
-#起因
+# 起因
 
 今天上固体材料课程，老师在讲解Ginzburg-Landau(金兹堡—朗道,GL)方程的时候，这么总结物理，物理是哲学的思维+数学的表达。
 

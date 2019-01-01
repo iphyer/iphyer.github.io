@@ -6,7 +6,7 @@ comments: true
 categories: C
 ---
 
-##起因
+## 起因
 
 前段时间看了一本书，The GNU C Programing Tutorial [weblink](http://crasseux.com/books/ctutorial/)。收获很大，其实你从K&R那里学来的不一定是GNU C的规范，
 最最不错的是这本书不是中国大学C教程那种大路货的教材，这本书教材基本上把整个流程串联起来了。其实如果一本书不讲解makefile基本上不能算是一本成熟的c语言书，除非你一直只是编写
@@ -18,7 +18,7 @@ categories: C
 
 <!--more-->
 
-##argv的使用
+## argv的使用
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #include <stdio.h>

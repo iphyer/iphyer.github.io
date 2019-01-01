@@ -6,7 +6,7 @@ comments: true
 categories: GRE
 ---
 
-##起因
+## 起因
 
 最近在背GRE单词突然发现这本俞敏洪的单词书中好多的计算机术语。所以留了个心总结了下，这里列出我看到的计算机单词，一般能够打动我的单词才选入。有些单词大家用的特别多了比如简单的几个表示动作的单词就不列出了，比如edit什么的。
 
@@ -16,7 +16,7 @@ categories: GRE
 
 <!--more-->
 
-##单词列表
+## 单词列表
 
 您也可以在这里下载到一份xls的版本文件，使用WPS for Linux制作。[GREandComputer](/upload/files/GREandComputer.xls)
 
@@ -108,7 +108,7 @@ categories: GRE
 		80	vim	567	精力，活力	编辑器之神	www.vim.org/‎ 	
 
 
-##写在最后的话
+## 写在最后的话
 
 其实这里我想说明的是这样一个道理——你为什么要背GRE单词。
 

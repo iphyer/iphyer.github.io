@@ -6,9 +6,9 @@ comments: true
 categories: Python
 ---
 
-#关于单词出现频率的Python统计——一个心理现象的验证
+# 关于单词出现频率的Python统计——一个心理现象的验证
 
-##起源
+## 起源
 
 这是《选择悖论》的一个例子，就是人的心理是受到各种因素影响的，比如可获得性启发式(availability heuristic)往往就是人类大脑和心理缺陷的原因之一。
 
@@ -19,7 +19,7 @@ categories: Python
 <!--more-->
 
 
-##设立语料库
+## 设立语料库
 
 为了验证这个结论，我们必须建立一个语料库，上网查了下，觉得”British National corpus”BNC。
 
@@ -27,7 +27,7 @@ categories: Python
 
 
 
-##程序
+## 程序
 
 有了语料库就可以写程序分析啦。具体代码如下：
 
@@ -78,7 +78,7 @@ print 'Length of the wcDict_2 is:', len(wcDict_2)
 print 'Done'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-##结果
+## 结果
 
 最后的结果为：
 

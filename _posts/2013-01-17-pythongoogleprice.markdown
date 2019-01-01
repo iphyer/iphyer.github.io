@@ -27,7 +27,7 @@ http://finance.yahoo.com/
 
 <!--more-->
 
-#程序
+# 程序
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def creatlist(Gfile):

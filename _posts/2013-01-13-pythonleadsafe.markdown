@@ -6,7 +6,7 @@ comments: true
 categories: Python
 ---
 
-#前言
+# 前言
 
 这个程序的算法部分是Bill James 博士的'Safe lead calculator'
 
@@ -19,7 +19,7 @@ categories: Python
 
 <!--more-->
 
-#程序
+# 程序
 
 这里我全部略过算法的说明部分，直接上程序了。
 

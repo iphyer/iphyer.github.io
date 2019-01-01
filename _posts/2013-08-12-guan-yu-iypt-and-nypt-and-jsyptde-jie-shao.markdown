@@ -6,7 +6,7 @@ comments: true
 categories: IYPT, NYPT, JSYPT, CUPT
 ---
 
-#前言
+# 前言
 
 这是今年给学弟学妹作关于？YPT的报告的时候总结出来的。参考了两位大CX和ZHY的成果，一并感谢两位大牛，也祝愿他们在美帝心想事成，万事如意！所谓的？YPT其实就IYPT，CUPT，NYPT，JSYPT的一系列YPT比赛的合称。这些比赛都采用和国际IYPT比赛相近的规则和题目。
 
@@ -17,7 +17,7 @@ categories: IYPT, NYPT, JSYPT, CUPT
 
 <!--more-->
 
-#关于IYPT、NYPT、JSYPT的介绍
+# 关于IYPT、NYPT、JSYPT的介绍
 
 ![tu1](/images/introduction-smr/幻灯片1.png)
 
@@ -40,14 +40,25 @@ categories: IYPT, NYPT, JSYPT, CUPT
 ![tu10](/images/introduction-smr/幻灯片10.png) 
 
 ![tu11](/images/introduction-smr/幻灯片11.png) 
+
 ![tu12](/images/introduction-smr/幻灯片12.png) 
+
 ![tu13](/images/introduction-smr/幻灯片13.png) 
+
 ![tu14](/images/introduction-smr/幻灯片14.png) 
-![tu15](/images/introduction-smr/幻灯片15.png) 
+
+![tu15](/images/introduction-smr/幻灯片15.png)
+
 ![tu16](/images/introduction-smr/幻灯片16.png) 
+
 ![tu17](/images/introduction-smr/幻灯片17.png) 
+
 ![tu18](/images/introduction-smr/幻灯片18.png) 
+
 ![tu19](/images/introduction-smr/幻灯片19.png) 
+
 ![tu20](/images/introduction-smr/幻灯片20.png) 
+
 ![tu21](/images/introduction-smr/幻灯片21.png) 
+
 ![tu22](/images/introduction-smr/幻灯片22.png) 

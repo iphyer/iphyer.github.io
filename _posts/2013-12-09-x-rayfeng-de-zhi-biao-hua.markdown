@@ -6,7 +6,7 @@ comments: true
 categories: 物理
 ---
 
-##前言
+## 前言
 
 X射线课的一篇作业，有点意思，所以贴出来。
 

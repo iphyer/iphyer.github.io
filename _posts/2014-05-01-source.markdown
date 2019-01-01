@@ -6,7 +6,7 @@ comments: true
 categories: 
 ---
 
-##发现
+## 发现
 
 最近重新安装了Ubuntu，结果发现需要新的源地址。
 
@@ -26,7 +26,7 @@ categories:
 
 这里可以选择Ubuntu的版本，IPv4/IPv6，Http/Ftp的版本。
 
-##Ubuntu14.04源IPv6源
+## Ubuntu14.04源IPv6源
 
 直接将生成器生成的源地址拷贝下来，编辑`/etc/apt/sources.list` ，这里因为我只使用教育网的源，所以删除掉所有其他的源，替换上下面生成器生成的科大源地址。
 
@@ -44,7 +44,7 @@ categories:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-##感谢
+## 感谢
 
 发现这个源地址生成器也支持Debian和Archlinux，感谢作者sNullp，[sNullp](https://lug.ustc.edu.cn/wiki/snullp/start)  Hal Gu (sNullp)
 USTC'09级计算机系本科。

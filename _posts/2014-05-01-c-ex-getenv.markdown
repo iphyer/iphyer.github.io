@@ -6,13 +6,13 @@ comments: true
 categories: 
 ---
 
-##getenv
+## getenv
 
 getenv得到在bash中使用env命令得到的所有信息。
 
 <!--more-->
 
-##示例
+## 示例
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #include<stdio.h>
