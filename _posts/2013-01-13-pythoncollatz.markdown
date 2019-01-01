@@ -6,7 +6,7 @@ comments: true
 categories: Python
 ---
 
-#前言
+# 前言
 
 这个是需要更多修改的部分。Python实现Collatz序列。
 本来以为比较简单，但是看了看维基百科的说明，这个居然可以出现分形，顿时冋了。
@@ -17,7 +17,7 @@ categories: Python
 
 <!--more-->
 
-#Collatz序列的定义
+# Collatz序列的定义
 
 所谓的Collatz序列是这样的一种序列：
 
@@ -28,7 +28,7 @@ categories: Python
 
 
 
-#生成Collatz序列
+# 生成Collatz序列
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

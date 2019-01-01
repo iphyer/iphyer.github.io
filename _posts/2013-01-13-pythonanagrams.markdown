@@ -6,12 +6,12 @@ comments: true
 categories: Python
 ---
 
-#前言
+# 前言
 
 这个程序比较简单就是比较两个单词是不是可以用相同的字母不同的排序组合出来的。
 
 
-#程序
+# 程序
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #the programe compares that some word letters can 
 #be reput as a new word
@@ -37,11 +37,11 @@ else:
 
 <!--more-->
 
-#效果
+# 效果
 
 ![tu1](/images/Python/anagrams/tu1.png)
 
-#改进
+# 改进
 
 当然程序还有一处可以更改的，就是使用多重赋值替代两个赋值语句
 

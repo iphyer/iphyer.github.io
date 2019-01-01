@@ -5,7 +5,8 @@ date: 2013-01-13 16:21
 comments: true
 categories: Python
 ---
-#前言
+
+# 前言
 
 这里其实是把葛底斯堡演讲和独立宣言联合在一起分析了。
 这里的作用不在于取得最后的结果只是简单分析就可以知道这两篇文章都是反应美国建国思想的文献资料。不出意料的话，两者会有很多的共同点。
@@ -19,7 +20,7 @@ categories: Python
 
 <!--more-->
 
-#程序
+# 程序
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #compare two files to help Python understand what's different or common
@@ -78,7 +79,7 @@ prettyPrint(GAset,DoIset)
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#效果
+# 效果
 
 ![tu15](/images/Python/gettysburg/tu5.png)
 

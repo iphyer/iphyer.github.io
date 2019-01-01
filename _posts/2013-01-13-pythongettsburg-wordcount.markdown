@@ -6,7 +6,7 @@ comments: true
 categories: Python
 ---
 
-#前言
+# 前言
 
 这里继续接着前面的工作做下去。
 
@@ -33,7 +33,7 @@ processline&rarr;addword&rarr;prettyPrint
 * addword使用in查看是否单词在字典之中
 * 排序的时候必须遍历字典，使用items方法。同时对于字典将key 和val调换，以使用sort方法排序。
 
-#程序
+# 程序
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #getttsburg addresss analysis

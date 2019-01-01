@@ -5,7 +5,7 @@ comments: true
 categories: Python
 ---
 
-#前言
+# 前言
 
 这是对于葛底斯堡演讲所作的分析。
 
@@ -17,7 +17,7 @@ categories: Python
 
 <!--more-->
 
-#程序1——简单分析
+# 程序1——简单分析
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #getttsburg addresss analysis
@@ -45,7 +45,7 @@ print "Speech Length:",len(speech)
 可以看到全文用词只有271个。
 
 
-#程序2——改进消除重复
+# 程序2——改进消除重复
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #getttsburg addresss analysis

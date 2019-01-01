@@ -6,11 +6,11 @@ comments: true
 categories: Python
 ---
 
-#前言
+# 前言
 
 程序的目的就是标题。
 
-#程序
+# 程序
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -45,6 +45,6 @@ for word in datafile:
 
 <!--more-->
 
-#效果
+# 效果
 
 ![tu1](/images/Python/findvowels/tu1.png)

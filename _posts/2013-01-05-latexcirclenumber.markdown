@@ -6,7 +6,7 @@ comments: true
 categories: Latex
 ---
 
-#前言
+# 前言
 
 今天写专利课老师的论文，发现必须要求我们遵循《中国法学》的文献格式要求。
 这里小不爽一下，就是这本杂志要求
@@ -17,7 +17,7 @@ categories: Latex
 
 <!--more-->
 
-#实现
+# 实现
 
 latex有几个包可以实现这个功能，比如很多人推荐的\fnsymbol和\textcircled{\scriptsize 1}或者还有 pifont 包的 \ding{} 命令。
 
@@ -30,7 +30,7 @@ latex有几个包可以实现这个功能，比如很多人推荐的\fnsymbol和
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%%%%%%%%%%%%%%%%%%%%%%脚注格式%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \makeatletter
 \newskip\@footindent
 \@footindent=1em
@@ -44,28 +44,22 @@ latex有几个包可以实现这个功能，比如很多人推荐的\fnsymbol和
 \def\@makefnmark{\hbox{\textsuperscript{\@thefnmark}}}
 \newcommand\myfootnotestyle[1]{\ifcase#1 \or ① \or ② \or ③ \or ④ \or ⑤ \or ⑥ \or ⑦ \or ⑧ \or ⑨ \or  ⑩ \or ⑪ \or ⑫ \or ⑬ \or ⑭ \or ⑮ \or ⑯ \or ⑰ \or ⑱\or ⑲ \or ⑳ \else *\fi\relax}
 \makeatother
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 把上述代码直接加入序言部分，在正文部分正常使用\footnote{content}的语法就可以生成最后的效果如下：
 
 
 ![tu1](/images/Latex/带圈字符脚注.png)
 
-_________________________________________________________
-分割线
-——————————————————————————————
 
-
-##必须改字体的问题
+## 必须改字体的问题
 
 今天重新使用了，latex作测试的时候把脚注加到大于10的时候做了新的测试，结果发现除了bug还是没有办法解决。
 在上网提问后知道原来这样不能大于10的限制还是和每个不同的字体本来的设计有关的。
 有个字体本身就不支持大于10的带圈字符，所以即使这样设置了也没有办法。
 
-从这个帖子得到解答：
-
-http://bbs.ctex.org/forum.php?mod=viewthread&tid=74491&pid=443704&page=1&extra=page%3D1#pid443704
+从[这个帖子得到解答](http://bbs.ctex.org/forum.php?mod=viewthread&tid=74491&pid=443704&page=1&extra=page%3D1#pid443704)
 
 换了新的Linux Libertine O字体。
 
@@ -75,15 +69,13 @@ http://bbs.ctex.org/forum.php?mod=viewthread&tid=74491&pid=443704&page=1&extra=p
 
 问题就处在我的texlive上。我的texlive还是texlive2009，没办法当时懒，直接使用了仓库里面的texlive。
 
-##升级texlive
+## 升级texlive
 
-可以参考这个帖子，非常棒。对于Ubuntu系统：
-
-http://blog.sina.com.cn/s/blog_6d0984870101961n.html#bsh-24-178876407
+可以参考这个帖子，非常棒。[对于Ubuntu系统](http://blog.sina.com.cn/s/blog_6d0984870101961n.html#bsh-24-178876407)
 
 按着这个一步步来，缺少包的话就按照后半部分教程重新安装即可。
 
-##最后效果
+## 最后效果
 
 ![tu1](/images/Latex/new.png)
 

@@ -6,12 +6,12 @@ comments: true
 categories: Python
 ---
 
-#前言
+# 前言
 
 这是我对于"The Practice of Computing Using Python"的读书笔记。
 总结了这本书很多有趣的编程题目。初次练手大家轻拍。
 
-#Python计算圆的周长和面积
+# Python计算圆的周长和面积
 <!--more-->
 这个程序比较简单，直接上程序了。
 
