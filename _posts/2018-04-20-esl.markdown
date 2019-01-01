@@ -1,0 +1,52 @@
+---
+layout: post
+title: "修复 AttributeError: module 'pip' has no attribute 'main' in PyCharm"
+date: 2018-04-20 23:32
+comments: true
+categories: Python
+---
+
+## 起因
+
+PyCharm 是我很喜欢的 IDE，最近遇到一个很奇怪的问题 `AttributeError: module 'pip' has no attribute 'main'`，这里记录下修复过程。
+
+<!--more-->
+
+## 原因
+
+具体的错误情况如下图所示,
+
+![Problems](/images/Python/pipDowngrade/problem.jpg)
+
+这里的原因其实报错信息都给出了，
+
+```python
+
+Traceback (most recent call last):
+  File "/Applications/PyCharm CE.app/Contents/helpers/packaging_tool.py", line 192, in main
+    retcode = do_install(pkgs)
+  File "/Applications/PyCharm CE.app/Contents/helpers/packaging_tool.py", line 109, in do_install
+    return pip.main(['install'] + pkgs)
+AttributeError: module 'pip' has no attribute 'main'
+
+```
+
+主要原因就是 `pip` 找不到 `main` 属性，谷歌下找到原因，[AttributeError: Module Pip has no attribute 'main'](https://stackoverflow.com/questions/49839610/attributeerror-module-pip-has-no-attribute-main)，原因很简单， `pip` 版本 10 不支持低版本的属性。相对来说降级 `pip`  版本。
+
+## 解决方案
+
+解决方案也很简单，只要降级就行了。合适的版本是 `pip==9.0.3`。
+
+首先找到自己的虚拟环境名称，我用的是 `microBlog` 所以运行如下命令即可，
+
+```bash
+conda install -n microBlog pip=9.0.3
+```
+
+当然我这里用的是 `conda` 作为包管理器。
+
+结果图
+
+![Solved](/images/Python/pipDowngrade/sol.jpg)
+
+

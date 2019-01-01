@@ -1,0 +1,36 @@
+---
+layout: post
+title: "ibus假死后的重启方法"
+date: 2013-01-09 02:55
+comments: true
+categories: Linux
+---
+
+#前言
+
+这里讲一下这个程序的作用。当时是Ubuntu11.12的系统，发现Unity的界面下面ibus经常假死。
+也就是你突然看不到输入框了，但是ibus还是在工作。
+但是现在Ubuntu12.04的系统貌似做的比较好了。
+当然我现在的系统是Lubuntu不知道是不是这个的因素。
+
+<!--more-->
+
+当然这些不影响这个小程序，当Ubuntu假死或，直接调用shell这个脚本即可。
+
+也就是bash X.sh
+
+X是脚本文件名
+
+#脚本
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#!/usr/bin/env bash
+#this is the scripts to restart ibus icon in table
+
+pkill -f ibus-daemon
+
+ibus-daemon -d -x
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

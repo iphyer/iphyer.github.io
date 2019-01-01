@@ -1,0 +1,54 @@
+---
+layout: post
+title: "NCE4-Lesson10仿写练习"
+date: 2014-12-03 15:12
+comments: true
+categories: 英语
+---
+
+#仿写结果
+
+![tu2](/images/NCE/lesson10.png)
+
+<!--more-->
+
+#总结
+
+* Technology trends may push Silicon Valley back to the future.
+
+这里的trends比干巴巴的一个development好了太多太多，新颖同时贴切还不落窠臼。
+
+* Carver Mead, a pioneer in integrated circuits and a professor of computer science at the California Institute of Technology, notes there are now work-stations that enable engineers to design, test and produce chips right on their desks, much the way an editor creates a newsletter on a Macintosh. 
+
+much the way ...　这样的表达比单纯的like更加贴切，同时注意这个句子怎么表达一个教授的称谓，成就，评价的，一个简单的同位语搞定。
+
+* As the time and cost of making a chip drop to a few days and a few hundred dollars, engineers may soon be free to let their imaginations soar without being penalized by expensive failures.
+
+这段话值得背诵，非常流畅毫无滞涩。
+
+*  giving the U.S. a jump on its foreign rivals in getting new products to market fast
+
+在推向市场上，领先一步， give a jump on sb in sth
+
+* Already, orientals and Asian Americans constitute the majority of the engineering staffs at many Valley firms. 
+
+注意constitute这个单词很好的高级词汇，提升档次。constitue the majority of sb
+
+* graduating in droves from California's colleges
+
+大量毕业-->也适合使用在中国的大学扩招
+
+* As the heads of next-generation start-ups, these Asian innovators can draw on customs and languages to forge tighter links with crucial Pacific Rim markets. 
+
+中美发展啦，为什么要去美国留学的话题都可以使用
+
+* Before it becomes a retirement village, Silicon Valley may prove a classroom for building a global business.
+
+prove a classroom for building a global business　非常适合用来表述公司相关的话题，我们的目标是建立全球化的公司等等
+
+
+#背诵
+
+
+<font color="#0000FF">Technology</font></b></span> <span><b><font color="#0000FF">trends</font></b></span> may <span><b><font color="#0000FF">push</font></b></span> <span><b><font color="#0000FF">Silicon</font></b></span> <span><b><font color="#0000FF">Valley</font></b></span> <span><b><font color="#0000FF">back</font></b></span> <span><b><font color="#0000FF">to</font></b></span> <span><b><font color="#0000FF">the</font></b></span> future. Carver Mead, <span><b><font color="#0000FF">a</font></b></span> <span><b><font color="#0000FF">pioneer</font></b></span> <span><b><font color="#0000FF">in</font></b></span> integrated circuits<span><b><font color="#0000FF"> and a</font></b></span> professor of<span><b><font color="#0000FF"> computer science at the</font></b></span> California Institute of Technology<span><b><font color="#0000FF">, notes</font></b></span> <span><b><font color="#0000FF">there</font></b></span> <span><b><font color="#0000FF">are</font></b></span> <span><b><font color="#0000FF">now work-stations</font></b></span> that enable <span><b><font color="#0000FF">engineers</font></b></span> to design, test and produce <span><b><font color="#0000FF">chips right</font></b></span> on their <span><b><font color="#0000FF">desks, much</font></b></span> <span><b><font color="#0000FF">the</font></b></span> <span><b><font color="#0000FF">way</font></b></span> an editor <span><b><font color="#0000FF">creates</font></b></span> a <span><b><font color="#0000FF">newsletter</font></b></span> on <span><b><font color="#0000FF">a</font></b></span> <span><b><font color="#0000FF">Macintosh. As</font></b></span> the <span><b><font color="#0000FF">time and cost</font></b></span> of <span><b><font color="#0000FF">making</font></b></span> <span><b><font color="#0000FF">a</font></b></span> <span><b><font color="#0000FF">chip</font></b></span> <span><b><font color="#0000FF">drop</font></b></span> <span><b><font color="#0000FF">to</font></b></span> <span><b><font color="#0000FF">a</font></b></span> <span><b><font color="#0000FF">few</font></b></span> <span><b><font color="#0000FF">days</font></b></span> <span><b><font color="#0000FF">and a few hundred</font></b></span> dollars, engineers <span><b><font color="#0000FF">may</font></b></span> <span><b><font color="#0000FF">soon be free</font></b></span> to <span><b><font color="#0000FF">let</font></b></span> their <span><b><font color="#0000FF">imaginations</font></b></span> <span><b><font color="#0000FF">soar</font></b></span> <span><b><font color="#0000FF">without being penalized by</font></b></span> <span><b><font color="#0000FF">expensive</font></b></span> <span><b><font color="#0000FF">failures</font></b></span>. Mead predicts that inventors <span><b><font color="#0000FF">will</font></b></span> <span><b><font color="#0000FF">be</font></b></span> <span><b><font color="#0000FF">able</font></b></span> to <span><b><font color="#0000FF">perfect</font></b></span> <span><b><font color="#0000FF">powerful</font></b></span> <span><b><font color="#0000FF">customized</font></b></span> <span><b><font color="#0000FF">chips</font></b></span> <span><b><font color="#0000FF">over</font></b></span> <span><b><font color="#0000FF">a</font></b></span> <span><b><font color="#0000FF">weekend</font></b></span> <span><b><font color="#0000FF">at the</font></b></span> office<span><b><font color="#0000FF"> -- spawning</font></b></span> <span><b><font color="#0000FF">a</font></b></span> new generation of <span><b><font color="#0000FF">garage</font></b></span> <span><b><font color="#0000FF">start-ups</font></b></span> <span><b><font color="#0000FF">and</font></b></span> <span><b><font color="#0000FF">giving</font></b></span> <span><b><font color="#0000FF">the</font></b></span> <span><b><font color="#0000FF">U.S. a jump on its foreign rivals</font></b></span> in <span><b><font color="#0000FF">getting</font></b></span> <span><b><font color="#0000FF">new</font></b></span> products <span><b><font color="#0000FF">to</font></b></span> <span><b><font color="#0000FF">market</font></b></span> <span><b><font color="#0000FF">fast. 'We're</font></b></span> <span><b><font color="#0000FF">got</font></b></span> <span><b><font color="#0000FF">more</font></b></span> <span><b><font color="#0000FF">garages with</font></b></span> smart people<span><b><font color="#0000FF">,' </font></b></span>Mead <span><b><font color="#0000FF">observes. '</font></b></span>We <span><b><font color="#0000FF">really</font></b></span> <span><b><font color="#0000FF">thrive</font></b></span> <span><b><font color="#0000FF">on</font></b></span> anarchy<span><b><font color="#0000FF">.'<br />
+    And</font></b></span> on Asians. <span><b><font color="#0000FF">Already, orientals</font></b></span> <span><b><font color="#0000FF">and</font></b></span> <span><b><font color="#0000FF">Asian</font></b></span> <span><b><font color="#0000FF">Americans</font></b></span> <span><b><font color="#0000FF">constitute</font></b></span> <span><b><font color="#0000FF">the majority</font></b></span> of <span><b><font color="#0000FF">the</font></b></span> <span><b><font color="#0000FF">engineering</font></b></span> <span><b><font color="#0000FF">staffs</font></b></span> <span><b><font color="#0000FF">at</font></b></span> <span><b><font color="#0000FF">many Valley</font></b></span> <span><b><font color="#0000FF">firms</font></b></span>. <span><b><font color="#0000FF">And </font></b></span>Chinese, Korean, Filipino and Indian engineers are <span><b><font color="#0000FF">graduating</font></b></span> <span><b><font color="#0000FF">in</font></b></span> <span><b><font color="#0000FF">droves</font></b></span> <span><b><font color="#0000FF">from</font></b></span> California<span><b><font color="#0000FF">'s</font></b></span> <span><b><font color="#0000FF">colleges</font></b></span>. As <span><b><font color="#0000FF">the heads</font></b></span> of <span><b><font color="#0000FF">next-generation</font></b></span> <span><b><font color="#0000FF">start</font></b></span>-<span><b><font color="#0000FF">ups, these</font></b></span> Asian <span><b><font color="#0000FF">innovators</font></b></span> can <span><b><font color="#0000FF">draw</font></b></span> <span><b><font color="#0000FF">on</font></b></span> <span><b><font color="#0000FF">customs</font></b></span> <span><b><font color="#0000FF">and</font></b></span> <span><b><font color="#0000FF">languages</font></b></span> <span><b><font color="#0000FF">to</font></b></span> <span><b><font color="#0000FF">forge</font></b></span> <span><b><font color="#0000FF">righter</font></b></span> <span><b><font color="#0000FF">links</font></b></span> with <span><b><font color="#0000FF">crucial</font></b></span> <span><b><font color="#0000FF">Pacific</font></b></span> <span><b><font color="#0000FF">Rim</font></b></span> <span><b><font color="#0000FF">markets</font></b></span>. For instance, Alex Au, <span><b><font color="#0000FF">a</font></b></span> <span><b><font color="#0000FF">Stanford Ph. D. </font></b></span>from Hong Kong, has set up <span><b><font color="#0000FF">a</font></b></span> Taiwan <span><b><font color="#0000FF">factory</font></b></span> <span><b><font color="#0000FF">to</font></b></span> <span><b><font color="#0000FF">challenge</font></b></span> <span><b><font color="#0000FF">Japan's</font></b></span> <span><b><font color="#0000FF">near</font></b></span> <span><b><font color="#0000FF">lock</font></b></span> on the memory<span><b><font color="#0000FF">-chip</font></b></span> market. <span><b><font color="#0000FF">India-born</font></b></span> N<span><b><font color="#0000FF">.Damodar</font></b></span> Reddy<span><b><font color="#0000FF">'</font></b></span>s tiny California company reopened <span><b><font color="#0000FF">an</font></b></span> <span><b><font color="#0000FF">AT & T</font></b></span> <span><b><font color="#0000FF">chip</font></b></span> <span><b><font color="#0000FF">plant</font></b></span> in Kansas City last spring <span><b><font color="#0000FF">with</font></b></span> <span><b><font color="#0000FF">financing</font></b></span> <span><b><font color="#0000FF">from</font></b></span> <span><b><font color="#0000FF">the</font></b></span> <span><b><font color="#0000FF">state of</font></b></span> Missouri. <span><b><font color="#0000FF">Before</font></b></span> <span><b><font color="#0000FF">it becomes a retirement village, </font></b></span>Silicon Valley <span><b><font color="#0000FF">may</font></b></span> <span><b><font color="#0000FF">prove</font></b></span> a classroom for <span><b><font color="#0000FF">building</font></b></span> a <span><b><font color="#0000FF">global</font></b></span> <span><b><font color="#0000FF">business</font></b>

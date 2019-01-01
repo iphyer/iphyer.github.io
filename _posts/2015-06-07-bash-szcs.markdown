@@ -1,0 +1,555 @@
+---
+layout: post
+title: "最好的超算中心提交任务方法"
+date: 2015-06-07 23:13
+comments: true
+categories: 科研
+---
+
+#前言
+
+其实这里就是把我常用的脚本提交上来。通常来说科学计算的流程是这样的:  本地coding ==> 本地测试 ==> 上超算试跑 ==> 大规模运算求解。主要的目的就是为了节约机时同时便于查找错误。
+
+所以我这里的程序主要包括的是提交和后期处理两部分。
+
+这是我个人最喜欢的使用超算中心的方法，当然就你个人的情况可能需要有针对性的修改。
+<!--more-->
+
+#提交任务
+
+##编译任务
+
+我使用gcc
+
+主要的文件分成source和run两个目录，run目录按照时间分类同时在实验记录本上记录这样非常方便查找。
+
+``` bash
+#!/bin/sh
+prog="chanel8.2"
+source="chanel8.2.c"
+date="20150601"
+cd ~/YourUserNameXXX/source/
+gcc -o ${prog} ${source}  -lm
+cp ${prog} ../RUN/${date}/
+exit
+
+```
+
+##提交任务
+
+深圳超算中心本身有一个提交任务的run.sh脚本这个每一个任务都必须有一个以方便超算中心分配资源。
+
+我的run.sh如下：
+
+``` bash
+
+#!/bin/sh
+APP_NAME=intelk_small
+NP=1
+RUN="chanel8.2"
+
+```
+
+然后提交任务的命令如下
+
+``` bash
+#!/bin/sh
+Possibility="attractive24-48-p0.55"
+date="20150601"
+prog="chanel8.2"
+source="chanel8.2.c"
+
+mkdir ~/YourUserNameXX/RUN/${date}/${Possibility}
+
+for i in $( seq 1 30  )
+do
+   mkdir ~/YourUserNameXXX/RUN/${date}/${Possibility}/no${i}
+   cd ~/YourUserNameXXX/RUN/${date}/${Possibility}/no${i}
+   cp ~/YourUserNameXXX/RUN/${date}/${prog} ~/YourUserNameXXX/RUN/${date}/run.sh .
+   chmod +x run.sh
+   bsub run.sh
+   sleep 1
+   echo "Done${i}"
+done
+
+```
+
+这个脚本的作用就是提交任务的，分别指定分配的计算目录同时拷贝文件进入，然后提交任务。提交完成后停止1s方便超算中心后台分配任务这样不太容易出错，因为北京和深圳的网络会有延时。所以为了抵消这个影响停止1s。
+
+
+#数据处理
+
+有一个主控的bash文件来实现一个命令处理完全部数据的目标。
+
+1. 验证计算的完整性，通过log文件实现
+2. 顺便生成所有需要做平均各个指标文件路径文件
+3. 用R语言来统计结果
+4. 需要作图的使用gnuplot输出
+
+##主控文件
+
+
+```bash
+
+#! /bin/bash 
+#测试所有的10个200万运算成功
+#标志为log.txt文件最后的记录为360001
+#同时在每个子目录循环的时候记录文件路径方便第二步处理数据
+count=0
+path=`pwd`
+Uflux="/flux.txt"
+Uvelocity="/velocity.txt"
+Udensity="/density.txt"
+
+find $path -mindepth 1 -type d | while read dir 
+do 
+    var=`tail -n 1 $dir/log.txt`
+    #echo $var
+    if [ $var -eq 360001 ]
+        then    
+            #echo "right"
+            let count++
+        else
+            echo $dir
+    fi
+
+    echo $count
+    
+    url="$dir$Uflux"
+    echo $url >> fluxurl.txt
+    url="$dir$Uvelocity"
+    echo $url >> velocityurl.txt
+    url="$dir$Udensity"
+    echo $url >> densityurl.txt
+    Dflux=`awk '{print $12}' $dir/output*`
+    echo $Dflux >> jet.txt
+done
+
+#调用程序合并10次的结果并且统计平均值输出
+#去除掉y=0,1,2部分数据，这部分数据受到边界处珠子的影响不准确
+Rscript $path/datapro.R $path
+
+#调用gnuplot画图
+
+#画密度场
+gnuplot density.gnu
+#画速度场
+gnuplot vector.gnu
+#计算同样的x位置所有y位置的x方向速度之和，验证连续性条件
+gnuplot XFluxOverWholeY.gnu
+#A的浓度梯度
+gnuplot gradA.gnu
+#B的浓度梯度
+gnuplot gradB.gnu
+#绘制 同一个x下不同y方向的层流大小分布，Y方向是否均一变化
+gnuplot YfluxDistrobutionOverDifferentX.gnu
+#y方向的层流大小，低Re系数下层流明显
+gnuplot YfluxOverWholeX.gnu
+#测试缺失的流量去向
+gnuplot checkmissingflux.gnu
+
+echo "Done"
+
+```
+##R文件数据处理
+
+使用R语言做大规模数据处理，主要的理由：
+
+1. 可以方便的使用各种函数
+2. 比较方便处理和输出同时可以进行很好的探究性先验研究
+3. 比较熟悉R事实上Python也是完全可以的
+
+值得注意的是这里的文件路径输入和读取
+
+``` r
+
+Args <- commandArgs()
+#绘制流场
+Vecurl<-paste(Args[6],"/velocityurl.txt",sep ="")
+
+#Vecurl="/home/iphyer/Chanel/Data/attractive12-24/p/attractive12-24-p0.65/velocityurl.txt"
+con <- file(Vecurl, "r")
+line=readLines(con,n=1)
+#print(line)
+#line="/home/iphyer/Chanel/p0.85/no5/velocity.txt"
+vector1<-read.table(line,fill = TRUE,col.names=c("i","x","y","vx","vy","n"))
+line=readLines(con,n=1)
+i=1
+while( length(line) != 0 ) {
+  #print(line)
+  vector2<-read.table(line,fill = TRUE,col.names=c("i","x","y","vx","vy","n"))
+  #tail(vector2)
+  vector1$vx<-vector1$vx+vector2$vx
+  vector1$vy<-vector1$vy+vector2$vy
+  vector1$n<-vector1$n+vector2$n
+  # print('Velocity Done')
+  line=readLines(con,n=1)
+  i=i+1
+}
+
+vector1$vx<-1.*vector1$vx/i
+vector1$vy<-1.*vector1$vy/i
+vector1$n<-1.*vector1$n/i
+subvec<-subset(vector1,vector1$y>=3)
+write.table(subvec,"velcoity.txt",,sep ="\t",col.names=F,row.names=F)
+close(con)
+
+#统计流场1
+b<-numeric(108)
+c<-numeric(108)
+flux<-data.frame(vector1$x,vector1$y,vector1$vx*vector1$n)
+j=1
+for (i in 1:108){
+  a<-subset(flux,flux$vector1.x==j)
+  b[j]<-j
+  c[j]<-sum(a$vector1.vx...vector1.n)
+  j=j+1
+}
+#plot(b,c)
+continuity=data.frame(b,c)
+#write.table(continuity,"flux.txt",sep ="\t",col.names=F,row.names=F)
+AllFlux<-sum(c)/108
+print('Flux1:')
+print(AllFlux)
+
+#=====================================================================================================================
+#解决Y方向流量不守恒问题
+#=====================================================================================================================
+flux3<-subset(vector1,vector1$y==3)
+fluxy3<-data.frame(flux3$x,flux3$vy*flux3$n)
+#plot(fluxy3)
+write.table(fluxy3,"fluxy3.txt",,sep ="\t",col.names=F,row.names=F)
+#====================================================================================================================
+#统计流场2
+Fluxurl<-paste(Args[6],"/fluxurl.txt",sep ="")
+#Fluxurl="/home/iphyer/Chanel/Data/attractive12-24/p/attractive12-24-p0.65/fluxurl.txt"
+con <- file(Fluxurl, "r")
+line=readLines(con,n=1)
+#print(line)
+flux1<-read.table(line,col.names=c("i","x","y","flux"))
+flux1$flux<-1.0*flux1$flux
+line=readLines(con,n=1)
+i=1
+while( length(line) != 0 ) {
+  #print(line)
+  flux2<-read.table(line,col.names=c("i","x","y","flux"))
+  flux2$flux<-1.0*flux2$flux
+  flux1$flux<-flux1$flux+flux2$flux
+  #print('Flux Done')
+  line=readLines(con,n=1)
+  i=i+1
+}
+#print(i)
+flux1$flux<-1.*flux1$flux/i
+
+write.table(flux1,"flux.txt",sep ="\t",col.names=F,row.names=F)
+
+#计算同样的x位置所有y位置的x方向速度之和，验证连续性条件
+b<-numeric(108)
+cGT3<-numeric(108)
+cWhole<-numeric(108)
+j=1
+for (i in 1:108){
+  a<-subset(flux1,flux1$x==j)
+  aGT3<-subset(a,a$y>=3)
+  b[j]<-j
+  cGT3[j]<-sum(aGT3$flux)
+  cWhole[j]<-sum(a$flux)
+  j=j+1
+}
+
+continuityGT3<-data.frame(b,cGT3)
+write.table(continuityGT3,"XfluxOverGT3Y.txt",sep ="\t",col.names=F,row.names=F)
+continuity<-data.frame(b,cWhole)
+write.table(continuity,"XfluxOverWholeY.txt",sep ="\t",col.names=F,row.names=F)
+AllFlux<-sum(cWhole)/108
+print('Flux2:')
+print(AllFlux)
+close(con)
+
+#============================================================================================
+#y方向的层流大小，低Re系数下层流明显
+#============================================================================================
+b<-numeric(14)
+c<-numeric(14)
+j=1
+for (i in 1:14){
+  a<-subset(flux1,flux1$y==j+2)
+  a<-subset(a,a$y>=3)
+  b[j]<-j+2
+  c[j]<-sum(a$flux)
+  j=j+1
+}
+continuity=data.frame(b,c)
+write.table(continuity,"YfluxOverWholeX.txt",sep ="\t",col.names=F,row.names=F)
+
+#============================================================================================
+#挑选最大流量的那一层其实就是最低一层代表该设置条件下的流动优势，为了减少误差，同时计入珠子左侧的影响、
+#考虑到平流效应已经被证实，所以使用y=3的这一层代表驱动的动力层
+#============================================================================================
+maxflux<-continuity[1,2]
+print("Max Bottom layer of Flux:")
+print(maxflux)
+#============================================================================================
+#同一个x下不同y方向的层流大小分布，Y方向是否均一变化
+#============================================================================================
+#============================================================
+#统计不同x处的y方向流量分布
+
+a<-subset(flux1,flux1$x==29.0)
+a<-subset(a,a$y>=3)
+b<-data.frame(a$y,a$flux)
+colnames(b)<-c("y","29")
+xcor<-c(32.0,35.0,38.0,41.0,44.0,47.0,50.0,53.0)
+for (i in xcor){
+  j<-i
+  a<-subset(flux1,flux1$x==j)
+  a<-subset(a,a$y>=3)
+  b<-cbind(b,a$flux)
+  colnames(b)[length(colnames(b))]<-i
+}
+
+write.table(b,"YfluxDistrobutionOverDifferentX.txt",sep ="\t",col.names=T,row.names=F)
+
+
+#===============================================================================================================
+#处理最严格意义上对于流量的积分
+#===============================================================================================================
+jet<-read.table("jet.txt",header=F)
+meanjet<-1.0*sum(jet)/(ncol(jet)*nrow(jet))
+print(meanjet)
+Ntimes<-1600000*0.1
+netflux<-meanjet/Ntimes
+print("netflux definition:")
+print(netflux)
+
+#===============================================================================================================
+#统计A和B粒子的密度分布
+#===============================================================================================================
+
+Densityurl<-paste(Args[6],"/densityurl.txt",sep ="")
+con <- file(Densityurl, "r")
+line=readLines(con,n=1)
+#print(line)
+den1<-read.table(line,col.names=c("x","y","denA","denB"))
+line=readLines(con,n=1)
+i=1
+while( length(line) != 0 ) {
+  #print(line)
+  den2<-read.table(line,col.names=c("x","y","denA","denB"))
+  den1$denA<-den1$denA+den2$denA
+  den1$denB<-den1$denB+den2$denB
+  #print('Density Done')
+  line=readLines(con,n=1)
+  i=i+1
+}
+den1$denA<-1.*den1$denA/i
+den1$denB<-1.*den1$denB/i
+
+subvec<-subset(den1,den1$y>=3)
+write.table(subvec,"density.txt",sep ="\t",col.names=F,row.names=F)
+close(con)
+#===============================================================================================================
+#处理梯度场问题，使用中心差分算法
+#===============================================================================================================
+
+denALL<-read.table("density.txt",col.names=c("x","y","denA","denB"))
+
+gradBx<-data.frame(gBx=numeric(0))
+
+#舍弃第一层，很难定义和计算
+for(i in 1:length(denALL$x)){
+  if(i>=217){
+    
+    if( i%%216==1 ){
+      temp<-denALL[i+1,4]-denALL[i+215,4]
+      gradBx<-rbind(gradBx,temp)
+    }
+    else if( i%%216==0 ){
+      temp<-denALL[i-215,4]-denALL[i-1,4]
+      gradBx<-rbind(gradBx,temp)
+    }
+    else{
+      temp<-denALL[i+1,4]-denALL[i-1,4]
+      gradBx<-rbind(gradBx,temp)
+    }  
+    
+  }
+  else{
+    temp<-0
+    gradBx<-rbind(gradBx,temp)
+  }
+  
+}
+
+gradBy<-data.frame(gBy=numeric(0))
+
+for(i in 1:length(denALL$x)){
+  if( i<=216 ){
+    temp<-0#denALL[i+216,4]/0.5
+    gradBy<-rbind(gradBy,temp)
+  }
+  else if( i>= 5617 ){
+    temp<-0
+    gradBy<-rbind(gradBy,temp)
+  }
+  else{
+    temp<-denALL[i+261,4]-denALL[i-216,4]
+    gradBy<-rbind(gradBy,temp)
+  }
+}
+
+gradB<-data.frame(denALL$x,denALL$y,gradBx,gradBy)
+
+write.table(gradB,"gradB.txt",col.names=F,row.names=F)
+
+#============================================================================================
+#A粒子梯度场图
+#============================================================================================
+
+denALL<-read.table("density.txt",col.names=c("x","y","denA","denB"))
+
+gradAx<-data.frame(gAx=numeric(0))
+
+#舍弃第一层，很难定义和计算
+for(i in 1:length(denALL$x)){
+  if(i>=217){
+    
+    if( i%%216==1 ){
+      temp<-denALL[i+1,3]-denALL[i+215,3]
+      gradAx<-rbind(gradAx,temp)
+    }
+    else if( i%%216==0 ){
+      temp<-denALL[i-215,3]-denALL[i-1,3]
+      gradAx<-rbind(gradAx,temp)
+    }
+    else{
+      temp<-denALL[i+1,3]-denALL[i-1,3]
+      gradAx<-rbind(gradAx,temp)
+    }  
+    
+  }
+  else{
+    temp<-0
+    gradAx<-rbind(gradAx,temp)
+  }
+  
+}
+
+gradAy<-data.frame(gAy=numeric(0))
+
+for(i in 1:length(denALL$x)){
+  if( i<=216 ){
+    temp<-0#denALL[i+216,4]/0.5
+    gradAy<-rbind(gradAy,temp)
+  }
+  else if( i>= 5617 ){
+    temp<-0
+    gradAy<-rbind(gradAy,temp)
+  }
+  else{
+    temp<-denALL[i+261,3]-denALL[i-216,3]
+    gradAy<-rbind(gradAy,temp)
+  }
+}
+
+gradA<-data.frame(denALL$x,denALL$y,gradAx,gradAy)
+
+write.table(gradA,"gradA.txt",col.names=F,row.names=F)
+
+#============================================================================================
+#A与B粒子的浓度比图
+#============================================================================================
+ratioBtoA<-data.frame(denALL$x,denALL$y,denALL$denB/denALL$denA)
+write.table(ratioBtoA,"ratioBtoA.txt",col.names=F,row.names=F)
+
+
+
+```
+
+## gnuplot画图
+
+就来一个画浓度场图的gnu文件吧！
+
+```
+#!/usr/bin/gnuplot
+#
+# Interpolating a heat map
+#
+# AUTHOR: Hagen Wierstorf
+# VERSION: gnuplot 4.6 patchlevel 0
+
+reset
+
+# wxt
+#set xterm jpeg size 216,16 #enhanced font 'Verdana,10' persist
+# png
+#set terminal pngcairo size 1080,160 enhanced font 'Verdana,10'
+#set output 'density-B.png'
+
+set terminal postscript eps size 108,18 enhanced font "Arial-Bold,100"
+
+
+set border linewidth 0
+unset key
+#set colorbox
+#unset tics
+set colorbox horiz user origin .1,.06 size .8,.04
+
+set cbtics 
+set grid cbtics
+
+set format cb "%.1f"
+
+#set palette grey
+# palette
+# set path of config snippets
+#set loadpath '/home/iphyer/.config/gnuplot/'
+#load 'ylrd.pal'
+set palette negative defined ( \
+    2 '#d73027',\
+    3 '#f46d43',\
+    4 '#fdae61',\
+    5 '#fee090',\
+    6 '#E6F598',\
+    7 '#ABDDA4',\
+    8 '#66C2A5',\
+    9 '#3288BD' )
+   
+set yrange [3:16]
+set xrange [0:108]
+#set pm3d  
+#splot "file"
+set dgrid3d
+set pm3d map 
+set size ratio -1
+
+
+set output 'densityB.eps'
+plot 'density.txt' u 1:2:4 with image
+set output
+
+
+set output 'densityA.eps'
+plot 'density.txt' u 1:2:3 with image
+set output
+
+set output 'ratioBtoA.eps'
+plot 'ratioBtoA.txt' u 1:2:3 with image
+set output
+
+
+```
+
+##结果
+
+最后放一个结果图吧，漂亮一点
+
+![tu１](/images/sci/densityB.png)
+
+![tu2](/images/sci/denA.png)
+
+希望这些脚本可以帮助到大家！
+
+欢迎留言讨论。
+

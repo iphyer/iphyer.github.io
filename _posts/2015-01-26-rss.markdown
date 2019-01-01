@@ -1,0 +1,36 @@
+---
+layout: post
+title: "QuiteRSS更新折腾记"
+date: 2015-01-26 04:08
+comments: true
+categories: Linux
+---
+
+今天回来发现QuiteRSS提示版本过期，于是就去官网更新了软件，结果出来的都是乱码．不支持中文而且经常崩溃．
+
+折腾到现在放弃了，直接去掉QuiteRSS的更新源，同时安装Ubuntu版本自带的QuiteRSS好了．
+
+无语了，还是不要瞎折腾的好！
+
+然后发现了Liferea这个软件也是非常不错的，推荐．
+
+保留了这个软件作为QuiteRSS的备份，想起一句话没啥事你更新啥软件？
+
+上个图，折腾好了，降级软件就行了．
+
+<!--more-->
+
+贴个图
+
+Liferea
+
+![tu2](/images/Linux/liferea.png)
+
+
+修复后的QuiteRSS
+
+![tu2](/images/Linux/RSS.png)
+
+其实二者功能差不多的．
+
+

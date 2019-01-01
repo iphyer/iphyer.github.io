@@ -1,0 +1,124 @@
+---
+layout: post
+title: "公务员考试资料——人民时评的下载和音频制作"
+date: 2014-10-30 22:50
+comments: true
+categories: Python
+---
+
+#任务概述
+
+人民时评是公务员考试常用的资料之一，具体可以参考这里[独家丨国考申论不抓瞎，人民时评帮你押](http://mp.weixin.qq.com/s?__biz=MzAxMzA2MTk0NQ==&mid=200845445&idx=1&sn=7fb529e6aa6db2cb6a9bd5cf1a4ee696&scene=1&from=singlemessage&isappinstalled=0&key=b04a2d1c413a2c78b94c9feccabd9f20aea549c22664e132369f53cb976edabd39b2b3fdcfd712fa617d6be224990c1f&ascene=1&uin=Mjc2ODM3MjM4MQ%3D%3D&devicetype=android-18&version=26000036&pass_ticket=GBG6U7bQNQ06ds4qYYZR4saibKPj%2F%2FQjOZXYqLxmmZWXhPIdeRa9Ye0n2zcBSG5o)
+，虽然我不考这个考试，但是需要实现这个需求。
+
+主要是从人民时评的网站上把内容抓取下来，然后制作成音频，这样就可以你用边角料时间多听一听练习写作了。
+主要目的是帮助熟悉表达和观点。
+
+这个任务本来以为挺简单的结果花费了一天的时间才结束。
+
+
+<!--more-->
+
+真的挺累人的。
+
+#过程
+
+##网页内容抓取
+
+这部分比较简单，人民网有一个总结地址在这里[人民时评](http://opinion.people.com.cn/GB/8213/49160/49219/index2.html)
+
+代码倒是挺简洁的，结构也很清晰，都是用表格排列的内容，所以很轻松的使用Python实现了抓取。
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Oct 30 11:14:57 2014
+
+@author: famer
+"""
+
+# 这个u程序实现从人民时评的网站上抓取内容并且存为TXT文件格式
+# 这里抓取从2014年10月30日03:20-2013年06月06日04:10的人民时评
+# 参考了http://www.zh30.com/python-threading-pachong1.html的代码
+
+import urllib2
+from bs4 import BeautifulSoup
+
+
+#参数设定
+urllinkmain="http://opinion.people.com.cn"
+
+#打开网页并且获得内容，输出soup整理后内容，输入网页地址
+#请注意网页编码的问题
+
+def webpageget(weblink):
+    request = urllib2.Request(weblink)
+    request.add_header('User-agent', 'Mozilla/5.0 (Linux i686)')
+    response = urllib2.urlopen(request)
+    websoup=BeautifulSoup(response,from_encoding="GB2312")
+    return websoup    
+
+
+#下载程序
+#地址设置，因为比较少就直接使用硬编码了
+#url="http://opinion.people.com.cn/GB/8213/49160/49219/"
+#url="http://opinion.people.com.cn/GB/8213/49160/49219/index2.html"
+url="http://opinion.people.com.cn/GB/8213/49160/49219/index3.html"
+#解析网页
+soup=webpageget(url)
+alink= soup.find_all('a', attrs={'class':'abl'})
+for a in alink:
+    link=a.get('href')
+    name=a.get_text()+'.txt'
+    fh=open(name,'a+')
+    urltemp=urllinkmain+link
+    newsoup=webpageget(urltemp)
+    div=newsoup.find_all('div',attrs={'id':'p_content'})
+    for p in div:
+        ptemp=p.get_text()
+        fh.write(ptemp)
+    fh.close()
+
+print  'Done'
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+##文字转化为声音
+
+这步真的是大坑。以前没有做过类似的工作，光是评估各个语音引擎的好坏就花去了好多时间。好不容易找到一个特别合适的语音转换软件，Linux下的我都仔细总结了下，英文的还勉强凑合，但是中文的这是一塌糊涂。所以果断换成了windows下实现。然后就发现了[Balabolka](http://www.cross-plus-a.com/cn/balabolka.htm)。神器啊，还支持批量转换。终于在windows下完美实现了这个过程。
+
+如图:
+
+![tu１](/images/TTS/Balabolka.PNG)
+
+主要是强烈推荐这个软件，　免费 (Freeware)软件做的这么好，不顶一下实在是对不起啊！
+
+##修正
+
+但是我一开始是使用的TXT格式，而在Linux下生成的文件在Windows非常不爽而且对于[Balabolka](http://www.cross-plus-a.com/cn/balabolka.htm)这样专门为Windows设计的软件而言非常容易出错，所以就想到了批量转换为word文件。这样可以方便在Windows下使用。
+
+最后发现了unoconv,非常好的一个软件。unoconv is a command line utility that can convert any file format that　LibreOffice can import, to any file format that LibreOffice is capable　of exporting.
+
+简单地说，unoconv实现了使用LibreOffice来生成word文档的功能。
+
+一个命令行全部实现
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+unoconv -f doc *.txt^C
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+然后就是用word实现了全部的功能。
+
+当然最后还是会有些幺蛾子，比如人民时评的网页版有的时候会有视频。。。坑爹。
+
+所以最后还需要对于word文档做一些修正。这个就是非常dirty的work了。没办法只能手工实现。还好最后是成功实现了。
+
+
+#人民视频文本和音频下载
+
+[下载地址](http://pan.baidu.com/s/1sj2Tp1b)

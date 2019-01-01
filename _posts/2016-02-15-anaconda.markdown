@@ -1,0 +1,280 @@
+---
+layout: post
+title: "Anaconda使用记录"
+date: 2016-02-15 13:14
+comments: true
+categories: Python
+---
+
+#前言
+
+经常使用 Python，以前为了解决依赖经常踩坑，后来有了 pip 生活充满了希望。但是每一次升级系统或者回家更换电脑，比如春节这样的假期就会非常难过。因为重新安装是如此大的系统性工程以至于经常感觉无力。
+
+不过自从出现了整合的发行版，一下子生活简单了很多。
+
+这里推荐自己经常使用的　Anaconda　给大家确实是神器，非常方便。
+
+<!--more-->
+
+#Anaconda 介绍
+
+根据官网简介:
+
+> Anaconda is an easy-to-install, free package manager, environment manager, Python distribution, and collection of over 150 open source packages with free community support.
+
+Anaconda是一个类似 Ubuntu　这样的整合发行版。同事　Anaconda　支持使用比如　pip 命令安装软件包，所以一下子大大简化了安装过程。
+
+具体的可以根据你需要使用的项目去查看　Anaconda 的支持包列表，[Anaconda 2.5.0 Package List](http://docs.continuum.io/anaconda/pkg-docs) 基本上你需要使用到的各个 Python 科学计算包都已经包括在内了。
+
+#Anaconda 安装
+
+安装特别简单，只要网络足够就可以非常容易地安装完成。
+
+安装过程可以参考这个网页[Anaconda install](http://docs.continuum.io/anaconda/install).
+
+Windows 下只要你下载安装包，点击运行就行。 Linux下也很简单，只要下载好安装包，然后 bash 运行下就行。
+
+特别值得一说的就是，删除真的很方便啊，直接　`rm -rf ~/anaconda` ，　当然后面的地址应该是你的安装地址。
+
+更新也非常方便
+
+```
+conda update conda
+conda update anaconda
+
+```
+
+就可以快速地更新版本。
+
+#Anaconda 使用
+
+因为有配套的商业版，所以　Anaconda　的文档支持做得相当得好。比如这里可以得到完整的文档信息，写得非常精炼，基本上讲到了使用 Python　的方方面面。下面我简单介绍下。
+
+##Python　使用的一般规律
+
+这里不依赖于　Anaconda 而讲讲 Python 使用的一般规律和经验。
+
+一般而言，首先你需要明确自己是用　Python2 还是　Python3 这连个是不兼容的版本。虽然可以修改通过，但是还是推荐大家不要弄混淆了。通常这个是由你的核心功能包决定的，因为 Python 的发展离不开开源社区的支持，但是开源社区通常和最新的版本支持之间会有一个衔接过程，同时有的开源软件是作者个人使用的计划项目作者很有可能用完了就不再支持了所以大量的情况下会出现很多“孤儿包”也就是只有少部分人使用而没有足够的社群支持。在开源的世界里这个才是常态，大家习惯就好。
+
+所以需要你明确自己的核心项目然后开始使用相应的 Python 版本。
+
+但是更经常出现的情况是，你不会单单只从事一个项目，即使你目前只从事一个项目你将来也可能从事一个截然不同的项目。比如 A 项目的 Python 版本是 2.4 (比较老，但是依然在使用的项目)，但是最新的 B 项目已经是 Python2.7,甚至计划中的 C　项目打算使用　Python3。当然也可能出现这样的情况，你需要导入的 Python　模块有不同的版本，所以你需要能够创建两个不同的虚拟环境，里面安装这个module的不同版本。你需要一套方法来合理分配自己的机器上的各种代码和项目。
+
+所以就出现了管理这样不同场景的需求，而通常的做法是使用 `virtualenv` 这样的软件来辅助自己管理相应的功能。
+
+具体的内容大家可以参考这个博文[用virtualenv管理python3运行环境](http://www.cnblogs.com/hiddenfox/p/virtualenv-python3.html)
+
+我简单总结下就是，以　Python3　为例的话，首先我们创建一个python3的虚拟环境，当然系统里得先装好了python3。
+
+```
+mkvirtualenv -p python3 py3env
+
+```
+
+-p 后面的参数指定了python3（也有可能要换成python3.2/python3.4，具体要看你系统里面/use/bin/里面的文件是什么名字），如果去掉这个参数，就会使用系统默认的python。最后一个参数py3env是创建的这个环境的名字。
+
+执行完了之后，会自动切换到这个新创建的虚拟环境。我们会发现命令行提示符会发生改变，例如在我的机器上：从 `XXX@XXX-HP-ProBook-4441s`变成了 `(py3env) XXX@XXX-HP-ProBook-4441s` ，最前面多了这个虚拟环境的名字。
+
+其他一些常用命令：
+
+```
+deactivate                # 退出当前虚拟环境
+workon [虚拟环境名称]       # 使用某个虚拟环境
+rmvirtualenv [虚拟环境名称] # 删除某个虚拟环境
+lsvirtualenv              # 列出所有虚拟环境
+
+```
+
+##使用 conda 管理
+
+当然在 Anaconda 中也是利用这个相似的方法来实现管理的功能，当然需要做一定的修改以配合其他的诸如升级，删除包的功能需求。这就是 conda 。按照官方的说法:
+
+> Conda is both a package manager and an environment manager. You know that a package manager helps you find and install packages. But let’s say that you want to use a package that requires a different version of Python than you are currently using. With just a few commands you can set up a totally separate environment to run that different version of Python, and yet continue to run your usual version of Python in your normal environment. That’s the power of having an environment manager like conda.
+
+conda既是包管理器也是运行环境管理器。
+
+首先输入 
+
+```
+
+conda --version
+
+``` 
+
+查看本地安装的 conda 是否成功，如果你安装 Anaconda 而这步报错则很有可能你没有设置好 .bashrc 中的环境变量。我的结果是 `conda 3.19.1` 。
+
+然后可以用
+
+```
+conda update conda
+```
+来更新所有包， conda 会自动处理是不是需要更新包，这点和 Ubuntu 的软件包管理非常相似就是设立一个分发中心，大家都通过和这个中心进行匹配以便更新。
+
+##管理环境变量
+
+创建环境变量
+
+```
+conda create --name monky flask 
+```
+
+这会安装一个名字叫 `monky` 环境，然后里面已经安装了 flask 包，和 `virtualenv` 不同，conda 要求指定一个包，如果你还没有想好的包名称的话(虽然这个比较少，多见于测试)，那么你可以指定下 Python 的版本,当然加上包名称也是没有任何问题的。
+
+比如我这个命令
+
+```
+conda create --name bunnies python=3
+```
+
+就会有如下输出
+
+```
+Using Anaconda Cloud api site https://api.anaconda.org
+Fetching package metadata: Could not connect to https://repo.continuum.io/pkgs/pro/noarch/
+Could not connect to https://repo.continuum.io/pkgs/pro/linux-64/
+Could not connect to https://repo.continuum.io/pkgs/free/noarch/
+.Could not connect to https://repo.continuum.io/pkgs/free/linux-64/
+...
+Solving package specifications: ............
+Package plan for installation in environment /home/iphyer/.conda/envs/bunnies:
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    xz-5.0.5                   |                1         572 KB
+    wheel-0.29.0               |           py35_0          82 KB
+    ------------------------------------------------------------
+                                           Total:         654 KB
+
+The following NEW packages will be INSTALLED:
+
+    openssl:    1.0.2f-0      (soft-link)
+    pip:        8.0.2-py35_0  (soft-link)
+    python:     3.5.1-0       (soft-link)
+    readline:   6.2-2         (soft-link)
+    setuptools: 19.6.2-py35_0 (soft-link)
+    sqlite:     3.9.2-0       (soft-link)
+    tk:         8.5.18-0      (soft-link)
+    wheel:      0.29.0-py35_0
+    xz:         5.0.5-1      
+    zlib:       1.2.8-0       (soft-link)
+
+Proceed ([y]/n)? n      
+```
+我没有链接到网上但是可以清晰的看到 Anaconda 是怎么处理这里的包问题，如果已经安装了相应的包就直接软链接过去，如果没有就链接到 Anaconda 的官网上下载。当然要查看 Anaconda 默认安装了那些包可以在这个网址查看 [Anaconda 2.5.0 Package List](http://docs.continuum.io/anaconda/pkg-docs)。当然如果没有安装， Anaconda 会自动联网安装。
+
+安装成功后，可以用如下命令进入相应的环境中开发。
+
+```
+Linking packages ...
+[      COMPLETE      ]|#######################################################| 100%
+#
+# To activate this environment, use:
+# $ source activate bunnies
+#
+# To deactivate this environment, use:
+# $ source deactivate
+#
+
+
+```
+你可以通过如下命令查看系统中已经有多少环境
+
+```
+conda info --envs
+```
+输出结果如下:
+
+```
+# conda environments:
+#
+bunnies                  /home/iphyer/.conda/envs/bunnies
+cow                      /home/iphyer/.conda/envs/cow
+monky                    /home/iphyer/.conda/envs/monky
+snakes                   /home/iphyer/.conda/envs/snakes
+root                  *  /home/iphyer/anaconda3
+
+```
+
+注意到root环境中的星号 * 那就是当前使用的环境。
+
+当然你也可以比如你基于你之前的工作新开一个工作，比如添加新功能那么可以直接使用:
+
+```
+conda create --name flowers --clone snakes
+```
+
+这将会建立一个叫做`flowers`的环境，所有内容都来自`snakes`这个已经设置好的环境。
+
+当然删除一个环境也很方便，比如:
+
+```
+conda remove --name flowers --all
+```
+
+这样就会删除所有的 flowers 环境内容。
+
+##管理 Python
+
+Conda 把 Python 也当做一个包进行管理。
+
+你可以用 
+
+```
+conda search --full-name python
+```
+
+查看到底有多少 Python 的版本，如果不加上 `--full-name` 那么其实是使用这个命令 `conda search python` 这个查找的是到底多少包的名字里面含有 python.
+
+所以还记得
+
+```
+conda create --name snakes python=3
+```
+
+这样就可以安装一个使用 Python3 的名叫 snakes 的环境了。
+
+##管理包
+
+可以输入 
+
+```
+conda list
+```
+
+查看当前环境安装的包。
+
+当然你也可以通过
+
+```
+conda search beautifulsoup4
+```
+
+来查看相应的包是不是存在，这里也会联网检索，如果找到就代表可以被 Conda 安装。
+
+```
+conda install --name bunnies beautifulsoup4
+```
+这个命令将`beautifulsoup4`安装到`bunnies`环境中。
+
+当然你也可以从 Anaconda.org 安装软件包。Anaconda.org 是配套的一个 Python 软件包库，所以可以很方便地从那里安装需要的软件包。你可以先登陆到 [http://anaconda.org.](http://anaconda.org)搜索下是不是存在你需要的包。如果存在使用如下命令安装:
+
+```
+conda install --channel https://conda.anaconda.org/pandas bottleneck
+```
+
+当然你也可以用 `pip` 安装，如果你习惯了 `pip` 的话。
+
+比如
+
+```
+pip install numpy
+```
+
+#后记
+
+这里其实就是 Anaconda 官网提供的[30分钟快速入门](http://conda.pydata.org/docs/test-drive.html)的学习笔记， Anaconda可以做的更多比如打包你的程序方便别人使用，和 IDE 联合使用等等。当然还有一个比较绝的就是和 R 联合使用把 R 作为 Python 的拓展，这个正是非常好用的功能。简单的统计功能完全不需要熟悉 Python 全部交给 R 就行。这些都可以在官网得到更加详细的资料。
+
+欢迎大家斧正。
+

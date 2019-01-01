@@ -1,0 +1,93 @@
+---
+layout: post
+title: "心理现象"
+date: 2014-04-19 01:56
+comments: true
+categories: Python
+---
+
+#关于单词出现频率的Python统计——一个心理现象的验证
+
+##起源
+
+这是《选择悖论》的一个例子，就是人的心理是受到各种因素影响的，比如可获得性启发式(availability heuristic)往往就是人类大脑和心理缺陷的原因之一。
+
+如果我们可以很容易地捕捉到记忆中的某些信息，我们就认为我们过去经常碰到某些信息，并且某些信息是正确的和经常出现的。 这是由一定道理的，因为事物出现的频率会影响我们的记忆的可获得性但是这不是唯一因素。显著性或者生动性也会影响我们的记忆的可获得性。 比如，人们往往会认为： “以T开头的单词比ｔ排在第三位的单词多”——记忆的可获得性差异，因为自己的记忆更加容易提取，所以认为经常发生。
+
+这里我想验证一下：“以T开头的单词比t排在第三位的单词多”——这个是不是真的。
+
+<!--more-->
+
+
+##设立语料库
+
+为了验证这个结论，我们必须建立一个语料库，上网查了下，觉得”British National corpus”BNC。
+
+当然这里我选择只是单单的一个简单的词典，网上有很多的下载的“BNC最常用15000词汇”大家可以自行下载。
+
+
+
+##程序
+
+有了语料库就可以写程序分析啦。具体代码如下：
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr  8 21:47:00 2014
+
+@author: famer
+"""
+#word frequency analysis
+#count words, unique words, common wrods
+#here we want to do word frequence analysis of a dict
+
+import string
+import re
+
+def processLine(line,wcDict_T,wcDict_T2):
+    #cut the whitespace before and after everyline
+    #sitll use strip method to seperate different words
+    wordlist=line.strip().split()
+    for word in wordlist:
+        if re.match(r'\At',word):
+            word=word.lower()
+            word=word.strip()
+            word=word.strip(string.punctuation)
+            addword(word,wcDict_T)
+        elif re.match(r'\D\Dt',word):
+            word=word.lower()
+            word=word.strip()
+            word=word.strip(string.punctuation)
+            addword(word,wcDict_T2)
+
+def addword(w,wcDict):
+    if w in wcDict:
+        wcDict[w]+=1
+    else:
+        wcDict[w]=1
+
+#main programe
+wcDict_1={}
+wcDict_2={}
+fObj=open("15000.txt",'r')
+for line in fObj:
+    processLine(line,wcDict_1,wcDict_2)
+print 'Length of the wcDict_1 is:', len(wcDict_1)
+print 'Length of the wcDict_2 is:', len(wcDict_2)
+print 'Done'
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+##结果
+
+最后的结果为：
+
+	Length of the wcDict_1 is: 720
+	Length of the wcDict_2 is: 1041
+	Done
+
+
+
+可以看到确实“以T开头的单词比ｔ排在第三位的单词多”这只是记忆的可获得性差异带来的一个幻觉罢了。
+
+你是不是有记忆的可获得性差异导致的经历呢？

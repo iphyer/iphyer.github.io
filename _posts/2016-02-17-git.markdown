@@ -1,0 +1,56 @@
+---
+layout: post
+title: "Git使用总结"
+date: 2016-02-17 15:57
+comments: true
+categories: Git
+---
+
+#前言
+
+使用 Git 的频率越来越高，这里总结下自己经常用的命令。参考了这篇博文[如何使用git创建项目，创建分支 ](http://blog.csdn.net/wfdtxz/article/category/1223316)
+
+<!--more-->
+
+#总结
+
+##初始配置
+
+```
+git config -global user.name "Your name"
+
+git config -global user.email "you@example.com"
+```
+
+##使用
+
+`git init`命令用于初始化当前所在目录的这个项目
+
+`git status` 查看项目状态
+
+`git add ..` 给我目前的这个项目制作一个快照snapshot（快照只是登记留名，快照不等于记录在案，git管快照叫做索引index)
+
+`git commit` 用于将快照里登记的内容永久写入git仓库
+
+`git commit -a`这个命令可以直接提交所有修改，省去了你`git add`和`git diff`和`git commit`的工序
+
+注意：无法把新增文件或文件夹加入进来，所以，如果你新增了文件或文件夹，那么就要老老实实的先`git add .`，再`git commit`
+
+`git log -p` git不但会给出开发日志，而且会显示每个开发版本的代码区别所在。
+
+> 总结：先git add你修改过的文件，再git diff并git status查看确认，然后git commit提交，然后输入你的开发日志，最后git log再次确认。
+
+##创建分支
+`git branch` 查看分支列表
+
+`git branch experiment` 创建一个分支
+
+`git checkout experiment` 切换分支到experiment
+
+`git commit -a`  在分支上提交工作
+
+`git checkout master` 切换主干道
+
+`git merge experiment` 合并分支到主干道
+
+`git branch -d experiment ` -d，表示“在分支已经合并到主干后删除分支”。如果使用大写的-D的话，则表示“不论如何都删除分支”，

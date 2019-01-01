@@ -1,0 +1,124 @@
+---
+layout: post
+title: "USpatent的搜索和提取"
+date: 2013-04-08 10:09
+comments: true
+categories: Python
+---
+
+#前言
+
+这是今年的实习的计划中的一个，进行了一个USpatent的搜索和调查。
+这里代码基于Python和SQLite。
+
+<!--more-->
+
+#代码
+
+```python
+
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Mar 29 14:24:32 2013
+
+@author: waventropy
+"""
+
+import urllib2
+import bs4 as bs
+import sqlite3
+import re
+
+
+
+#定义补足为给出的网址头部分
+aa='http://patft.uspto.gov/'
+
+g=open('new11.txt','wr')
+
+#创建数据库，存储数据
+conn = sqlite3.connect("Patentdatabase.db")
+cursor = conn.cursor()
+cursor.execute("""CREATE TABLE Patent
+                  (PatentNumber text,PatentName text,PatentInventors text,PatentCompany text,PatentFiledtime text,PatentAbstract text) """)
+#给出其实搜索地址。主要是x-ray和detect
+#然后将参数传给soup
+
+starturl = 'http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&Sect2=HITOFF&p=1&u=%2Fnetahtml%2FPTO%2Fsearch-bool.html&r=0&f=S&l=50&TERM1=X+ray&FIELD1=ABTX&co1=AND&TERM2=detect&FIELD2=ABTX&d=PTXT'
+
+#添加浏览器信息防止服务器中止频繁项请求
+
+request = urllib2.Request(starturl)
+request.add_header('User-agent', 'Mozilla/5.0 (Linux i686)')
+response = urllib2.urlopen(request).read()
+soup =  bs.BeautifulSoup(response)
+
+#得到所有的检索结果
+number=soup.findAll('i')
+AllNumber=number[1].findAll('strong')[2].text
+AllNumber=int(AllNumber)
+#找到所有的记录
+
+#设立计数变量因为USPTO网页的显示限制是每次50条记录
+n=abs(AllNumber-(AllNumber/50)*50)
+if n==0:
+    CircleNumber=(AllNumber/50)
+else:
+    CircleNumber=(AllNumber/50)+1
+
+for k in range(1,CircleNumber):
+    tr=soup.findAll('tr')
+    for i in range(2,len(tr)-2):
+        temp=tr[i].findAll('td')
+        #在次页面提取PatentName信息
+        PatentName=temp[3].text.strip()
+        #重新进入新的搜索出的结果页面进行数据提取
+        urltemp=aa+temp[1].a.get('href')
+        request = urllib2.Request(urltemp)
+        request.add_header('User-agent', 'Mozilla/5.0 (Linux i686)')
+        response = urllib2.urlopen(request).read()
+        souptemp =  bs.BeautifulSoup(response)
+        PatentNumber=souptemp.html.head.title.renderContents().strip()
+        #PatentInventors使用正则化搜索避开可能的不规则排列顺序
+        anchortemp = souptemp.findAll(text=re.compile("Inv"))
+        if len(anchortemp)>0:
+            anchortemp = anchortemp[0]
+            PatentInventors=' '.join(anchortemp.find_next('td').stripped_strings)
+        else:
+            PatentInventors='NoRecord'
+        #PatentCompany使用正则化搜索避开可能的不规则排列顺序
+        anchortemp = souptemp.findAll(text=re.compile("Assi"))
+        if len(anchortemp)>0:
+            anchortemp = anchortemp[0]
+            PatentCompany=' '.join(anchortemp.find_next('td').stripped_strings)
+        else:
+            PatentCompany='NoRecord'
+        #PatentFiledtime使用正则化搜索避开可能的不规则排列顺序
+        anchortemp = souptemp.findAll(text=re.compile("File"))
+        if len(anchortemp)>0:
+            anchortemp = anchortemp[0]
+            PatentFiledtime= ' '.join(anchortemp.find_next('td').stripped_strings)
+            
+        else:
+            PatentFiledtime='NoRecord'
+        #对于PatentAbstract进行格式化
+        PatentAbstract=souptemp.html.body.p.text.strip()
+        PatentAbstract.replace('\n', '')
+        PatentAbstract=' '.join(PatentAbstract.split())
+        #向数据库中写入记录
+        cursor.execute("INSERT INTO Patent VALUES (?,?,?,?,?,?)" ,(PatentNumber,PatentName,PatentInventors,PatentCompany,PatentFiledtime,PatentAbstract))
+        conn.commit()
+        g.write("%s \n"%(PatentInventors))
+    ktemptemp=str(k)
+    urltemptemp='http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&Sect2=HITOFF&u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&r=0&f=S&l=50&d=PTXT&OS=ABST%2F%22X+ray%22+AND+ABST%2Fdetect&RS=ABST%2F%22X+ray%22+AND+ABST%2Fdetect&Query=ABST%2F%22X+ray%22+AND+ABST%2Fdetect&TD=352&Srch1=%22X+ray%22.ABTX.&Srch2=detect.ABTX.&Conj1=AND&NextList'+ktemptemp+'=Next+50+Hits'
+    #添加浏览器信息防止服务器中止频繁项请求
+    request1 = urllib2.Request(urltemptemp)
+    request1.add_header('User-agent', 'Mozilla/5.0 (Linux i686)')
+    response1 = urllib2.urlopen(request1).read()
+    soup =  bs.BeautifulSoup(response1)
+
+g.close()
+print 'Done'
+
+```
+

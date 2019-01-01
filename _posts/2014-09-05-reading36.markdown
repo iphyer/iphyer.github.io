@@ -1,0 +1,577 @@
+---
+layout: post
+title: "GRE阅读36套疑难问题集锦和总结"
+date: 2014-09-05 15:47
+comments: true
+categories: 英语
+---
+
+##前言
+
+最近在练习陈虎平老师的36套，选用这套题目的原因在于这套题目在经过时间的检验后虽然肯定不能和真题比拼。但是,因为大家讨论很多,也有不少人写下自己的总结和感受所以非常适合用来练习。而且效果非常好。    
+
+但是陈虎平老师毕竟是一个人所以这个题目也是有不少问题，正好自己是很认真地在订正阅读36套的题目。
+
+这里给出我自己总结的问题和解答，希望大家都可以反馈给虎平老师。
+
+因为公益的事情确实很难做，请不要吐痰，可以吐槽，尽力修正！
+
+说明：很多答案参考了QQ群和大家的讨论，这里恕不给出出处，因为太难找了。很多地方保留了在论坛讨论的语气和用词，请大家见谅。
+
+
+##不合理的题目部分，请虎平老师修订的部分总结
+
+###确定的部分(对照老G确认少部分内容)
+
+* EX2 NO3
+* EX35 NO7
+
+###存疑
+
+* EX16 NO10
+* EX34 NO6
+
+
+<!--more-->
+
+##更新2014-10-11
+今天把整个36套都做完了,作为一个总结将这个文章Update一下。前面写下自己的总结后面是疑问列举和已经解决的疑问。
+
+阅读经验总结:
+
+* 正确选项都在改写！
+* 细节决定成败！很多时候题目的题干和选项都值得多多阅读。小心细节比如，EXCEPT,preceded,NOT
+* GRE的有些选项在同义改写的时候非常坑爹——要注意不是都是同一方向的改写——很多是负面改写
+* 理科重视逻辑和步骤！文科重视关系和评价！
+
+最后贴一个自己感觉比较好的的阅读总结链接：
+
+1. [GRE阅读36套解析打包下载（Beta版全）](http://www.sharewithu.com/forum.php?mod=viewthread&tid=441329&extra)非常全
+2. [GRE阅读36篇小笔记汇总贴(更新至Exe32)](http://www.sharewithu.com/thread-484477-1-1.html)虽然只有到EX32但是已经有的很好，特别是老G和新G对照起来了
+
+最后祝大家考G顺利！
+
+为者常成，行者常至。
+
+
+
+##关于材料
+
+很多人说36套节选不合理的问题，选项耦合断开的问题，其实以我的感觉问题不大。并不是像你想象的那么支离破碎，其实只有那么几个选项有问题。且对于独自一人备考的同学，36套最大的好处是——有很完善的解析。
+
+
+
+##疑问列举、
+EX后数字是代表第几套阅读，NO后数字代表题目号码，我使用的是老版本的36套。虽然题号可能有不同，但是基本上陈虎平老师保持了每个练习内部题目的不变，只是数字调整。
+
+###1 EX16 NO10
+第16个练习的第10题有疑问。
+
+If people are regarded only as machines guided by logic, as they were by some "scientistic" thinkers, rhetoric is likely to be held in low regard; for the most obvious truth about rhetoric is that it speaks to the whole person. It presents its arguments first to the person as a rational being. Logical argument is the plot, as it were, of any speech or essay that is respectfully intended to persuade people. Yet it is a characterizing feature of rhetoric that it goes beyond this and appeals to the parts of our nature that are involved in feeling, desiring, acting, and suffering. It recalls relevant instances of the emotional reactions of people to circumstances-real or fictional-that are similar to our own circumstances.
+
+
+
+For the following question, consider each of the choices separately and select all that apply
+10. Which of the following states the author's
+main point about logical argument?
+□A It is a sterile, abstract discipline, of little use in
+real life.
+□B It is an essential element of persuasive
+discourse, but only one such element.
+20:08
+□C It is essential to persuasive discourse because it
+deals with universal truths.
+
+这个第10题，我知道AC不正确，但是B为什么正确呢？
+
+
+定位到这句话： Yet it is a characterizing feature of rhetoric that it goes beyond this and appeals to the parts of our nature that are involved in feeling, desiring, acting, and suffering.
+
+但是所以B的前面一半是对的，但是后面一半呢？
+
+but only one such element.这个根本就没有说啊
+
+###2 EX34 NO6
+练习34 N06
+
+6. The passage suggests that which of the following
+would be LEAST important in determining
+whether nonenzymatic glycosylation is likely to
+have taken place in the proteins of a particular
+tissue?
+
+(A) The likelihood that the tissue has been
+exposed to free glucose
+
+(B) The color and spectrographic properties of
+structures within the tissue.
+
+(C) The amount of time that the proteins in the
+tissue have persisted in the body
+
+(D) The number of amino groups within the
+proteins in the tissue
+
+(E) The degree of elasticity that the tissue exhibits
+
+这道题目我觉得是虎平老师出题的时候欠考虑了，没有任何对应。其实这里的因为可能都有关系，LEAST在哪里体现了？
+
+谈谈正确答案D。
+
+已经解决疑问：he number of amino groups within the proteins in the tissue
+
+Nonenzymatic glycosylation begins when an aldehyde group (CHO) of glucose and an amino group (NH2) of a protein are attracted to each other.
+
+那你说都是NG这个过程的构成部分了，AG的数目不重要？
+
+##已经解决部分
+
+###1、EX2 NO3
+
+第二套的第三题，A和D的细微区别靠最后的一个句子是分别不出来的。
+Which of the following best summarizes the author‘s opinion of the suggestion that different areas of the brain determine perceptions produced by sensory nerve impulses?
+It is a plausible explanation, but it has not been completely proved.
+
+(D) There is some evidence to support it, but it fails to explain the diversity of mental experience.
+
+最后一句However, cortical locus, in itself, turned out to have little explanatory value.这个句子是负评价不假，但是我感觉A就是在表达这个意思，还没有完全证实也是负评价就是说有些地方还不清楚么比如cortical locus。
+
+ETS的原文后面还有这句话：However, cortical locus, in itself, turned out to have little explanatory value. Studies showed that sensations as diverse as those of red, black, green, and white, or touch, cold, warmth, movement, pain, posture, and pressure apparently may arise through activation of the same cortical areas.
+
+所以这个时候选项D是非常合理地。
+
+###2 EX7 NO3
+EX7第三题 
+According to the passage, a significant distinction
+between the salonnieres and Bluestockings was in the
+way each group regarded which of the following?
+
+(A) The value of acquiring knowledge
+
+(B) The role of pleasure in the activities of the
+literary salon
+
+(C) The desirability of a complete break with
+societal traditions
+
+(D) The inclusion of women of different back-
+grounds in the salons
+
+(E) The attainment of full social and political
+equality with men
+
+这句话原文不是又这么一句话么？
+Most Bluestockings did not wish to
+mirror the salonnieres; they simply desired to adapt a
+proven formula to their own purpose—the elevation
+of women‘s status through moral and intellectual
+Training.
+
+不是要求提高妇女的地位么？E为什么不对？
+
+Differences in social orientation and background 
+can account perhaps for differences in the
+nature of French and English salons. The French
+salon incorporated aristocratic attitudes that exalted
+courtly pleasure and emphasized artistic accomplishments.
+ The English Bluestockings, originating from a more modest 
+background, emphasized learning and work over pleasure.
+
+所以前面的不同只是一个靶子，真正的不同在后面，作者明确说明了用什么来解释。
+
+这里的重点是作者指明了之后，以作者指明的部分为准，不要抱住一点不放，从全局的高度理解问题。、
+
+###3 EX7 NO6
+
+The use of heat pumps has been held back
+largely by skepticism about advertisers‘ claims that
+heat pumps can provide as many as two units of
+thermal energy for each unit of electrical energy
+used, thus apparently contradicting the principle of
+energy conservation. (43 words)
+
+===============================
+
+6. If the author‘s assessment of the use of heat pumps is
+correct, which of the following best expresses the
+lesson that advertisers should learn from this case?
+
+(A) Do not make exaggerated claims about the
+products you are trying to promote.
+
+(B) Focus your advertising campaign on vague
+analogies and veiled implications instead of
+on facts.
+
+(C) Do not use facts in your advertising that will
+strain the prospective client‘s ability to
+believe.
+
+(D) Do not assume in your advertising that the
+prospective clients know even the most
+elementary scientific principles.
+
+(E) Concentrate your advertising firmly on financially
+relevant issues such as price discounts and
+efficiency of operation.
+
+(A) Do not make exaggerated claims about the
+products you are trying to promote.
+(C) Do not use facts in your advertising that will
+strain the prospective client‘s ability to
+believe.
+
+A和C的区别在哪里？
+
+Strain（MW）： to injure (a body part or muscle) by too much tension, use, or effort， 引申为伤害。   
+
+容易错选A，但是有很多广告都会用夸大的手法是人印象深刻，不一定是一件坏事。
+
+夸张不可怕，这个热泵最大的问题是低估顾客的智商，欺骗顾客。
+
+
+###4 EX6 NO8
+EX6的8题，这道题目
+
+The author is primarily concerned with
+
+(A) showing that a certain interpretation isbetter supported by the evidence than isan alternative explanation
+
+(E)presenting evidence in support of a controversial version of an earlier interpretation.
+
+(A)(E)两个选项又细微差别么？我认为两个其实是个同义改写。都是在说对于某个explanation不支持，同时给出证据。这些证据支持另外一个观点
+
+这道题目的E和A我也总结了好久，我后来发现还是A是对的。
+因为韦氏字典的controversial的解释是：
+con·tro·ver·sial adjective \ˌkän-trə-ˈvər-shəl, -ˈvər-sē-əl\
+: relating to or causing much discussion, disagreement, or argument : likely to produce controversy
+
+也就是只有争议的意思，那么E的答案就是这么个意思，作者展示证据支持一个对于早期解释具有争议性的版本的解释。
+
+你觉得通顺么？也就是我们提出的新的解释是一个争议性的解释，这个明显是矛盾的说法。
+
+E错就是在于，作者提出的是新的解释而不是一个controversial，很多同学包括我自己都把contrary这个词的意思和controversial混淆了。韦氏字典con·tro·ver·sial adjective \ˌkän-trə-ˈvər-shəl, -ˈvər-sē-əl\
+: relating to or causing much discussion, disagreement, or argument : likely to produce controversy
+所以controversial version就是有争议性的版本解释，而作者的感情态度恰恰是支持这个新观点又怎么会controversial?
+
+这道题真是考到单词的核心含义上去了，我们GRE单词都是浑沦吞枣甚至模糊归类记忆过来的，一遇到这个题目就被点中死穴了。
+
+###５ EX9 NO2
+EX9的第二个问题，您给的答案是不是错误了？
+2. All of the following aspects of Afro-American
+poetry are referred to in the passage as having been
+influenced by Wesleyan hymnals EXCEPT
+
+(A) subject matter
+
+(B) word choice
+
+(C) rhythm
+
+(D) structure
+
+(E) tone
+
+对应文章中的这句话：The appropriateness of such an approach may
+5 seem self-evident for a tradition commencing with
+spirituals and owing its early forms, rhythms, vocabulary,
+and evangelical fervor to Wesleyan hymnals.
+
+rhythm重复，word choice = vocabulary form= structure， 后面的这个evangelical fervor宗教性质的热情难道是tone么？为什么不是subject matter。答案说是选择A，subject matter，也就是说evangelical fervor 是 tone？
+
+其实这个问题的关键在于对于tone这个单词怎么理解的问题。
+
+最最权威的解释还是韦氏字典的解释。根据韦氏词典我们可以知道：
+
+[tone](http://www.merriam-webster.com/dictionary/tone) noun  
+
+: the quality of a person's voice
+
+: the quality of a sound produced by a musical instrument or singing voice
+
+: a quality, feeling, or attitude expressed by the words that someone uses in speaking or writing
+
+其实这里ETS使用了第三个意思，这里的强调用来在演讲或者文字作品中表达某个人的态度和倾向的意思。evangelical fervor中的fervor就是强调了这个意义的tone而不是你简单的内容问题。
+
+所以不选择A。
+
+###6 EX35 NO7
+
+7. The author‘s assertions concerning the conditions
+that lead to the decay of the vacuum would be
+most weakened if which of the following occurred?
+
+(B) Scientists assembled a superheavy atomic
+nucleus next to a vacuum, but found that no
+virtual particles were created in the vacuum‘s
+region of space.
+
+(C) Scientists assembled a superheavy atomic
+nucleus next to a vacuum, but found that
+they could not then detect any real particles
+in the vacuum‘s region of space.
+
+
+我直接摘录答案合集内容吧
+
+逻辑链: The essential condition for the decay of the vacuum is the presence of an intense
+electric field.
+
+the decay of the vacuum 的必要条件是:the presence of an intense electric field,想要结论不
+成立,必要条件不成立即可;
+
+“An electric field of sufficient intensity to create a charged vacuum is likely to be found in　only one place: in the immediate vicinity of a super heavy atomic nucleus”
+告诉我们 an intense electric field 的必要条件是:in the immediate vicinity of a super heavy
+atomic nucleus, 只需必要条件不成立,结论就不成立;
+
+逻辑思路清楚以后,但发现选项里没有这样的选项,这是为什么呢?因为这道题的定位不在这一段......
+更好的定位在这段文章的上一段:In other words, under these conditions the vacuum is an
+unstable state and can decay into a state of lower energy; i.e., one in which real particles　are created.
+
+其实这道问题，最后我在B,C之间徘徊但是我还是选了C，正确答案。因为我的专业是——物理。。。
+
+这可能就是有的人强调的所谓的36套节选文章不合理，但是我要说的是真的做完全部题目只有几处这个问题，大约３,4处吧，所以请不要再喋喋不休了，先做完最重要！
+
+我觉得可能是到了后面了虎平老师有点疲惫了所以错误多了一些，这里的错误，在新的2014版本里面也有。
+
+但是虎平老师放出这么好的免费资源，大家不应该要求很多而应该尽力帮助修正！
+
+谢谢虎平老师！
+
+##阅读总结
+
+<table class="table table-bordered table-striped table-condensed">
+   <tr>
+      <td>Exercise</td>
+      <td>Time/min</td>
+      <td>Accuracy</td>
+      <td>Per Question Time/min </td>
+   </tr>
+   <tr>
+      <td>1</td>
+      <td>25</td>
+      <td>0.69 </td>
+      <td>1.923076923</td>
+   </tr>
+   <tr>
+      <td>2</td>
+      <td>25</td>
+      <td>0.62 </td>
+      <td>1.923076923</td>
+   </tr>
+   <tr>
+      <td>3</td>
+      <td>25</td>
+      <td>0.62 </td>
+      <td>1.923076923</td>
+   </tr>
+   <tr>
+      <td>4</td>
+      <td>40</td>
+      <td>0.77 </td>
+      <td>3.076923077</td>
+   </tr>
+   <tr>
+      <td>5</td>
+      <td>20</td>
+      <td>0.50 </td>
+      <td>1.666666667</td>
+   </tr>
+   <tr>
+      <td>6</td>
+      <td>25</td>
+      <td>0.62 </td>
+      <td>1.923076923</td>
+   </tr>
+   <tr>
+      <td>7</td>
+      <td>28</td>
+      <td>0.77 </td>
+      <td>2.153846154</td>
+   </tr>
+   <tr>
+      <td>8</td>
+      <td>21</td>
+      <td>0.83 </td>
+      <td>1.75</td>
+   </tr>
+   <tr>
+      <td>9</td>
+      <td>22</td>
+      <td>0.85 </td>
+      <td>1.692307692</td>
+   </tr>
+   <tr>
+      <td>10</td>
+      <td>27</td>
+      <td>0.42 </td>
+      <td>2.25</td>
+   </tr>
+   <tr>
+      <td>11</td>
+      <td>17</td>
+      <td>0.46 </td>
+      <td>1.307692308</td>
+   </tr>
+   <tr>
+      <td>12</td>
+      <td>30</td>
+      <td>0.77 </td>
+      <td>2.307692308</td>
+   </tr>
+   <tr>
+      <td>13</td>
+      <td>22</td>
+      <td>0.67 </td>
+      <td>1.833333333</td>
+   </tr>
+   <tr>
+      <td>14</td>
+      <td>21</td>
+      <td>1.00 </td>
+      <td>1.75</td>
+   </tr>
+   <tr>
+      <td>15</td>
+      <td>22</td>
+      <td>0.69 </td>
+      <td>1.692307692</td>
+   </tr>
+   <tr>
+      <td>16</td>
+      <td>16</td>
+      <td>0.90 </td>
+      <td>1.6</td>
+   </tr>
+   <tr>
+      <td>17</td>
+      <td>19</td>
+      <td>0.90 </td>
+      <td>1.9</td>
+   </tr>
+   <tr>
+      <td>18</td>
+      <td>20</td>
+      <td>0.90 </td>
+      <td>2</td>
+   </tr>
+   <tr>
+      <td>19</td>
+      <td>21</td>
+      <td>0.60 </td>
+      <td>2.1</td>
+   </tr>
+   <tr>
+      <td>20</td>
+      <td>26</td>
+      <td>0.50 </td>
+      <td>2.6</td>
+   </tr>
+   <tr>
+      <td>21</td>
+      <td>26</td>
+      <td>0.40 </td>
+      <td>2.6</td>
+   </tr>
+   <tr>
+      <td>22</td>
+      <td>23</td>
+      <td>0.80 </td>
+      <td>2.3</td>
+   </tr>
+   <tr>
+      <td>23</td>
+      <td>18</td>
+      <td>0.60 </td>
+      <td>1.8</td>
+   </tr>
+   <tr>
+      <td>24</td>
+      <td>13</td>
+      <td>0.70 </td>
+      <td>1.3</td>
+   </tr>
+   <tr>
+      <td>25</td>
+      <td>19</td>
+      <td>0.90 </td>
+      <td>1.9</td>
+   </tr>
+   <tr>
+      <td>26</td>
+      <td>19</td>
+      <td>0.90 </td>
+      <td>1.9</td>
+   </tr>
+   <tr>
+      <td>27</td>
+      <td>21</td>
+      <td>0.80 </td>
+      <td>2.1</td>
+   </tr>
+   <tr>
+      <td>28</td>
+      <td>28</td>
+      <td>0.70 </td>
+      <td>2.8</td>
+   </tr>
+   <tr>
+      <td>29</td>
+      <td>19</td>
+      <td>0.80 </td>
+      <td>1.9</td>
+   </tr>
+   <tr>
+      <td>30</td>
+      <td>19</td>
+      <td>0.80 </td>
+      <td>1.9</td>
+   </tr>
+   <tr>
+      <td>31</td>
+      <td>20</td>
+      <td>0.90 </td>
+      <td>2</td>
+   </tr>
+   <tr>
+      <td>32</td>
+      <td>20</td>
+      <td>0.90 </td>
+      <td>2</td>
+   </tr>
+   <tr>
+      <td>33</td>
+      <td>24</td>
+      <td>1.00 </td>
+      <td>2.4</td>
+   </tr>
+   <tr>
+      <td>34</td>
+      <td>21</td>
+      <td>0.90 </td>
+      <td>2.1</td>
+   </tr>
+   <tr>
+      <td>35</td>
+      <td>26</td>
+      <td>0.80 </td>
+      <td>2.6</td>
+   </tr>
+   <tr>
+      <td>36</td>
+      <td>16</td>
+      <td>0.70 </td>
+      <td>1.6</td>
+   </tr>
+   <tr>
+      <td></td>
+   </tr>
+</table>
+
+##图形化展示(比较粗糙)
+
+![tu1](/images/GRE/36/Graph1.png)
+
+![tu2](/images/GRE/36/Graph2.png)
+
+![tu3](/images/GRE/36/Graph3.png)

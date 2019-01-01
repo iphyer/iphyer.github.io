@@ -1,0 +1,209 @@
+---
+layout: post
+title: "doctest使用记录"
+date: 2017-03-22 23:56
+comments: true
+categories: Python
+---
+##起源
+
+最近刚刚刷完了 Coursea 一门公开课，感觉收货很大，推荐下这门课，Learn to Program: Crafting Quality Code。
+
+![Learn to Program: Crafting Quality Code](/images/doctest/learn.png)
+
+这门课从名字就能看出来并不是为 Python 基础入门而准备的，相反这门课是为大家进一步提高自己的编程能力而开设的。在5周的课程中，重点在于如何写出清晰，可用，健壮的程序。
+
+这篇博客不细细介绍这门课程，推荐大家自行学习，这里总结下我觉得收货最大的一个地方，认识了 doctest这个非常好用的 Python 测试架构。
+
+所有的 code 基于 Python3。
+
+
+<!--more-->
+
+##使用 doctest 的背景
+
+这里我简单介绍下 doctest 的使用背景。如果脱离了使用场景和程序的背景，独立地评价某个程序的优劣是非常偏颇的。
+
+正常我们编写程序，都会先总结出某个需求，然后设计数据结构并构思算法，甚至可能画出 UML 图，流程图来总结自己的想法。
+
+在这个过程中，最重要的就是抽象出每一个功能模块的输入和输出，不考虑具体的模块内部设计，输入输出是你在整体把握程序时最重要的参考。
+
+doctest 正是利用这个过程进行代码测试的工作。所以要体会到 doctest 的先进性，首先，必须明确你的代码设计过程是符合上述流程的。当然上述流程是绝大多数程序员喜欢的过程，也是绝大多数场景下推荐的(肯定存在特例，比如你的主要工作是接手别人的代码，ORZ)。既然我们在设计每个程序模块的时候都会规定好输入和输出，何不用这些规定来做程序测试？甚至进一步，这些测试能不能用来展示程序的用法呢？
+
+#doctest
+
+根据官方文档的介绍 doctest 的目的是:
+
+> The doctest module searches for pieces of text that look like interactive Python sessions, and then executes those sessions to verify that they work exactly as shown. There are several common ways to use doctest:
+
+> * To check that a module’s docstrings are up-to-date by verifying that all interactive examples still work as documented.
+> * To perform regression testing by verifying that interactive examples from a test file or a test object work as expected.
+> * To write tutorial documentation for a package, liberally illustrated with input-output examples. Depending on whether the examples or the expository text are emphasized, this has the flavor of “literate testing” or “executable documentation”.
+
+
+## 示例
+
+Talk is Cheap, show me the code.
+
+这里直接举 doctest 官方文档中的例子，方便大家理解。
+
+<pre style='color:#55cc66;background:#001800;'><span style='color:#b96969; '>"""</span>
+<span style='color:#b96969; '>This is the "example" module.</span>
+<span style='color:#b96969; '></span>
+<span style='color:#b96969; '>The example module supplies one function, factorial().  For example,</span>
+<span style='color:#b96969; '></span>
+<span style='color:#b96969; '>>>> factorial(5)</span>
+<span style='color:#b96969; '>120</span>
+<span style='color:#b96969; '>"""</span>
+
+<span style='color:#508050; font-weight:bold; '>def</span> factorial<span style='color:#808030; '>(</span>n<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+    <span style='color:#b96969; '>"""Return the factorial of n, an exact integer >= 0.</span>
+<span style='color:#b96969; '></span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;>>> [factorial(n) for n in range(6)]</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;[1, 1, 2, 6, 24, 120]</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;>>> factorial(30)</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;265252859812191058636308480000000</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;>>> factorial(-1)</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;Traceback (most recent call last):</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;...</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;ValueError: n must be >= 0</span>
+<span style='color:#b96969; '></span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;Factorials of floats are OK, but the float must be an exact integer:</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;>>> factorial(30.1)</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;Traceback (most recent call last):</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;...</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;ValueError: n must be exact integer</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;>>> factorial(30.0)</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;265252859812191058636308480000000</span>
+<span style='color:#b96969; '></span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;It must also not be ridiculously large:</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;>>> factorial(1e100)</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;Traceback (most recent call last):</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;...</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;OverflowError: n too large</span>
+<span style='color:#b96969; '>&#xa0;&#xa0;&#xa0;&#xa0;"""</span>
+
+    <span style='color:#508050; font-weight:bold; '>import</span> math
+    <span style='color:#508050; font-weight:bold; '>if</span> <span style='color:#508050; font-weight:bold; '>not</span> n <span style='color:#44aadd; '>>=</span> <span style='color:#778c77; '>0</span><span style='color:#808030; '>:</span>
+        <span style='color:#508050; font-weight:bold; '>raise</span> <span style='color:#477766; '>ValueError</span><span style='color:#808030; '>(</span><span style='color:#cc5555; '>"n must be >= 0"</span><span style='color:#808030; '>)</span>
+    <span style='color:#508050; font-weight:bold; '>if</span> math<span style='color:#808030; '>.</span>floor<span style='color:#808030; '>(</span>n<span style='color:#808030; '>)</span> <span style='color:#44aadd; '>!=</span> n<span style='color:#808030; '>:</span>
+        <span style='color:#508050; font-weight:bold; '>raise</span> <span style='color:#477766; '>ValueError</span><span style='color:#808030; '>(</span><span style='color:#cc5555; '>"n must be exact integer"</span><span style='color:#808030; '>)</span>
+    <span style='color:#508050; font-weight:bold; '>if</span> n<span style='color:#44aadd; '>+</span><span style='color:#778c77; '>1</span> <span style='color:#44aadd; '>==</span> n<span style='color:#808030; '>:</span>  <span style='color:#b96969; '># catch a value like 1e300</span>
+        <span style='color:#508050; font-weight:bold; '>raise</span> <span style='color:#477766; '>OverflowError</span><span style='color:#808030; '>(</span><span style='color:#cc5555; '>"n too large"</span><span style='color:#808030; '>)</span>
+    result <span style='color:#808030; '>=</span> <span style='color:#778c77; '>1</span>
+    factor <span style='color:#808030; '>=</span> <span style='color:#778c77; '>2</span>
+    <span style='color:#508050; font-weight:bold; '>while</span> factor <span style='color:#44aadd; '>&lt;=</span> n<span style='color:#808030; '>:</span>
+        result <span style='color:#44aadd; '>*</span><span style='color:#808030; '>=</span> factor
+        factor <span style='color:#44aadd; '>+</span><span style='color:#808030; '>=</span> <span style='color:#778c77; '>1</span>
+    <span style='color:#508050; font-weight:bold; '>return</span> result
+
+
+<span style='color:#508050; font-weight:bold; '>if</span> <span style='color:#477766; '>__name__</span> <span style='color:#44aadd; '>==</span> <span style='color:#cc5555; '>"__main__"</span><span style='color:#808030; '>:</span>
+    <span style='color:#508050; font-weight:bold; '>import</span> doctest
+    doctest<span style='color:#808030; '>.</span>testmod<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+</pre>
+
+上面的 code 就是 Python 代码，设代码存在`example.py`文件中。
+
+代码的功能就是返回所有正整数的阶乘。
+
+现在就可以在 terminal 使用如下方法调用该文件:
+
+<pre style='color:#55cc66;background:#001800;'>python example<span style='color:#808030; '>.</span>py
+</pre>
+
+会发现没有任何异常输出，这表示代码在注释中所有的测试都通过，所以不显示输出。
+
+如果觉得不直观，可以添加如下的参数，再运行:
+
+<pre style='color:#55cc66;background:#001800;'><span style='color:#44aadd; '>>></span><span style='color:#44aadd; '>></span>python example<span style='color:#808030; '>.</span>py <span style='color:#44aadd; '>-</span>v
+Trying<span style='color:#808030; '>:</span>
+    factorial<span style='color:#808030; '>(</span><span style='color:#778c77; '>5</span><span style='color:#808030; '>)</span>
+Expecting<span style='color:#808030; '>:</span>
+    <span style='color:#778c77; '>120</span>
+ok
+Trying<span style='color:#808030; '>:</span>
+    <span style='color:#808030; '>[</span>factorial<span style='color:#808030; '>(</span>n<span style='color:#808030; '>)</span> <span style='color:#508050; font-weight:bold; '>for</span> n <span style='color:#508050; font-weight:bold; '>in</span> <span style='color:#400000; '>range</span><span style='color:#808030; '>(</span><span style='color:#778c77; '>6</span><span style='color:#808030; '>)</span><span style='color:#808030; '>]</span>
+Expecting<span style='color:#808030; '>:</span>
+    <span style='color:#808030; '>[</span><span style='color:#778c77; '>1</span><span style='color:#808030; '>,</span> <span style='color:#778c77; '>1</span><span style='color:#808030; '>,</span> <span style='color:#778c77; '>2</span><span style='color:#808030; '>,</span> <span style='color:#778c77; '>6</span><span style='color:#808030; '>,</span> <span style='color:#778c77; '>24</span><span style='color:#808030; '>,</span> <span style='color:#778c77; '>120</span><span style='color:#808030; '>]</span>
+ok
+Trying<span style='color:#808030; '>:</span>
+    factorial<span style='color:#808030; '>(</span><span style='color:#778c77; '>30</span><span style='color:#808030; '>)</span>
+Expecting<span style='color:#808030; '>:</span>
+    <span style='color:#778c77; '>265252859812191058636308480000000</span>
+ok
+Trying<span style='color:#808030; '>:</span>
+    factorial<span style='color:#808030; '>(</span><span style='color:#44aadd; '>-</span><span style='color:#778c77; '>1</span><span style='color:#808030; '>)</span>
+Expecting<span style='color:#808030; '>:</span>
+    Traceback <span style='color:#808030; '>(</span>most recent call last<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+        <span style='color:#808030; '>.</span><span style='color:#808030; '>.</span><span style='color:#808030; '>.</span>
+    <span style='color:#477766; '>ValueError</span><span style='color:#808030; '>:</span> n must be <span style='color:#44aadd; '>>=</span> <span style='color:#778c77; '>0</span>
+ok
+Trying<span style='color:#808030; '>:</span>
+    factorial<span style='color:#808030; '>(</span><span style='color:#778c77; '>30.1</span><span style='color:#808030; '>)</span>
+Expecting<span style='color:#808030; '>:</span>
+    Traceback <span style='color:#808030; '>(</span>most recent call last<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+        <span style='color:#808030; '>.</span><span style='color:#808030; '>.</span><span style='color:#808030; '>.</span>
+    <span style='color:#477766; '>ValueError</span><span style='color:#808030; '>:</span> n must be exact integer
+ok
+Trying<span style='color:#808030; '>:</span>
+    factorial<span style='color:#808030; '>(</span><span style='color:#778c77; '>30.0</span><span style='color:#808030; '>)</span>
+Expecting<span style='color:#808030; '>:</span>
+    <span style='color:#778c77; '>265252859812191058636308480000000</span>
+ok
+Trying<span style='color:#808030; '>:</span>
+    factorial<span style='color:#808030; '>(</span><span style='color:#778c77; '>1</span><span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>e100</span><span style='color:#808030; '>)</span>
+Expecting<span style='color:#808030; '>:</span>
+    Traceback <span style='color:#808030; '>(</span>most recent call last<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+        <span style='color:#808030; '>.</span><span style='color:#808030; '>.</span><span style='color:#808030; '>.</span>
+    <span style='color:#477766; '>OverflowError</span><span style='color:#808030; '>:</span> n too large
+ok
+<span style='color:#778c77; '>2</span> items passed <span style='color:#400000; '>all</span> tests<span style='color:#808030; '>:</span>
+   <span style='color:#778c77; '>1</span> tests <span style='color:#508050; font-weight:bold; '>in</span> __main__
+   <span style='color:#778c77; '>6</span> tests <span style='color:#508050; font-weight:bold; '>in</span> __main__<span style='color:#808030; '>.</span>factorial
+<span style='color:#778c77; '>7</span> tests <span style='color:#508050; font-weight:bold; '>in</span> <span style='color:#778c77; '>2</span> items<span style='color:#808030; '>.</span>
+<span style='color:#778c77; '>7</span> passed <span style='color:#508050; font-weight:bold; '>and</span> <span style='color:#778c77; '>0</span> failed<span style='color:#808030; '>.</span>
+Test passed<span style='color:#808030; '>.</span>
+</pre>
+
+`-v`表示显示详细信息。最后的总与信息也是非常有用的，可以帮助具体判断。
+
+当然，在这个例子中，更加值得探讨的是哪些例子是比较好的测试用例，针对这些测试用例有什么比较好的方法来检测。不过这是另外一个话题就不在这儿讨论了。当然你也可以看 doctest 自己的检测方法，如何 eat you own shit 的方法实现测试。具体网址 [Test script for doctest.](https://svn.python.org/projects/python/trunk/Lib/test/test_doctest.py)
+
+## 讨论
+
+### 测试文件
+
+虽然，我很喜欢把测试文件写在源程序中，这样往往让程序比较臃肿，所以 doctest 还可以把测试语句写在文件中，比如这样:
+
+<pre style='color:#55cc66;background:#001800;'>The <span style='color:#808030; '>`</span><span style='color:#808030; '>`</span>example<span style='color:#808030; '>`</span><span style='color:#808030; '>`</span> module
+<span style='color:#44aadd; '>==</span><span style='color:#44aadd; '>==</span><span style='color:#44aadd; '>==</span><span style='color:#44aadd; '>==</span><span style='color:#44aadd; '>==</span><span style='color:#44aadd; '>==</span><span style='color:#44aadd; '>==</span><span style='color:#44aadd; '>==</span><span style='color:#44aadd; '>==</span><span style='color:#44aadd; '>==</span><span style='color:#44aadd; '>==</span>
+
+Using <span style='color:#808030; '>`</span><span style='color:#808030; '>`</span>factorial<span style='color:#808030; '>`</span><span style='color:#808030; '>`</span>
+<span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span><span style='color:#44aadd; '>-</span>
+
+This <span style='color:#508050; font-weight:bold; '>is</span> an example text <span style='color:#400000; '>file</span> <span style='color:#508050; font-weight:bold; '>in</span> reStructuredText format<span style='color:#808030; '>.</span>  First <span style='color:#508050; font-weight:bold; '>import</span>
+<span style='color:#808030; '>`</span><span style='color:#808030; '>`</span>factorial<span style='color:#808030; '>`</span><span style='color:#808030; '>`</span> <span style='color:#508050; font-weight:bold; '>from</span> the <span style='color:#808030; '>`</span><span style='color:#808030; '>`</span>example<span style='color:#808030; '>`</span><span style='color:#808030; '>`</span> module<span style='color:#808030; '>:</span>
+
+    <span style='color:#44aadd; '>>></span><span style='color:#44aadd; '>></span> <span style='color:#508050; font-weight:bold; '>from</span> example <span style='color:#508050; font-weight:bold; '>import</span> factorial
+
+Now use it<span style='color:#808030; '>:</span>
+
+    <span style='color:#44aadd; '>>></span><span style='color:#44aadd; '>></span> factorial<span style='color:#808030; '>(</span><span style='color:#778c77; '>6</span><span style='color:#808030; '>)</span>
+    <span style='color:#778c77; '>120</span>
+</pre>
+
+设文件存为 `example.txt`， 那么在 `main` 中的调用就是
+
+<pre style='color:#55cc66;background:#001800;'><span style='color:#508050; font-weight:bold; '>import</span> doctest
+doctest<span style='color:#808030; '>.</span>testfile<span style='color:#808030; '>(</span><span style='color:#cc5555; '>"example.txt"</span><span style='color:#808030; '>)</span>
+</pre>
+
+ `testfile()`方法可以实现从文件中测试的目的。
+
+# 总结
+
+这是一篇简短的介绍，本身 doctest 包就非短小精悍，具体的细节可以参考官方文档. [ doctest — Test interactive Python examples](https://docs.python.org/3.3/library/doctest.html) 
+
+当然对于大型的项目，可能更加适合的使用的是 `unittest` 这样的测试框架而不是 doctest。这也是为什么在 MOOC 中又介绍 `unittest` 的原因。
+

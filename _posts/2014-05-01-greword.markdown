@@ -1,0 +1,130 @@
+---
+layout: post
+title: "GRE单词中的电脑术语"
+date: 2014-05-01 16:05
+comments: true
+categories: GRE
+---
+
+##起因
+
+最近在背GRE单词突然发现这本俞敏洪的单词书中好多的计算机术语。所以留了个心总结了下，这里列出我看到的计算机单词，一般能够打动我的单词才选入。有些单词大家用的特别多了比如简单的几个表示动作的单词就不列出了，比如edit什么的。
+
+我使用的是2008年9月第8版的红宝书，这本书是2010年3月第18次印刷的。所以是针对旧GRE考试的，单元数也多一点50个list，新的红宝书可能删减掉了一些单词，没做过统计。所以这里是针对这个特定版本的统计。
+
+同时因为个人的兴趣原因，这里的概念肯定有所偏差，大家看的时候可能也会得出不同的单词列表，如果你有发现，请告诉我，我会及时增补的。这里也是抛砖引玉，主要是督促自己好好背单词，也是回击那些说GRE单词你一辈子用不到的人的说法的。具体想法放在最后一节，写在最后的话。
+
+<!--more-->
+
+##单词列表
+
+您也可以在这里下载到一份xls的版本文件，使用WPS for Linux制作。[GREandComputer](/upload/files/GREandComputer.xls)
+
+2014.5.7号更新几个新见到的单词。
+
+格式：单词 + 页码 + 红宝书解释 + 计算机术语意思 + 链接 +  评价
+
+    	
+         标号   	单词	页码	红宝书释义	计算机术语释义	链接	评价
+	       	1.	adobe	11	泥砖，土坯	Adobe公司	www.adobe.com/cn/‎	开发PDF，Photoshop,Lightroom的图像巨人
+		2.	agile	16	敏捷的	敏捷开发		
+		3.	alias	17	化名，别名	Shell中的一个命令		非常适合把记不住的命令化为简写
+		4.	audacious	40	大胆无畏的	audacity是一个常用的音频编辑软件	http://audacity.sourceforge.net	
+		5	batch	47	一批，一炉	批量处理		如果你想批量处理，请用这个单词google
+		6	bazaar	47	集市，商店集中区	GNU有一个版本控制项目叫bazaar	http://bazaar.canonical.com/en/	可能你和我一样更加熟悉的是The Cathedral and the Bazaar自由软件的模式宣言
+		7	bin	52	大箱子	回收站叫trash bin；你的可执行程序往往在/bin目录		
+		8	boost	56	往上推，增加	Boost C++ Libraries	http://www.boost.org/	
+		9	cache	62	贮藏处，藏于某处	缓存		
+		10	calibrate	63	量口径，校准	本义当然计算机用的很多，如校准显示器等。Calibre也是一个电子书管理软件	http://calibre-ebook.com/	用Kindle的一定深有体会
+		11	clipper	80	大剪刀，快速帆船	很多软件，如Evernote都有clipper这个插件Evernote Web Clipper 	http://evernote.com/intl/zh-cn/webclipper/	
+		12	compile	88	汇集，编辑	编译		
+		13	crack	110	裂缝，破裂，裂开	破解		
+		14	deluge	123	大洪水，暴雨	BitTorrent 客户端软件	http://deluge-torrent.org/	
+		15	derivative	128	派生的，无创意的	Linux的很多著名软件都有派生版就叫derivative	http://www.ubuntu.com/about/about-ubuntu/derivatives	
+		16	discard	135	扔掉，抛弃	保存选择的时候，取消这个选项的英文		
+		17	doodle	147	胡画，混时间	Google Doodle	http://www.google.com/doodles/	
+		18	neumerate	164	列举，枚举	一种语言机制；Latex的一种列表环境	http://www.pythonclub.org/python-basic/built-in	
+		19	epilogue	165	收场白，尾声	很多计算机书后面喜欢接的一个部分		
+		20	evince	171	表明，表示	PDF，PostScript，DjVu，TIFF与DVI文档查看工具	http://sourceforge.net/projects/evince.mirror/	
+		21	execute	173	执行；履行；将某人处死	exe的由来		
+		22	feature	183	特色、特点	一般下载一个软件前先看看网页的feature部分，需求驱动安装		
+		23	folder	190	文件夹，纸夹	文件夹		
+		24	gadget	198	小工具，小机械	win7下有一个很方便的工具就是gadget，linux下也有		
+		25	galaxy	198	星群，显赫的人	三星的著名手机品牌		
+		26	gem	201	宝石，珠宝，精华	RubyGems	https://rubygems.org/	
+		27	glossary	205	词汇表，难词表	很多计算机书和网站后面有个index的部分有时候也叫做glossary	www.lpi.org/linux-certifications/glossary‎	
+		28	hack	212	乱劈，乱砍；雇佣文人	hacker是一种精神		
+		29	hyphen	223	连字符	即A-B中的-		
+		30	idle	225	无所事事；懒散的	Python自带的IDE	http://en.wikipedia.org/wiki/IDLE_(Python)	
+		31	install	247	安装，使就职	安装		
+		32	kernel	261	果仁；核心	Linus发布的Linux其实专指的应该是kernel	https://www.kernel.org/	
+		33	kindle	261	着火，点燃	看书神器	http://zh.wikipedia.org/wiki/Kindle	
+		34	knit	261	编织	R语言动态生成报告的包，大神谢益辉的作品 	http://yihui.name/knitr/	
+		35	license	267	放肆，自由；许可证，执照	最著名的许可证可能就是GPL了	http://en.wikipedia.org/wiki/GNU_General_Public_License	
+		36	log	270	日志，记录；一段木头，圆木	日志文件分析是常用的工具和手段		
+		37	maintenance	275	维护，维护	软件维护，运维		
+		38	maple	277	枫树	计算机代数系统		
+		39	maverick	279	想法与众不同的人	OS X Mavericks	http://en.wikipedia.org/wiki/OS_X_Mavericks	Mavericks是加州的⼀处冲浪圣地，其实这个词在计算机中还是很多的，参见wiki： http://en.wikipedia.org/wiki/Maverick
+		40	mint	286	薄荷糖；大量；造币厂	Linux Mint	www.linuxmint.com/‎ 	
+		41	mute	294	沉默，减弱声音	音量调节功能		
+		42	oath	301	誓言，咒骂	安全认证系统	http://www.openauthentication.org/	
+		43	objective	302	客观的，目标的	OOP，Objective-C.etc		面向对象却是是一大主流
+		44	oracle	307	代神发布神谕的人	甲骨文公司	http://www.oracle.com/index.html	Java，virtualbox，基本绕不开的甲骨文
+		45	orient	308	确定方向，使熟悉	Object-oriented programming的第二个O		
+		46	original	308	最初的，原始的；有创意的	originlab是常用的画图软件，功能强大	http://www.originlab.com/	
+		47	palette	314	调色板	调色板		
+		48	patch	319	补丁；一小片	所谓的打补丁就是patch	http://en.wikipedia.org/wiki/Patch_(Unix)	
+		49	pirate	331	海盗	Pirate Bay	http://thepiratebay.se/	
+		50	prime	345	全盛时期，最初的，最好的	C++ Primer所以其实有两层含义		
+		51	protocol	352	外交礼节；协议；草案	Http，Ftp中的P		
+		52	scheme	389	阴谋；体系，结构	Scheme language，Lisp两种主要的方言之一	http://zh.wikipedia.org/wiki/Scheme	
+		53	shell	396	贝壳，炮弹；剥去弹壳	命令行界面的解析器，bash	http://zh.wikipedia.org/wiki/Shell	
+		54	sober	403	清醒的；庄严地	Sobel边缘检测算法，Sobel operator	http://en.wikipedia.org/wiki/Sobel_operator%E2%80%8E	
+		55	sublime	419	崇高的	Sublime Text	http://www.sublimetext.com/	我没用过这个编辑器，但是可以看到很多人很推荐。我还是喜欢Geany
+		56	terminal	435	末端的；终端的	电脑终端，所谓的命令行操作一般都在terminal中进行	http://zh.wikipedia.org/wiki/Terminal	
+		57	tinker	438	补锅工人；拙劣修补	Tinker 本身是一个分子动力学模拟软件	http://en.wikipedia.org/wiki/Tinker_(software)	
+		58	torrent	455	洪流，急流	BitTorrent		
+		59	upgrade	455	提升，升级	升级		
+		60	valve	457	活门，阀门	Valve Software，半条命的开发公司	www.valvesoftware.com	
+		61	virtual	462	实质上的，实际上的	virtualbox	https://www.virtualbox.org/	
+		62	virus	463	病毒	病毒		
+		63	vista	463	远景，展望	Windows Vista	http://zh.wikipedia.org/zh-cn/Windows_Vista%E2%80%8E	
+		64	void	464	空的，空隙	void 函数		
+		65	warehouse	466	仓库，货栈	Date Warehouse，数据仓库，大数据之前往往说Date Warehouse	http://en.wikipedia.org/wiki/Data_warehouse	
+		66	warranty	467	正当理由，许可证	 WITHOUT ANY WARRANTY	http://www.gnu.org/licenses/gpl-2.0.html	这是在自由软件中经常可以看到的语句而且一般大写，详情参考GPL网站说明How to Apply These Terms to Your New Programs
+		67	azure	477	天蓝色，蔚蓝的	Microsoft Azur云平台	http://azure.microsoft.com/zh-cn/	
+		68	browse	482	吃嫩叶的，浏览	browser就是浏览器		
+		69	buffer	483	缓冲	缓冲		
+		70	dock	501	剪短，扣除一部分工资	图形用户界面中用于启动、切换运行中的应用程序的一种功能界面	http://zh.wikipedia.org/wiki/Dock	其实我在思考这个是不是用了剪短这个意思？剪短程序启动过程？
+		71	encyclopedia	503	百科全书	Wikipedia就是一个encyclopedia		
+		72	flick	511	轻打，轻弹	flickr图片分享	https://www.flickr.com/	
+		73	gnome	515	地精；格言	桌面环境一种	http://www.gnome.org/	说实话真的不知道gnome这个首字母缩写词是不是特地赶这个巧合的
+		74	postscript	542	附言，后记	用于电子产业和桌面出版领域的一种页面描述语言和编程语言	http://zh.wikipedia.org/wiki/PostScript	就是Latex常见到ps格式文件
+		75	query	545	质疑，疑问，询问	Structured Query Language		
+		76	repository	547	储藏室，仓库	我们常用更新的源地址其实就是一个repository	https://help.ubuntu.com/community/Repositories/Ubuntu	
+		77	sage	550	智慧	基于python的开源数学软件	http://www.sagemath.org/zh/	
+		78	studio	559	工作室，画室	VS是MS的著名产品，其实还有很多的studio如TexStudio等等		
+		79	verbatim	566	逐字的，照字面的	latex的逐字照排环境	http://people.oregonstate.edu/~peterseb/tex/samples/verbatim-environment.html	
+		80	vim	567	精力，活力	编辑器之神	www.vim.org/‎ 	
+
+
+##写在最后的话
+
+其实这里我想说明的是这样一个道理——你为什么要背GRE单词。
+
+GRE单词是美国有文化的人常用的词汇汇总，是非常值得仔细学习的。参见这个生活大爆炸中Leonard 形容 Sheldon的词汇腹语者ventriloquist。 
+
+![tu2](/images/GRE/ventriloquist.png)
+
+世界上有两种人，一种人背过GRE单词，另外一种人没有背过GRE单词。其实GRE单词真的是美国受过高等教育的人惯常使用的单词，你如果只是去超市买个鸡蛋，买瓶水估计还真是用不到GRE单词。但是如果你希望进入上流社会，学习到新的文化知识那么你必须背会GRE单词。据说单词量是和收入成正比的。[A Wealth of Words](http://www.city-journal.org/2013/23_1_vocabulary.html)
+
+> So there’s a positive correlation between a student’s vocabulary size in grade 12, the likelihood that she will graduate from college, and her future level of income. The reason is clear: vocabulary size is a convenient proxy for a whole range of educational attainments and abilities—not just skill in reading, writing, listening, and speaking but also general knowledge of science, history, and the arts.
+
+其实你如果去看那些诺贝尔物理学奖获得者的演讲论文，他们也很多的时候使用了很多的词语，比如serendipity这个词，我至少看到P.W.安德森，W.Kohn在他们的文章中用过而不是所谓的创新innovation这些简单的词。
+
+>Of course, vocabulary isn’t perfectly correlated with knowledge. People with similar vocabulary sizes may vary significantly in their talent and in the depth of their understanding. Nonetheless, there’s no better index to accumulated knowledge and general competence than the size of a person’s vocabulary. Simply put: knowing more words makes you smarter. And between 1962 and the present, a big segment of the American population began knowing fewer words, getting less smart, and becoming demonstrably less able to earn a high income.
+
+当然这篇文章作者说大量背单词其实是没有效果，但是注意作者说的是美国人。作为一个中国人其实你不得不向背诵单词，架起一座连接中英文的桥梁来。这个也是没有办法的办法吧。不过最终掌握这些单词确实如作者所说的，还要到文字中去。
+
+其实罗嗦了这么多也就一句话大家好好背单词啊！
+

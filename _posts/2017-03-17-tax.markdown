@@ -1,0 +1,73 @@
+---
+layout: post
+title: "报税总结"
+date: 2017-03-17 00:07
+comments: true
+categories: 美国生活 
+---
+
+#前言
+
+花了不少时间，终于今天下午把税报完了。
+
+写篇日记总结下，这个过程确实是和国内有很大的区别，在国内基本没有经历过报税，结果来了美国发现报税是一个基本的的过程。
+
+<!--more-->
+
+
+#必要性
+首先只要你在美国你就少不了必须纳税，其次，纳税是你在美国政府那儿的正式记录文件。看看川普选举就知道了，除了川普大部分的候选人都是要全部公开自己的纳税记录和收入数据的。IRS,Internal Revenue Service 也是美国最强大的政府机构之一。
+
+其次，说说纳税这件事。第一个想到的就是当年北美十三州团结起来的抗税事件，“无代表，不交税！”（No Taxation without Representation），这是美国立国的口号。当然背后还是复杂的政治，经济博弈，特别是殖民地和母国之间的博弈，不过纳税确实是美国的基础之一，所以税务之复杂，超乎意料。
+
+学校这次也有专门的workshop帮助你纳税，去参加这些活动还是挺有帮助的，至少知道了整个报税的流程。
+
+#框架
+这里说说框架，首先是明确自己的身份，对于 resident 身份的美国居民，报税那是复杂极了，而且有各种拐弯抹角的优惠或者免税政策。比如，你们家有几个孩子，有几个人工作会极大影响你的税率，当然你的收入也会直接影响税率。孩子多，家庭收入低，政府收的税也会低很多。
+
+再比如，美国政府鼓励大家捐助受到认证的慈善机构。你把自己的旧衣服，旧家具送给这些机构，他们会折价给你一个证明。拿着这个证明，你就可以申请免税了。虽然慈善机构往往会折价比较低，但是毕竟是你不用的东西再循环利用，所以还是划算的。当然这个不论是不是居民都能使用。
+
+再其次，作为非居民的alien，所有的F/J身份都是享受最高税率，报税也是单独的表格和美国居民的表格不同。谁让你是外星人呢？
+
+然后，一个大的要点就是税收要分类。
+
+第一个大类是联邦税，Federal Taxes，这个是联邦政府收的税，要去 IRS，联邦国税局报税。联邦收税一般都比较简单，作为合众国的特点，联邦的收税其实就那么几个类别，被限制了很多。同时，中国政府和美国政府有税收协议，Tax Treaties，涉及到大陆学生的主要是，1984年里根总统和中国政府签订的协议，对于学生主要是每年收入的前5000刀免税。具体的在IRS都能查到，[China - Tax Treaty Documents](https://www.irs.gov/pub/irs-trty/china.pdf)。
+
+> The Government of the United States of America and the Government of the People's Republic of China,
+ Desiring to conclude an Agreement for the avoidance of double taxation and the prevention of tax evasion with
+respect to taxes on income
+
+第二个大类是州税，State Taxes，这个就各个州都有不同，五花八门，各个州有不同州政策。类似国内的地税，一般要去当地的税务部分报税和说明。Wisconsin州就是DOR， [Wisconsin Department of Revenue](https://www.revenue.wi.gov/Pages/home.aspx)，填写1NPR,Wisconsin Income Tax for Nonresidents and Part-Year Residents。
+
+#报税记录
+
+##联邦税
+
+联邦税很简单，因为学校基本给每一个外国学生配置了相应的报税软件，主要是确定自己的身份和所在国家与美国的税收协议就行了，大陆学生就是 5000刀免税。
+
+比如我们学校提供的GTP,就是报税软件之一，基本上一路点下去确定信息正确即可。
+
+
+![UStax](/images/tax/US.png)
+
+然后把生成的表格，打印，签字寄回去，比如我这个表格就提示需要寄到德克萨斯州奥斯汀市。
+
+##州税
+
+州税就复杂多了，也讲究多了，我就参加了学校的讲座然后，还是需要请教下同学才报完。比如，展示下有多少可以抵扣税的选项：
+
+
+![StateTax](/images/tax/state.PNG)
+
+这儿除了收入还有各种收入记录，比如股票收益，农场收入，赡养老人支出(alimony),做生意收入等等。合计大约有四十多项，后面各种慈善组织的抵扣款也是。
+
+当然作为外星人(non-resident alien),大部分看看就好，和你没什么关系。。。
+
+你只需要按照 1 的系数算各项扣税就可，因为你不是居民。
+
+可以参考这个帖子[Tax, i Think](http://leeaccountant.blogspot.com/2015/03/wisconsin-state-tax-1npr.html#more)。 blogspot的博客，估计国内会404。
+
+然后报完税，直接把联邦税收部分附件到1NPR里面即可，这也是为什么必须要用 Adobe Reader的原因。然后可以直接电子提交比联邦政府的税收都要高效。
+
+#总结
+这次报税终于结束了。因为收入只有半年，太低，所以在联邦和州税都是低保水平。。。政府给退税，一般两周会退回你填的卡号。

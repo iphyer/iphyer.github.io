@@ -1,0 +1,138 @@
+---
+layout: post
+title: "更好的随机数生成总结"
+date: 2016-07-09 22:42
+comments: true
+categories: 科研
+---
+
+#起因
+
+最近因为任务需要使用了下北大的计算资源结果很 bug 的发现，北大的作业调度系统居然是全局任务调度的——也就是如果你在计算节点假设20 个CPU 你提交20个 RUN 这个程序不是你提交了就立刻运行，而是你运行完提交脚本后，整体的计算中心提交作业的。这个倒不是特别让人吃惊也算是并行的时候的良方但是对于我这样的单CPU进程然后多计算结果平均的任务就不适合了。
+
+最主要的问题是它居然是同一时间提交作业的！
+
+Are you kiding me ?
+
+众所周知，计算机的随机数产生往往要依赖于提交运行时间( 真是伟大的想法如何在确定性中引入随机性 )。但是北大这个作业系统就会导致我的同一节点 20 个 RUN 居然是一样的～！
+
+<!--more-->
+
+#物理背景
+
+我这里讲下我希望的计算过程，因为这个过程必须接合物理本质来理解。
+
+我计算的是这样一个模型，以力$F_t$为例，t代表时间。假设力由如下两部分构成
+
+
+ $$ F_t = F_{fix} + F_{random} $$ 
+
+我们可以预期的这是一个随机力和有固定趋势的力的接合,对应的物理背景考虑下布朗运动加上定下外场或者驱动力下的运动。
+
+布朗运动导致的随机力在纳米尺度是难以消除的，但是如果对于上述力做多个 RUN 的平均则往往还是可以得到期望的平均值 $F_{fix}$ 的。
+
+这个就是我期望计算的模型。
+
+我希望的计算过程如下，
+
+
+ $$ \sum_{i}  F_{t,i} = \sum_{i}  F_{fix,i} + \sum_i  F_{random,i} $$  
+
+可以预期的是$\sum_i F_{random,i} = 0$， i 足够大的时候。
+
+所以我们通过这个方法可以实现对于微小趋势力的提取。事实上，在纳米尺度如果能够不借助外场等手段实现这样的趋势力是很了不起的。
+
+#解决方法
+
+当然我们不能因为北大的作业调度是为了并行做的优化就不算了。所以还是需要计算的。
+
+具体的方法是这样，因为是时间种子的问题，所以集中解决的问题就是时间种子。
+
+原来用的时间种子是直接简单利用 `time.h` 提供的时间函数，这是用的系统当前时间而且是分辨率到秒的时间。事实上，操作系统是提供精确到毫秒量级的时间。
+
+所以即使在秒这个量级没有差异的北大作业系统在毫秒量级还是有差异的，当然这一点是我验证之后才能保证的。
+
+那么怎么才能保证一定是独立的没有可能相同的时间种子呢？
+
+这个问题，抽象而言就是给每一个进程赋予一个各不相同的数字。
+
+这样的话，其实这个问题已经解决了。每个进程在 Linux 系统下是有不同的 PID 号的。如果在时间随机数的基础上再加上 PID 号码那就非常完美了。即使出现那种同一个毫秒提交的情况(我觉得这个可能很小，即使是同时提交在 CPU 中运行也应该是一个个提交的，除非你的提交脚本是并行的。)
+
+当然这个问题已经在 Linux 中完美解决了。
+
+上具体的代码：
+
+```c
+
+/*
+ * test.c
+ *
+ * Copyright 2016 iphyer <iphyer@163.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ * MA 02110-1301, USA.
+ *
+ *
+ */
+
+
+#include <stdio.h>
+#include<unistd.h>
+#include<time.h>
+
+int main(int argc, char **argv)
+{
+	/* new setup of time*/
+	struct timespec tnow;
+	time_t tt;
+	// clock_gettime(CLOCK_MONOTONIC, &ts); // Works on FreeBSD
+	clock_gettime(CLOCK_REALTIME,&tnow); // Works on Linux
+	
+	
+	tt = tnow.tv_sec + (time_t)(tnow.tv_nsec); 
+	
+	int nseed;
+    nseed= (unsigned)(tt) + (unsigned)(getpid());//time(NULL);
+
+
+	printf("time in ms : %d \n",(unsigned)(tt));
+	printf("pid=%d \n",getpid());
+	printf("PID + time(ms) = %d \n",nseed);
+	return 0;
+}
+
+```
+
+`#include<unistd.h>` 中的 unistd.h 值得仔细说一说。
+
+>unistd.h 是 C 和 C++ 程序设计语言中提供对 POSIX 操作系统 API 的访问功能的头文件的名称。是Unix Standard的缩写。该头文件由 POSIX.1 标准（单一UNIX规范的基础）提出，故所有遵循该标准的操作系统和编译器均应提供该头文件（如 Unix 的所有官方版本，包括 Mac OS X、Linux 等）。
+
+>对于类 Unix 系统，unistd.h 中所定义的接口通常都是大量针对系统调用的封装（英语：wrapper functions），如 fork、pipe 以及各种 I/O 原语（read、write、close 等等）。
+
+>类似于 Cygwin 和 MinGW 的 Unix 兼容层也提供相应版本的 unistd.h。
+
+> 来自：[维基百科unistd.h](https://zh.wikipedia.org/wiki/Unistd.h)
+ 
+这是一个非常好的头文件，可以说非常值得仔细研究。
+
+#总结
+
+这个问题其实不大，归根到底是这样一个问题。在粗略的时间统计无法胜任的时候我们使用更加高分辨率的时间计数。同时引入操作系统级别的操作，增加更多的不同。
+
+当然在使用这个之前，我都是在没有同意调度的服务器使用人工每隔一定的时间提交，这样认为引入时间不确定性。虽然这是可以的，但是还是不如这个方法好。这个方法中使用 PID 保证了在操作系统级别不可能出现相同的时间种子从而导致相同的随机数出现。
+
+当然如何评价随机数生成函数的优劣是一个更加深刻的问题，远远不是一篇博客能够解释清楚的。
+
+随机数产生函数的优劣直接导致了最后很多物理问题求解的优劣，特别是在蒙特卡洛模拟中。所以如果想更深入地了解相关知识，请参考相关的专著。

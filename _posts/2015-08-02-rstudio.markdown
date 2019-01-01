@@ -1,0 +1,40 @@
+---
+layout: post
+title: "Rstudio修改默认library安装位置"
+date: 2015-08-02 00:38
+comments: true
+categories: R
+---
+#目标
+
+主要是在清理Linux的home目录，之前使用 Rstudio 一直会在home目录下建立一个安装library的文件，功能也很单一。但是一直也没找到什么好的修改方法。
+
+今天晚上查阅了下，修改成功，特此记录。
+
+<!--more-->
+
+#方法
+
+其实很简单R的`libPaths()`命令记录了安装library的位置，但是具体这个信息记录在何处呢？
+
+查找下在`/usr/lib/R/etc/`下的`Renviron`文件中。找到这一行
+
+```
+
+R_LIBS_SITE=${R_LIBS_SITE-'/home/XXX/Archive/software/R/x86_64-pc-linux-gnu-library/3.0/:/usr/local/lib/R/site-library:/usr/lib/R/site-library:/usr/lib/R/library'}
+
+```
+当然上面包含XXX的路径修改成你希望的存储目录即可。
+
+修改之后的再次在R中运行`libPaths()`命令的结果是:
+
+```
+> .libPaths()
+[1] "/home/XXX/Archive/software/R/x86_64-pc-linux-gnu-library/3.0"
+[2] "/usr/local/lib/R/site-library"                                  
+[3] "/usr/lib/R/site-library"                                        
+[4] "/usr/lib/R/library"    
+
+
+```
+

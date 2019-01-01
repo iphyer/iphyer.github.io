@@ -1,0 +1,53 @@
+---
+layout: post
+title: "NCE4-Lesson14仿写练习"
+date: 2014-12-03 15:14
+comments: true
+categories: 英语
+---
+
+#仿写结果
+
+![tu2](/images/NCE/14.png)
+
+<!--more-->
+
+#总结
+
+* Beyond two or three days, the world's best weather forecasts are speculative, and beyond six or seven they are worthless.
+
+用beyond这个词表示提前而不是通常使用的before这样的老套词汇
+
+* The Butterfly Effect is the reason.  
+
+这里需要掌握的就是倒装句的写法——正常语序会削弱表达能力，这个倒装简短易用，非常实用。
+
+* For small pieces of weather -- and to a global forecaster, small can mean thunderstorms and blizzards -- any prediction deteriorates rapidly. 
+
+这里的几个介词用得非常精彩，for,to 这两个词语非常好！
+
+* The modern weather models work with a grid of points of the order of sixty miles apart, and even so, some starting data has to guessed, since ground stations and satellites cannot see everywhere. 
+
+work with a grid of points of the order of 60 miles apart 这个说法适合于科研使用
+
+同时even so 这个语法也非常好很好的把两个句子粘合在一起。
+
+*  But suppose the earth could be covered with sensors spaced one foot apart, rising at one-foot intervals all the way to the top of the atmosphere. Suppose every sensor gives perfectly accurate readings of temperature, pressure, humidity, and any other quantity a meteorologist would want. Precisely at noon an infinitely powerful computer takes all the data and calculates what will happen at each point at 12.01, then 12.02, then 12. 03...
+
+这段话整段背诵，首先是suppose这个词汇的使用，非常精彩。其次，spaced one foot apart, one-foot intervals all the way to the top of atmosphere,后面是我们在计算类模型中经常使用的。
+
+6. The computer will still be unable to predict whether Princeton, New Jersey, will have sun or rain on a day one month away.
+
+one month away 和　beyond one day　异曲同工的使用方法，注意吸收。
+
+* At noon the spaces between the sensors will hide fluctuations that the computer will not know about, tiny deviations from the average. By 12.01, those fluctuations will already have created small errors one foot away. Soon the errors will have multiplied to the ten-foot scale, and so on up to the size of the globe.
+
+这段话也是背诵经典，首先是掩盖这个词使用hide这个词，典型的四两拨千斤，巧妙啊！后面是mutiply to the ten-foot scale, 注意连接词不使用复数。an so on up to这个so on 比什么continue更加生动活泼。
+
+#背诵
+
+<font color="#0000FF">Beyond</font></b></span> <span><b><font color="#0000FF">two</font></b></span> <span><b><font color="#0000FF">or</font></b></span> <span><b><font color="#0000FF">three</font></b></span> <span><b><font color="#0000FF">days, </font></b></span>the world<span><b><font color="#0000FF">'s</font></b></span> <span><b><font color="#0000FF">best</font></b></span> <span><b><font color="#0000FF">weather</font></b></span> <span><b><font color="#0000FF">forecasts</font></b></span> <span><b><font color="#0000FF">are</font></b></span> <span><b><font color="#0000FF">speculative, and</font></b></span> <span><b><font color="#0000FF">beyond</font></b></span> six or seven <span><b><font color="#0000FF">they</font></b></span> <span><b><font color="#0000FF">are worthless.<br />
+    </font></b></span>The <span><b><font color="#0000FF">Butterfly</font></b></span> <span><b><font color="#0000FF">Effect</font></b></span> is the <span><b><font color="#0000FF">reason</font></b></span>. <span><b><font color="#0000FF">For</font></b></span> <span><b><font color="#0000FF">small pieces of</font></b></span> weather<span><b><font color="#0000FF"> -- and</font></b></span> <span><b><font color="#0000FF">to</font></b></span> <span><b><font color="#0000FF">a</font></b></span> <span><b><font color="#0000FF">global</font></b></span> <span><b><font color="#0000FF">forecaster, small</font></b></span> <span><b><font color="#0000FF">can</font></b></span> <span><b><font color="#0000FF">mean</font></b></span> <span><b><font color="#0000FF">thunderstorms</font></b></span> <span><b><font color="#0000FF">and</font></b></span> <span><b><font color="#0000FF">blizzards -- any</font></b></span> <span><b><font color="#0000FF">prediction</font></b></span> <span><b><font color="#0000FF">deteriorates rapidly</font></b></span>. Errors and uncertainties <span><b><font color="#0000FF">multiply, cascading upward</font></b></span> <span><b><font color="#0000FF">through</font></b></span> a <span><b><font color="#0000FF">chain</font></b></span> of turbulent features, from dust devils <span><b><font color="#0000FF">and</font></b></span> squalls up to continent-size eddies that only satellites can see<span><b><font color="#0000FF">.<br />
+    The modern</font></b></span> weather <span><b><font color="#0000FF">models</font></b></span> <span><b><font color="#0000FF">work</font></b></span> <span><b><font color="#0000FF">with</font></b></span> a grid of points of the order of sixty miles apart, and even so, some starting data has to guessed<span><b><font color="#0000FF">, since</font></b></span> ground stations and satellites <span><b><font color="#0000FF">cannot</font></b></span> see everywhere. <span><b><font color="#0000FF">But</font></b></span> <span><b><font color="#0000FF">suppose</font></b></span> <span><b><font color="#0000FF">the</font></b></span> earth <span><b><font color="#0000FF">could</font></b></span> <span><b><font color="#0000FF">be</font></b></span> <span><b><font color="#0000FF">covered</font></b></span> <span><b><font color="#0000FF">with</font></b></span> <span><b><font color="#0000FF">sensors</font></b></span> <span><b><font color="#0000FF">spaced one</font></b></span> foot apart<span><b><font color="#0000FF">, rising</font></b></span> <span><b><font color="#0000FF">at</font></b></span> <span><b><font color="#0000FF">one-foot</font></b></span> <span><b><font color="#0000FF">intervals</font></b></span> <span><b><font color="#0000FF">all</font></b></span> the <span><b><font color="#0000FF">way to the top</font></b></span> of <span><b><font color="#0000FF">the</font></b></span> <span><b><font color="#0000FF">atmosphere</font></b></span>. <span><b><font color="#0000FF">Suppose</font></b></span> every sensor <span><b><font color="#0000FF">gives</font></b></span> <span><b><font color="#0000FF">perfectly</font></b></span> <span><b><font color="#0000FF">accurate</font></b></span> <span><b><font color="#0000FF">readings of</font></b></span> temperature<span><b><font color="#0000FF">, </font></b></span>pressure<span><b><font color="#0000FF">, </font></b></span>humidity, and<span><b><font color="#0000FF"> any</font></b></span> other <span><b><font color="#0000FF">quantity</font></b></span> <span><b><font color="#0000FF">a</font></b></span> <span><b><font color="#0000FF">meteorologist would want</font></b></span>. <span><b><font color="#0000FF">Precisely at</font></b></span> noon<span><b><font color="#0000FF"> an infinitely</font></b></span> powerful <span><b><font color="#0000FF">computer</font></b></span> <span><b><font color="#0000FF">takes</font></b></span> all the data and <span><b><font color="#0000FF">calculates</font></b></span> <span><b><font color="#0000FF">what</font></b></span> <span><b><font color="#0000FF">will</font></b></span> <span><b><font color="#0000FF">happen at each point</font></b></span> at 12<span><b><font color="#0000FF">.</font></b></span>01<span><b><font color="#0000FF">, then </font></b></span>12<span><b><font color="#0000FF">.</font></b></span>02<span><b><font color="#0000FF">, then </font></b></span>12.
+<span><b><font color="#0000FF">03...<br />
+    The</font></b></span> <span><b><font color="#0000FF">computer</font></b></span> <span><b><font color="#0000FF">will</font></b></span> <span><b><font color="#0000FF">still</font></b></span> <span><b><font color="#0000FF">be</font></b></span> <span><b><font color="#0000FF">unable</font></b></span> <span><b><font color="#0000FF">to</font></b></span> <span><b><font color="#0000FF">predict</font></b></span> <span><b><font color="#0000FF">whether</font></b></span> <span><b><font color="#0000FF">Princeton</font></b></span>, <span><b><font color="#0000FF">New</font></b></span> <span><b><font color="#0000FF">Jersey, </font></b></span>will <span><b><font color="#0000FF">have</font></b></span> <span><b><font color="#0000FF">sun</font></b></span> or <span><b><font color="#0000FF">rain</font></b></span> <span><b><font color="#0000FF">on</font></b></span> <span><b><font color="#0000FF">a</font></b></span> <span><b><font color="#0000FF">day one month away</font></b></span>. At noon<span><b><font color="#0000FF"> </font></b></span>the <span><b><font color="#0000FF">spaces</font></b></span> between<span><b><font color="#0000FF"> the</font></b></span> sensors will hide fluctuations that the <span><b><font color="#0000FF">computer</font></b></span> <span><b><font color="#0000FF">will</font></b></span> not know<span><b><font color="#0000FF"> about</font></b></span>, tiny <span><b><font color="#0000FF">deviations</font></b></span> from the average. <span><b><font color="#0000FF">By</font></b></span> 12<span><b><font color="#0000FF">.</font></b></span>01, those fluctuations <span><b><font color="#0000FF">will</font></b></span> <span><b><font color="#0000FF">already</font></b></span> <span><b><font color="#0000FF">have</font></b></span> <span><b><font color="#0000FF">created</font></b></span> <span><b><font color="#0000FF">small errors one</font></b></span> foot <span><b><font color="#0000FF">away</font></b></span>. Soon <span><b><font color="#0000FF">the</font></b></span> <span><b><font color="#0000FF">errors</font></b></span> will <span><b><font color="#0000FF">have multiplied</font></b></span> to <span><b><font color="#0000FF">the</font></b></span> <span><b><font color="#0000FF">ten-foot</font></b></span> <span><b><font color="#0000FF">scale, </font></b></span>and so on up to the size<span><b><font color="#0000FF"> of the globe</font></b></span>

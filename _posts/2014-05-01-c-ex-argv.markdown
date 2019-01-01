@@ -1,0 +1,76 @@
+---
+layout: post
+title: "C语言的Argv的使用"
+date: 2014-05-01 18:48
+comments: true
+categories: C
+---
+
+##起因
+
+前段时间看了一本书，The GNU C Programing Tutorial [weblink](http://crasseux.com/books/ctutorial/)。收获很大，其实你从K&R那里学来的不一定是GNU C的规范，
+最最不错的是这本书不是中国大学C教程那种大路货的教材，这本书教材基本上把整个流程串联起来了。其实如果一本书不讲解makefile基本上不能算是一本成熟的c语言书，除非你一直只是编写
+一些小工的程序。
+
+下面摘抄一段自己的豆瓣书评：
+
+>虽然是入门书，但是对比K&R的书来说更加入门，而且融入了GNU的基因，当然这本书只是入门！教程就是教程不是指南，不过看完这本再看K&R你会理解的更深刻！我是在酷壳上看到陈浩大神的推荐才看的，发现果然收获很大，这个不再是单单的讲解语言更加是GNU系统的一个解释，后面也讲到Make和GDB，不过是不是我下载的版本问题GDB部分没有内容？但是综合而言还是所获很多，如果你重度依赖GCC那么还是值得一看的，语言非常Simple,非常适合入门当然收获更大的是你有了C的基础但是一直不太清楚GNU C的约定的时候！
+
+<!--more-->
+
+##argv的使用
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#include <stdio.h>
+
+int main (int argc,char *argv[])
+{
+	int count;
+	
+	printf ("This program was called with \" %s \".\n",argv[0]);
+	if (argc >1)
+	{
+			for (count = 1 ; count < argc; count++)
+			{
+					printf ("argv[%d]=%s \n",count,argv[count]);
+			}
+	}
+	else
+	{
+		printf("the command had no other arguments. \n");
+	}
+	return 0;
+}
+#include <stdio.h>
+
+int main (int argc,char *argv[])
+{
+	int count;
+	
+	printf ("This program was called with \" %s \".\n",argv[0]);
+	if (argc >1)
+	{
+			for (count = 1 ; count < argc; count++)
+			{
+					printf ("argv[%d]=%s \n",count,argv[count]);
+			}
+	}
+	else
+	{
+		printf("the command had no other arguments. \n");
+	}
+	return 0;
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+输出示例：
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ ./17argc a v x
+ 
+
+This program was called with " ./17argc ".
+argv[1]=a 
+argv[2]=v 
+argv[3]=x 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,0 +1,53 @@
+---
+layout: post
+title: "NCE4-Lesson15仿写练习"
+date: 2014-12-03 15:14
+comments: true
+categories: 英语
+---
+
+#仿写结果
+
+![tu2](/images/NCE/lesson10.png)
+
+<!--more-->
+
+#总结
+
+* Two factors weigh heavily against the effectiveness of scientific research in industry. 
+
+注意介词，against一个介词就解决了反对，压制这个意思怎么表的问题
+
+* 注意这篇文章怎么表达保密这个含义的:
+
+secrecy 这是名词表达，keep them secret　动名词表达,　secret process 形容词修饰 连续三种方式混合使用，防止干枯无趣地使用　secret keeping 这个动名词的ing形式做名词。
+
+* In so far as any inquiry is a secret one, it naturally limits all those engaged in carrying it out from effective contact with their fellow scientists either in other countries or in universities, or even, often enough, in other departments of the same firm. 
+
+这个表达的连贯流畅，注意学习。
+
+*  The degree of secrecy naturally varies considerably. 
+
+degree 这个词汇的使用
+
+* Some of the bigger firms are engaged in researches which are of such general and fundamental nature that it is a positive advantage to them not to keep them secret. 
+
+注意词汇的使用，a postive advantage 和 such general and fundamental nature 都是形容基础科研的好词汇
+
+* Yet a great many processes depending on such research are sought for with complete secrecy until the stage at which patents can be taken out. 
+
+sought for, the stage, with complete secrecy 都是很精彩的词汇使用
+
+*  Even more processes are never patented at all but kept as secret processes. 
+
+递进式表达
+
+* This applies particularly to chemical industries, where chance discoveries play a much larger part than they do in physical and mechanical industries. Sometimes the secrecy goes to such an extent that the whole nature of the research cannot be mentioned. 
+
+组合句子的使用
+
+* Many firms, for instance, have great difficulty in obtaining technical or scientific books from libraries because they are unwilling to have names entered as having taken out such and such a book, for fear the agents of other firms should be able to trace the kind of research they are likely to be undertaking.
+
+#背诵
+
+<font color="#0000FF">Two</font></b></span> factors <span><b><font color="#0000FF">weigh</font></b></span> <span><b><font color="#0000FF">heavily</font></b></span> against the <span><b><font color="#0000FF">effectiveness</font></b></span> of scientific research in industry<span><b><font color="#0000FF">. One</font></b></span> is the <span><b><font color="#0000FF">general</font></b></span> atmosphere of <span><b><font color="#0000FF">secrecy</font></b></span> in <span><b><font color="#0000FF">which</font></b></span> <span><b><font color="#0000FF">it</font></b></span> is<span><b><font color="#0000FF"> carried out, the other</font></b></span> the lack of freedom of <span><b><font color="#0000FF">the individual</font></b></span> research <span><b><font color="#0000FF">worker. In</font></b></span> <span><b><font color="#0000FF">so</font></b></span> <span><b><font color="#0000FF">far</font></b></span> <span><b><font color="#0000FF">as</font></b></span> <span><b><font color="#0000FF">any</font></b></span> <span><b><font color="#0000FF">inquiry</font></b></span> <span><b><font color="#0000FF">is</font></b></span> <span><b><font color="#0000FF">a</font></b></span> <span><b><font color="#0000FF">secret one, it</font></b></span> naturally <span><b><font color="#0000FF">limits</font></b></span> <span><b><font color="#0000FF">all</font></b></span> <span><b><font color="#0000FF">those</font></b></span> <span><b><font color="#0000FF">engaged</font></b></span> <span><b><font color="#0000FF">in</font></b></span> <span><b><font color="#0000FF">carrying it out</font></b></span> from<span><b><font color="#0000FF"> effective contact with their fellow scientists either in</font></b></span> other countries or<span><b><font color="#0000FF"> in</font></b></span> universities, <span><b><font color="#0000FF">or </font></b></span>even<span><b><font color="#0000FF">, often</font></b></span> <span><b><font color="#0000FF">enough, in</font></b></span> <span><b><font color="#0000FF">other departments of</font></b></span> the same <span><b><font color="#0000FF">firm</font></b></span>. The degree of <span><b><font color="#0000FF">secrecy</font></b></span> <span><b><font color="#0000FF">naturally</font></b></span> <span><b><font color="#0000FF">varies</font></b></span> <span><b><font color="#0000FF">considerably</font></b></span>. Some <span><b><font color="#0000FF">of</font></b></span> <span><b><font color="#0000FF">the</font></b></span> <span><b><font color="#0000FF">bigger</font></b></span> <span><b><font color="#0000FF">firms</font></b></span> <span><b><font color="#0000FF">are</font></b></span> <span><b><font color="#0000FF">engaged</font></b></span> <span><b><font color="#0000FF">in researches</font></b></span> which<span><b><font color="#0000FF"> are of such general and fundamental nature that it</font></b></span> is <span><b><font color="#0000FF">a</font></b></span> <span><b><font color="#0000FF">positive</font></b></span> <span><b><font color="#0000FF">advantage to them not to keep them secret</font></b></span>. <span><b><font color="#0000FF">Yet</font></b></span> <span><b><font color="#0000FF">a</font></b></span> <span><b><font color="#0000FF">great many processes</font></b></span> <span><b><font color="#0000FF">depending</font></b></span> on <span><b><font color="#0000FF">such</font></b></span> <span><b><font color="#0000FF">research</font></b></span> are <span><b><font color="#0000FF">sought</font></b></span> <span><b><font color="#0000FF">for</font></b></span> <span><b><font color="#0000FF">with</font></b></span> <span><b><font color="#0000FF">complete</font></b></span> <span><b><font color="#0000FF">secrecy</font></b></span> <span><b><font color="#0000FF">until</font></b></span> <span><b><font color="#0000FF">the</font></b></span> <span><b><font color="#0000FF">stage</font></b></span> <span><b><font color="#0000FF">at</font></b></span> <span><b><font color="#0000FF">which</font></b></span> <span><b><font color="#0000FF">patents</font></b></span> <span><b><font color="#0000FF">can</font></b></span> <span><b><font color="#0000FF">be</font></b></span> <span><b><font color="#0000FF">taken</font></b></span> <span><b><font color="#0000FF">out. Even</font></b></span> <span><b><font color="#0000FF">more</font></b></span> <span><b><font color="#0000FF">processes</font></b></span> are<span><b><font color="#0000FF"> never patented at all but</font></b></span> kept as secret<span><b><font color="#0000FF"> processes</font></b></span>. This <span><b><font color="#0000FF">applies</font></b></span> <span><b><font color="#0000FF">particularly</font></b></span> <span><b><font color="#0000FF">to</font></b></span> chemical <span><b><font color="#0000FF">industries, where</font></b></span> <span><b><font color="#0000FF">chance</font></b></span> <span><b><font color="#0000FF">discoveries</font></b></span> <span><b><font color="#0000FF">play</font></b></span> <span><b><font color="#0000FF">a</font></b></span> <span><b><font color="#0000FF">much</font></b></span> <span><b><font color="#0000FF">larger</font></b></span> <span><b><font color="#0000FF">part</font></b></span> <span><b><font color="#0000FF">than they do</font></b></span> in <span><b><font color="#0000FF">physical</font></b></span> <span><b><font color="#0000FF">and</font></b></span> <span><b><font color="#0000FF">mechanical</font></b></span> <span><b><font color="#0000FF">industries</font></b></span>. Sometimes <span><b><font color="#0000FF">the</font></b></span> <span><b><font color="#0000FF">secrecy</font></b></span> <span><b><font color="#0000FF">goes</font></b></span> <span><b><font color="#0000FF">to</font></b></span> <span><b><font color="#0000FF">such</font></b></span> <span><b><font color="#0000FF">an</font></b></span> <span><b><font color="#0000FF">extent</font></b></span> <span><b><font color="#0000FF">that</font></b></span> the <span><b><font color="#0000FF">whole nature</font></b></span> of the research<span><b><font color="#0000FF"> cannot be mentioned</font></b></span>. <span><b><font color="#0000FF">Many</font></b></span> <span><b><font color="#0000FF">firms</font></b></span>, <span><b><font color="#0000FF">for</font></b></span> <span><b><font color="#0000FF">instance, have</font></b></span> <span><b><font color="#0000FF">great</font></b></span> <span><b><font color="#0000FF">difficulty</font></b></span> <span><b><font color="#0000FF">in</font></b></span> <span><b><font color="#0000FF">obtaining</font></b></span> <span><b><font color="#0000FF">technical</font></b></span> <span><b><font color="#0000FF">or</font></b></span> scientific books from libraries because they <span><b><font color="#0000FF">are</font></b></span> <span><b><font color="#0000FF">unwilling</font></b></span> to <span><b><font color="#0000FF">have</font></b></span> <span><b><font color="#0000FF">names</font></b></span> <span><b><font color="#0000FF">entered</font></b></span> <span><b><font color="#0000FF">as</font></b></span> <span><b><font color="#0000FF">having</font></b></span> <span><b><font color="#0000FF">taken</font></b></span> <span><b><font color="#0000FF">out such</font></b></span> and <span><b><font color="#0000FF">such a</font></b></span> book<span><b><font color="#0000FF">, for</font></b></span> <span><b><font color="#0000FF">fear</font></b></span> <span><b><font color="#0000FF">the</font></b></span> agents of other <span><b><font color="#0000FF">firms</font></b></span> <span><b><font color="#0000FF">should</font></b></span> <span><b><font color="#0000FF">be</font></b></span> <span><b><font color="#0000FF">able to trace</font></b></span> the <span><b><font color="#0000FF">kind</font></b></span> <span><b><font color="#0000FF">of research</font></b></span> they <span><b><font color="#0000FF">are</font></b></span> <span><b><font color="#0000FF">likely to be undertaking.</font></b></span></div>
