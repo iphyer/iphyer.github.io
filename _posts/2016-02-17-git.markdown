@@ -6,15 +6,15 @@ comments: true
 categories: Git
 ---
 
-#前言
+# 前言
 
 使用 Git 的频率越来越高，这里总结下自己经常用的命令。参考了这篇博文[如何使用git创建项目，创建分支 ](http://blog.csdn.net/wfdtxz/article/category/1223316)
 
 <!--more-->
+ 
+# 总结
 
-#总结
-
-##初始配置
+## 初始配置
 
 ```
 git config -global user.name "Your name"
@@ -22,7 +22,7 @@ git config -global user.name "Your name"
 git config -global user.email "you@example.com"
 ```
 
-##使用
+## 使用
 
 `git init`命令用于初始化当前所在目录的这个项目
 
@@ -40,7 +40,7 @@ git config -global user.email "you@example.com"
 
 > 总结：先git add你修改过的文件，再git diff并git status查看确认，然后git commit提交，然后输入你的开发日志，最后git log再次确认。
 
-##创建分支
+## 创建分支
 `git branch` 查看分支列表
 
 `git branch experiment` 创建一个分支

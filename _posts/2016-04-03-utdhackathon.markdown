@@ -5,7 +5,7 @@ date: 2016-04-03 10:42
 comments: true
 categories: Hackathon
 ---
-#前言
+# 前言
 
 这是前段时间参加UTD Hackathon的总结。
 
@@ -21,7 +21,7 @@ categories: Hackathon
 
 [HackUTD : Find Available Driving Test Appointment](https://github.com/njuyangyang/Drive-test-schedule-system)
 
-#原理
+#原 理
 
 首先如果你希望自动话一个功能，那么你一定要能够手动实现这个功能。如果你没有很高的AI设计，计算机是很难自己自动实现某些功能的。
 
@@ -37,7 +37,7 @@ Bryan, TX 77803,也就是TAMU所在的college town。
 这里需要注意的，这个网页是在我们点击之后才生成的，同时表格月份日期的那栏有向左和向右的箭头。这两个箭头如果打开分别对应了两个Javascript脚本从而实现动态更新部分网页的功能。
 
 
-#如何实现对于Javascript脚本的爬取
+# 如何实现对于Javascript脚本的爬取
 
 对于静态的HTML页面我们可以使用Beautiful Soup进行页面解析从而得到我们需要的页面内容，但是如何处理Ajax，Javascript?
 
@@ -50,7 +50,7 @@ Bryan, TX 77803,也就是TAMU所在的college town。
 
 然后得到了需要的静态HTML之后只要进行相应的解析处理即可。主要来说所有需要的信息是日期和是不是可以注册，所以只要针对这个日期标的数据做解析即可，而DPS的这个网页的写得非常规范，所有日期分成四个种类，calendar-closed 这是指当天,calendar-notavailable这是已经过去的日期和超过90天的日期，calendar-fullday这是虽然在90天内但是注册满了的日期，calendar-available顾名思义就是可以注册的日期。所以爬取信息也很简单直接通过class得到这几个属性即可。最后得到的结果放到数据库中，给其他程序使用。
 
-#程序整体思路
+# 程序整体思路
 
 ![tu3](/images/UTDhackathon/Software.jpg)
 
@@ -60,7 +60,7 @@ Bryan, TX 77803,也就是TAMU所在的college town。
 
 后端实现一个每过10min扫描一遍预约信息网站的更新脚本。然后如果检测到不同且该日期属于注册用户的指定日期那么调用发用邮件程序给该用户发送可以预约信息的邮件，提醒用户赶快上网预约。
 
-#总结
+# 总结
 
 这个任务其实比较简单，但是能够连贯起来还是非常不错的。当然对于一般用户而言，我们不需要暴露这么多细节。事实上做成一个网站就可以了，让用户使用的主要是前段部分。后端应该都放在网上。
 
@@ -68,7 +68,7 @@ Bryan, TX 77803,也就是TAMU所在的college town。
 
 这个留待以后解决。
 
-#update 10 mins的Python代码
+# update 10 mins的Python代码
 
 ```python
 #!/usr/bin/env python

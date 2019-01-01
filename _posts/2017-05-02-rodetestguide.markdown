@@ -5,7 +5,7 @@ date: 2017-05-02 21:11
 comments: true
 categories: 美国生活
 ---
-##起源
+## 起源
 
 这个日志的原因是5.2要开始路考了，这篇日志总结下自己做的总结。
 
@@ -27,37 +27,37 @@ categories: 美国生活
 
 
 
-##转弯(TURNS)
+## 转弯(TURNS)
 
-###接近转弯(Approaching a turn)
+### 接近转弯(Approaching a turn)
 
 1. 检查交通(Traffic Check) : 转弯道拐角前，提前检查路况，看前、左、右、后的路况
 2. 最少提前 100 feet (30米) 打转向信号灯，但是不能太早。
 3. 减速，避免急刹车
 4. 通过，除非不能通过或者另有指示，不能有非必要的犹豫和停车
 
-###需要停车的转弯(​​​Stopping before you turn)
+### 需要停车的转弯(​​​Stopping before you turn)
 
 1. 车距(Gap):和前车保持好车距，可以看到前车的保险杠（rear bumper）
 2. 停止线(Stop Line): 有线，停在线前(不压线)；没线，停在人行横道前，注意行人，避让行人(pedestrians have the right-of-way)
 3. 停车时，方向盘保持直行，直到你开始转弯。避免开动后装上来车。
 
-###完成转弯(Completing the turn)
+### 完成转弯(Completing the turn)
 
 1. 检查交通，前，后，左，右
 2. 在转弯中加速或者控制到安全的速度通过
 3. 转弯后提速至安全车速
 4. 转弯的路线选择，就近原则，选择正确的行车道，不要转弯太大或者过小(技巧就是使用合适车速)
 
-##十字路口(Intersections)
+## 十字路口(Intersections)
 
-###需要 stop 的十字路口
+### 需要 stop 的十字路口
 
 1. 接近路口之前，检查两侧，后方车流
 2. 减速，流畅刹车，确保与前车有合适的距离。 选择正确的车道进入停止。(左转到左转道，右转到右转道)
 3. 有停止线(Stop Line)，停在线前(不压线)；没线，停在人行横道前，注意行人，避让行人(pedestrians have the right-of-way)
 
-###无需 stop 的十字路口
+### 无需 stop 的十字路口
 
 1. 保持自己的车道
 2. 到达路口前检查其他方向车流，右侧来车先行(Yield to traffic on your right.)
@@ -66,7 +66,7 @@ categories: 美国生活
 
 **如果在无人，无标志牌控制的十字路口不减速且不观察通过，立刻考试失败(It is An Immediate Disqualification)**
 
-##在商业区／居民区开车(Driving in a business or residential area)
+## 在商业区／居民区开车(Driving in a business or residential area)
 
 1. 每隔 6 到 8 秒观察后视镜(Check the rear-view mirror about every 6 to 8 seconds. )掌握车后的全局信息
 2. 保持合适车速，车速要和 **当前路况**，**天气**，**车流密集度**，**限速标志**匹配
@@ -145,19 +145,19 @@ categories: 美国生活
 
 ## 倒车(Backing)
 
-###倒车前
+### 倒车前
 
 1. 检查路况(前后左右，扭头看右侧盲点)
 2. 打右灯
 
 
-###倒车中
+### 倒车中
 
 1. 直线倒车
 2. 不超过步行速度
 3. **扭头看后侧**
 
-###倒车后
+### 倒车后
 
 1. 检查路况(前后左右，扭头看盲点)
 2. 打转向灯

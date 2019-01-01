@@ -5,7 +5,7 @@ date: 2017-03-22 23:56
 comments: true
 categories: Python
 ---
-##起源
+## 起源
 
 最近刚刚刷完了 Coursea 一门公开课，感觉收货很大，推荐下这门课，Learn to Program: Crafting Quality Code。
 
@@ -20,7 +20,7 @@ categories: Python
 
 <!--more-->
 
-##使用 doctest 的背景
+## 使用 doctest 的背景
 
 这里我简单介绍下 doctest 的使用背景。如果脱离了使用场景和程序的背景，独立地评价某个程序的优劣是非常偏颇的。
 
@@ -30,7 +30,7 @@ categories: Python
 
 doctest 正是利用这个过程进行代码测试的工作。所以要体会到 doctest 的先进性，首先，必须明确你的代码设计过程是符合上述流程的。当然上述流程是绝大多数程序员喜欢的过程，也是绝大多数场景下推荐的(肯定存在特例，比如你的主要工作是接手别人的代码，ORZ)。既然我们在设计每个程序模块的时候都会规定好输入和输出，何不用这些规定来做程序测试？甚至进一步，这些测试能不能用来展示程序的用法呢？
 
-#doctest
+# doctest
 
 根据官方文档的介绍 doctest 的目的是:
 

@@ -5,7 +5,8 @@ date: 2015-08-02 00:38
 comments: true
 categories: R
 ---
-#目标
+
+# 目标
 
 主要是在清理Linux的home目录，之前使用 Rstudio 一直会在home目录下建立一个安装library的文件，功能也很单一。但是一直也没找到什么好的修改方法。
 
@@ -13,7 +14,7 @@ categories: R
 
 <!--more-->
 
-#方法
+# 方法
 
 其实很简单R的`libPaths()`命令记录了安装library的位置，但是具体这个信息记录在何处呢？
 
