@@ -6,14 +6,14 @@ comments: true
 categories: 英语
 ---
 
-#前言
+# 前言
 
 ![tu2](/images/NCE/lesson9.png)
 
 <!--more-->
 
 
-#总结
+# 总结
 
 * Alfred the Great acted his own spy, visiting Danish camps disguised as a minstrel.  
 

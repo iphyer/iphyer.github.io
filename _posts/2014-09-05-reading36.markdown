@@ -6,7 +6,7 @@ comments: true
 categories: 英语
 ---
 
-##前言
+## 前言
 
 最近在练习陈虎平老师的36套，选用这套题目的原因在于这套题目在经过时间的检验后虽然肯定不能和真题比拼。但是,因为大家讨论很多,也有不少人写下自己的总结和感受所以非常适合用来练习。而且效果非常好。    
 
@@ -19,14 +19,14 @@ categories: 英语
 说明：很多答案参考了QQ群和大家的讨论，这里恕不给出出处，因为太难找了。很多地方保留了在论坛讨论的语气和用词，请大家见谅。
 
 
-##不合理的题目部分，请虎平老师修订的部分总结
+## 不合理的题目部分，请虎平老师修订的部分总结
 
-###确定的部分(对照老G确认少部分内容)
+### 确定的部分(对照老G确认少部分内容)
 
 * EX2 NO3
 * EX35 NO7
 
-###存疑
+### 存疑
 
 * EX16 NO10
 * EX34 NO6
@@ -34,7 +34,8 @@ categories: 英语
 
 <!--more-->
 
-##更新2014-10-11
+## 更新2014-10-11
+
 今天把整个36套都做完了,作为一个总结将这个文章Update一下。前面写下自己的总结后面是疑问列举和已经解决的疑问。
 
 阅读经验总结:
@@ -55,16 +56,15 @@ categories: 英语
 
 
 
-##关于材料
+## 关于材料
 
 很多人说36套节选不合理的问题，选项耦合断开的问题，其实以我的感觉问题不大。并不是像你想象的那么支离破碎，其实只有那么几个选项有问题。且对于独自一人备考的同学，36套最大的好处是——有很完善的解析。
 
-
-
-##疑问列举、
+## 疑问列举、
 EX后数字是代表第几套阅读，NO后数字代表题目号码，我使用的是老版本的36套。虽然题号可能有不同，但是基本上陈虎平老师保持了每个练习内部题目的不变，只是数字调整。
 
-###1 EX16 NO10
+### 1 EX16 NO10
+
 第16个练习的第10题有疑问。
 
 If people are regarded only as machines guided by logic, as they were by some "scientistic" thinkers, rhetoric is likely to be held in low regard; for the most obvious truth about rhetoric is that it speaks to the whole person. It presents its arguments first to the person as a rational being. Logical argument is the plot, as it were, of any speech or essay that is respectfully intended to persuade people. Yet it is a characterizing feature of rhetoric that it goes beyond this and appeals to the parts of our nature that are involved in feeling, desiring, acting, and suffering. It recalls relevant instances of the emotional reactions of people to circumstances-real or fictional-that are similar to our own circumstances.
@@ -91,7 +91,7 @@ deals with universal truths.
 
 but only one such element.这个根本就没有说啊
 
-###2 EX34 NO6
+### 2 EX34 NO6
 练习34 N06
 
 6. The passage suggests that which of the following
@@ -124,9 +124,9 @@ Nonenzymatic glycosylation begins when an aldehyde group (CHO) of glucose and an
 
 那你说都是NG这个过程的构成部分了，AG的数目不重要？
 
-##已经解决部分
+## 已经解决部分
 
-###1、EX2 NO3
+### 1、EX2 NO3
 
 第二套的第三题，A和D的细微区别靠最后的一个句子是分别不出来的。
 Which of the following best summarizes the author‘s opinion of the suggestion that different areas of the brain determine perceptions produced by sensory nerve impulses?
@@ -140,7 +140,7 @@ ETS的原文后面还有这句话：However, cortical locus, in itself, turned o
 
 所以这个时候选项D是非常合理地。
 
-###2 EX7 NO3
+### 2 EX7 NO3
 EX7第三题 
 According to the passage, a significant distinction
 between the salonnieres and Bluestockings was in the
@@ -181,7 +181,7 @@ background, emphasized learning and work over pleasure.
 
 这里的重点是作者指明了之后，以作者指明的部分为准，不要抱住一点不放，从全局的高度理解问题。、
 
-###3 EX7 NO6
+### 3 EX7 NO6
 
 The use of heat pumps has been held back
 largely by skepticism about advertisers‘ claims that
@@ -230,7 +230,7 @@ Strain（MW）： to injure (a body part or muscle) by too much tension, use, or
 夸张不可怕，这个热泵最大的问题是低估顾客的智商，欺骗顾客。
 
 
-###4 EX6 NO8
+### 4 EX6 NO8
 EX6的8题，这道题目
 
 The author is primarily concerned with
@@ -256,7 +256,7 @@ E错就是在于，作者提出的是新的解释而不是一个controversial，
 
 这道题真是考到单词的核心含义上去了，我们GRE单词都是浑沦吞枣甚至模糊归类记忆过来的，一遇到这个题目就被点中死穴了。
 
-###５ EX9 NO2
+### ５ EX9 NO2
 EX9的第二个问题，您给的答案是不是错误了？
 2. All of the following aspects of Afro-American
 poetry are referred to in the passage as having been
@@ -295,7 +295,7 @@ rhythm重复，word choice = vocabulary form= structure， 后面的这个evange
 
 所以不选择A。
 
-###6 EX35 NO7
+### 6 EX35 NO7
 
 7. The author‘s assertions concerning the conditions
 that lead to the decay of the vacuum would be
@@ -338,7 +338,7 @@ unstable state and can decay into a state of lower energy; i.e., one in which re
 
 谢谢虎平老师！
 
-##阅读总结
+## 阅读总结
 
 <table class="table table-bordered table-striped table-condensed">
    <tr>
@@ -568,7 +568,7 @@ unstable state and can decay into a state of lower energy; i.e., one in which re
    </tr>
 </table>
 
-##图形化展示(比较粗糙)
+## 图形化展示(比较粗糙)
 
 ![tu1](/images/GRE/36/Graph1.png)
 

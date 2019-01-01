@@ -6,7 +6,7 @@ comments: true
 categories: GRE
 ---
 
-#前言
+# 前言
 
 1.24号考了这个学期的第三次GRE考试，虽然结果不是特别理想超出预料,但是也不错了．
 
@@ -24,7 +24,7 @@ categories: GRE
 
 <!--more-->
 
-#奥数题目
+# 奥数题目
 
 两道奥数题目给大家热热身．
 
@@ -38,7 +38,7 @@ categories: GRE
 正确答案：15种
 
 
-##2.[看题库](http://www.kantiku.com/math2-2439453.htm?nsukey=vbxe8jp1mheqb9FrtPH1%2FXteaJVVKk6pbcbldJMm58hWMU5SV%2Bbw24Gc6uVSPxus%2BCOgmfXXwhB6KwoZ%2F5UuAg%3D%3D)
+## 2.[看题库](http://www.kantiku.com/math2-2439453.htm?nsukey=vbxe8jp1mheqb9FrtPH1%2FXteaJVVKk6pbcbldJMm58hWMU5SV%2Bbw24Gc6uVSPxus%2BCOgmfXXwhB6KwoZ%2F5UuAg%3D%3D)
 
 如图，在某城市中，M，N两地之间有整齐的方格形道路网，其中A1、A2、A3、A4是道路网中位于一条对角线上的4个交汇处．今在道路网M，N处的甲、乙两人分别要到N，M处，他们分别随机地选择一条沿街的最短路径，以相同的速度同时出发，直到到达N，M为止．
 （1）求甲经过A2到达N的方法有多少种；
@@ -88,13 +88,13 @@ $$
  
    （3）甲、乙两人相遇的概率 $\frac{41}{100}$．
 
-#怎么做
+# 怎么做
 
 这里主要参考了奥数网的知识讲解，链接如下[计数方法与技巧:标数法例题精讲](http://www.aoshu.com/e/20110617/4dfafd921a7f9.shtml)
 
 ![tu１](/images/GREmath/3.png)
 
-#升华
+# 升华
 
 这是我在搜索资料的时候看到的真是无语了，奥数题目已经进化到这个地步了，真是令人无语了．
 
