@@ -6,7 +6,7 @@ comments: true
 categories: GRE
 ---
 
-#说明
+# 说明
 
 重新写了新的版本，基本可以说是1.0版本了。
 
