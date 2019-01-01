@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "2018 食物总结"
-date: 2018-12-31 10:37
+date: 2018-12-31 22:37
 comments: true
 categories: 美国生活
 ---
@@ -18,6 +18,9 @@ categories: 美国生活
 当然需要安装下 `brew install imagemagick` 作为图片压缩的工具。
 
 这两个都可以利用已经写好的 Python 程序完成。
+
+<!--more-->
+
 
 # 食物图列表
 
