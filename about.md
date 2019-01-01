@@ -4,12 +4,16 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Information about Me
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+I am a grduate student of UW-Madison in CS.
+
+This site is a personal blog which inclcudes my personal thoughts and interesting things I want to share.
+
+Enjoy and have fun!
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[iphyer](mailto:iphyer@163.com)
