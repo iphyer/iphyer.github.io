@@ -16,11 +16,11 @@ Latex转过来的时候的参考文献格式我就没怎么换，都放在最后
 
 <!--more-->
 
-##abstract
+## abstract
 
 In this lab experiment, we use importance sampling Monte Carlo techniques to study $60 \times 60 $ 2-D Ising Model. We will further discuss the thermal properties of Ising Model.
 
-##Introduction
+## Introduction
 
 Ising Model is one of the most important the theoretical model in statistical physics,which is proposed first to explain the start of ferro-magnetism. The central thought of Ising Model is representing real system like magnetic Curie points or order-disorder phenomena transitions in alloy as  molecules interacting with nearest neighbour in a lattice \cite{Rev}. Although Ising Model was scorned and ignored by most scientists during its early ages \cite{Rev}, it has gained more and more popularity in the science community for both its multi-disciplines application in physics, chemistry, metallurgy,and mathematics and its simple and elegant lattice models physical intuition.
 
@@ -30,7 +30,7 @@ Ising Model can be simply described as the lattice model with $-1$ or $+1$ spins
 
 In this report, we will generally focus on 2-D Ising Model and the lattice size is $60 \times 60$ and the temperature will be decreased from 3.5 to 1.5 by step 0.1 ,then increased form 1.5 to 3.5
 
-##Algorithm
+## Algorithm
 
 Generally we simulate Ising Model following the rule of importance sampling which only counts those configurations that contribute greater to the final state of system.
 
@@ -85,7 +85,7 @@ So we can describe Metropolis Importance Sampling Motel Carlo Scheme as followin
 * Choose an initial state
 * Choose a site i
 * Calculate the energy change $\Delta E$ which results from if the spin at site i is overturned 
-* Generate a random number r that  $0<r<1$
+* Generate a random number r that  $$0<r<1$$
 * Go the next site and go to step 3
 * After enough steps, sample needed physical prosperities 
 
@@ -140,10 +140,10 @@ $$
 
 So we need to keep record of $E, E^2 , M , $ and $M^2$ , we can get the evolution of the energy, the magnetization, the specific heat, and the magnetic susceptibility.
 
-##Algorithm Details
+## Algorithm Details
 During the program of Monte Carlo Simulation, there are generally two details needed to pay attention to. The first one is how to calculate energy difference between the old state and new one.The second one is how to realize periodic boundary conditions.
 
-###Calculating Energy Difference
+### Calculating Energy Difference
 If we just use the common method to calculate the energy changes, the amount of calculations will be huge but if we further explore the different cases in energy changes there are only 5 results will happen if we change the spin of one site.
 
 ![tu1](/images/Ising/5case.png)
@@ -165,7 +165,7 @@ $$
 
 where $n.n$ means the nearest four neighbours of site $(i,j)$.
 
-###Periodic Boundary Conditions
+### Periodic Boundary Conditions
 
 Because our simulations are performed on infinite systems, so we must take the effect of those edges and surfaces into consideration because they may be different from those in the body or inner part of the system. We can effectively eliminated these boundaries by wrapping the $N \times N$ Ising  lattice on a the $ (N+1) \times (N+1)$ one.
 
@@ -178,7 +178,7 @@ where $ip1,im1,jp1,jm1$ means plus and minus 1 form i and j and $\mod$ means mod
 But this involves too many computations for $mod$ can not be computed easily. But we can referred to two tables to simply the calculation for periodic boundary condition only happens on the edges of lattice, which means that the index of one spin site $(i,j)$ must have this relations:$i=1 , i= L$ or $j= 1 , j= L$.So we can calculated those periodic boundary conditions before which can also fasten the simulation. 
 
 
-##Conclusion
+## Conclusion
 
 After doing all the simulation work, we will further discuss the propensities of Ising Model.
 
@@ -206,13 +206,13 @@ As figure \ref{magv} has shown,magnetic susceptibility has a sharp jump at the c
 
 
 
-###Average Accepting Rate
+### Average Accepting Rate
 And in figure \ref{acrate} we show the change of accepting rate. We can easily find out that the accepting rate increases when temperature does. This is just what we except. When temperature increases, a single site overturn will be less important to the change of system energy or we can say when temperature increases, the spins will be more disordered than they are at low temperature. At low temperature, all the spins are like frozen at their own site and less likely to change their direction.    
 
 ![tu1](/images/Ising/acceptingrate.jpeg)
 
 
-###Phase Transition
+### Phase Transition
 
 ![tu2](/images/Ising/transfernew.png)
 
@@ -233,7 +233,7 @@ Following we will show three key the configuration of three states at temperatur
 
 
 
-###Equilibrium Time
+### Equilibrium Time
 
 
 In my simulation, I set  $40 \% $ of the total Monte Carol Move to be the equilibrium stage. And this seems works fine when I set $mc\_ total\_steps=50000000$ which means the program will try to overturn the spin of Isng Model Lattice 50000000 times.
@@ -250,11 +250,11 @@ If you compare figure \ref{mag500000} with figure \ref{mag} you will find that f
 Generally speaking, there are two kinds of correlations existing in Ising Model: one is time correlation, the other is space correlation. Below we will focus on both two kinds.
 
 
-####Time  Correlation
+#### Time  Correlation
 
 As we use Monte Carlo Step Time as the unit of our simulation time unit, so time correlation can be also explained as the Monte Carlo Move Step Correlation.So different numbers of simulation steps can result different result which has been explained in previous section \ref{equ} Equilibrium Time.
 
-####Space Correlation
+#### Space Correlation
 
 Because a change of one spin site may result another change of another spin site, we can define a correlation length to represent this effect, which is also known as space correlation. So if the distance of two spin sites is within correlation length we think they are coupled or interacted and if not, we ignore their correlation. 
 
@@ -272,11 +272,11 @@ The result is figure \ref{corr} has shown.
 
 We can see that when the temperature is high, the correlation is weak but when temperature approximates the critical temperature where phase transition happens the correlation jumps up quickly. So we can say that phase transition is closely related with correlation between different spins. Also figure \ref{corr} tells us that at a specific temperature the nearer the stronger correlation . If we want to define some  correlation length of spin sites, it seems that we can set the correlation length between $2 \sim 3$ at high temperature. And at low temperature,correlation length is less obvious for the very strong correlation interaction.
 
-###Initial Conformation dependence
+### Initial Conformation dependence
 
 Based on my study, I think initial conformation is useless for the final result of Ising Model if you set a large enough total number of simulation steps. But I do agree, that initial conformation can influence the equilibrium time and large enough total number of simulation steps can cancel its effect.
 
-##Programme Code
+## Programme Code
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 !**********************************************************************
@@ -645,7 +645,7 @@ subroutine get_unit ( iunit )
 end
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-##Reference
+## Reference
 
 \bibitem{Rev} Brush S G. History of the Lenz-Ising model[J]. Reviews of Modern Physics, 1967, 39(4): 883.
 
