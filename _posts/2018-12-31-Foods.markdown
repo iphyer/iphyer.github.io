@@ -15,6 +15,8 @@ categories: 美国生活
 1. 压缩图片
 2. 列出文件引用地址
 
+当然需要安装下 `brew install imagemagick` 作为图片压缩的工具。
+
 这两个都可以利用已经写好的 Python 程序完成。
 
 # 食物图列表
