@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "缩写博客图片尺寸"
+title: "压缩博客图片尺寸"
 date: 2017-05-13 10:01
 comments: true
 categories: 博客
