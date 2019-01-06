@@ -57,12 +57,33 @@ categories: 生活
 敦促合作者争取尽力推进。
 
 (1) 生成新的数据集 
+
 (2) 用 Keras 替换 ChainerCV 的 Faster R-CNN 开发
+
 (3) 基于  Defects Detection，做 Image Augumentation
-(4) 尝试传统方法, 跟踪 LS 进度。
-(5) 摘要写作
-(6) 新的方法 和 思路
- 
+
+(4) Better training of the Faster R-CNN model fine-tune 
+
+(5) 尝试传统方法, 跟踪 LS 进度。 Background subtracting on the first frame == > residual image analysis? 或者做一个分类器？
+
+** (6) 摘要写作 ** 
+
+(7) 考虑更加困难的确证病例  
+* Clear cut cases 
+V.S. 
+* Complex & hard to decided cases == > using an marker
+
+(8) 新的方法 和 思路
+
+** Using temporal information contained in the video **
+
+* Video Tracking Methods
+* YOLO for video == > Provide videos
+* Background subtracting on the first frame == > residual image analysis?
+* LSTM, RNN
+* GAN, conditional GNA based on first frame negative image
+* Probability Model to integrate temporal information
+
 ### GAN
 
 争取 2 月开始论文写作。
@@ -84,8 +105,11 @@ categories: 生活
 ## 生活
 
 (1) 打算去 大峡谷 或者 黄石公园旅游一趟。
+
 (2) 买车？ 感觉可以买一辆日系车，主要是代步和买菜。
+
 (3) 8 月室友会搬出去，那就争取 3 月 ～ 4 月联系认识的同学转租。
+
 (4) 回国拔智齿
 
 > 汉之广矣，不可泳思；江之永矣，不可方思。
