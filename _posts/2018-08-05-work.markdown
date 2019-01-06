@@ -10,7 +10,7 @@ categories: 工作
 
 这个暑假帮老板带了一个工作，现在总结下自己的一些体会，做个记录。
 
-因为之前写过 []()
+因为之前写过 [毕业工作总结](https://iphyer.github.io/blog/2016/06/09/20160609summary/) 所以这个博文就叫做 [工作经验总结 2](https://iphyer.github.io/blog/2018/08/05/work/) 吧。
 
 <!--more-->
 
