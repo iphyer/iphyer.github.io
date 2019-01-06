@@ -104,6 +104,14 @@ V.S.
 
 9 月开始 PhD 资格考试。
 
+## Kaggle
+
+* [How to Win a Data Science Competition: Learn from Top Kagglers](https://www.coursera.org/learn/competitive-data-science)
+* [Faster Data Science Education](https://www.kaggle.com/learn/overview)
+
+
+准备一个月参加一个 Kaggle 比赛，如果比赛时间更长就相应地调节。
+
 ## 学习计划
 
 ### 网络课程
@@ -114,10 +122,13 @@ V.S.
 * [Advanced Deep Learning & Reinforcement Learning By DeepMind](https://www.youtube.com/playlist?list=PLqYmG7hTraZDNJre23vqCGIVpfZ_K2RZs)
 * [深度学习面试题目汇总](https://github.com/ShanghaiTechAIClub/DLInterview)
 * [The Web Developer Bootcamp](https://www.udemy.com/the-web-developer-bootcamp/?siteID=skg_Sko_Ybo-icN1VNsPpbLc_8Bni1jLKw&LSNPUBID=skg%2FSko%2FYbo)
+* [TensorFlow-Tutorials](https://github.com/Hvass-Labs/TensorFlow-Tutorials)
 
 * [system-design-primer](https://github.com/donnemartin/system-design-primer)
 * [秒杀系统设计与实现.互联网工程师进阶与分析](https://github.com/qiurunze123/miaosha)
 争取寒假解决上面部分。
+
+* [tensorflow-internals](https://github.com/horance-liu/tensorflow-internals)
 
 ### 书籍
 
@@ -139,10 +150,7 @@ E-book
 * Deep Learning for Computer Vision
 * Learning OpenCV
 * Hands-On Transfer Learning with Python
-* Hands On GPU Accelerated Computer Vision with OpenCV and CUDA
-
-
-Excerpt From: Dipanjan Sarkar. “Hands-On Transfer Learning with Python.” Apple Books. 
+* Hands On GPU Accelerated Computer Vision with OpenCV and CUDA]
 * designing data-intensive applications
 
 ## 生活
