@@ -35,23 +35,23 @@ categories: 博客
 
 
     for file in  `find ./ -name "*.[jJ][pP][gG]"`;
-    do    	
-    	if [ `stat --printf="%s" $file` -gt 1000000 ]
-		then
-    		echo $file
-    		mogrify -resize 50% $file
-		fi
+    do      
+        if [ `stat --printf="%s" $file` -gt 1000000 ]
+        then
+            echo $file
+            mogrify -resize 50% $file
+        fi
 
-	done
+    done
 
-	for file in  `find ./ -name "*.[pP][nN][gG]"`;
+    for file in  `find ./ -name "*.[pP][nN][gG]"`;
     do 
-    	if [ `stat --printf="%s" $file` -gt 1000000 ]
-		then
-    		echo $file
-    		mogrify -resize 50% $file
-		fi
-	done
+        if [ `stat --printf="%s" $file` -gt 1000000 ]
+        then
+            echo $file
+            mogrify -resize 50% $file
+        fi
+    done
 
 
 echo "Done"

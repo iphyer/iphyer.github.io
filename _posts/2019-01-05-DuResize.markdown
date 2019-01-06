@@ -51,4 +51,4 @@ echo "Done"
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-也可以从这儿下载 [resize.sh]()
+也可以从这儿下载 [resize.sh](https://raw.githubusercontent.com/iphyer/iphyer.github.io/master/images/resize.sh)。
