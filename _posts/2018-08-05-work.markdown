@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "工作经验总结"
+title: "科研工作经验总结 2"
 date: 2018-08-05 23:51
 comments: true
 categories: 工作
@@ -9,6 +9,8 @@ categories: 工作
 # 起因
 
 这个暑假帮老板带了一个工作，现在总结下自己的一些体会，做个记录。
+
+因为之前写过 []()
 
 <!--more-->
 
