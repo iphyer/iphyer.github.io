@@ -1,0 +1,54 @@
+---
+layout: post
+title: "更通用的压缩博客图片尺寸的 Bash 脚本"
+date: 2019-01-05 11:10
+comments: true
+categories: 博客
+---
+
+# 起因
+
+今天更新博客，想起来图片还没有压缩格式，所以利用之前的写过的程序 ( [压缩博客图片尺寸](https://iphyer.github.io/blog/2017/05/13/shrinkingimages/) ) 更新博客，但是发现没办法在 Mac 使用。
+
+其实原因也很简单，因为之前的程序主要在 Linux 平台使用，所以我用了 `stat` 命令，但是这不是一个通用的 POSIX 标准程序，参考这个链接修改了一个新的版本 [How can I get the size of a file in a bash script?](https://unix.stackexchange.com/questions/16640/how-can-i-get-the-size-of-a-file-in-a-bash-script)。
+
+<!--more-->
+
+# 程序
+
+其实 [unix.stackexchange.com](https://unix.stackexchange.com/questions/16640/how-can-i-get-the-size-of-a-file-in-a-bash-script)  的帖子特别好，总而言之一句话就是 `stat` 不是一个通用命令，最好使用 POSIX 规定的命令和格式比如 `du` 和 `cut` 同时即使是 `du` 的选项也需要注意。
+
+修改后的程序如下
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#! /bin/bash 
+
+#获取脚本所在文件目录
+#大于1M图片缩小一半
+
+for file in  `find ./ -name "*.[jJ][pP][gG]"`;
+    do    	
+    	if [ `du -k "$file" | cut -f1` -gt 1000 ]
+		then
+    		echo $file
+    		mogrify -resize 50% $file
+		fi
+
+	done
+
+for file in  `find ./ -name "*.[pP][nN][gG]"`;
+    do 
+    	if [ `du -k "$file" | cut -f1` -gt 1000 ]
+		then
+    		echo $file
+    		mogrify -resize 50% $file
+		fi
+	done
+
+echo "Done"
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+也可以从这儿下载 [resize.sh]()

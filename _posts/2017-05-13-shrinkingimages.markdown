@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "压缩博客图片尺寸"
+title: "压缩博客图片尺寸的 Bash 脚本(Linux)"
 date: 2017-05-13 10:01
 comments: true
 categories: 博客
