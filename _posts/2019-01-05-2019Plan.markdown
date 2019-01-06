@@ -6,13 +6,13 @@ comments: true
 categories: 生活
 ---
 
-# 起因
-
 一元复始，万象更新，又到了年度打脸立 Flag 的时候。
 
 有时候看看自己的过去的计划还是挺有感慨的，很多东西只有往回看才知道为什么。
 
 <!--more-->
+
+# 起因
 
 先对照下 [2018年计划](https://iphyer.github.io/blog/2018/01/31/2018/) ，同时各个小项上自己进行更新。
 
@@ -66,7 +66,7 @@ categories: 生活
 
 (5) 尝试传统方法, 跟踪 LS 进度。 Background subtracting on the first frame == > residual image analysis? 或者做一个分类器？
 
-** (6) 摘要写作 ** 
+(6) **摘要写作** 
 
 (7) 考虑更加困难的确证病例  
 * Clear cut cases 
@@ -75,7 +75,7 @@ V.S.
 
 (8) 新的方法 和 思路
 
-** Using temporal information contained in the video **
+**Using temporal information contained in the video**
 
 * Video Tracking Methods
 * YOLO for video == > Provide videos
