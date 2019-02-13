@@ -18,9 +18,13 @@ categories: 工作
 
 ```Bash
 
-remote: error: File Archive/Models/20181201/snapshot_model_100000.npz is 484.52 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: File Archive/Models/20181201/snapshot_model_100000.npz is 484.52 MB; 
 
-remote: error: File Archive/Models/20181202/snapshot_model_100000_20181202.npz is 484.48 MB; this exceeds GitHub's file size limit of 100.00 MB
+this exceeds GitHub's file size limit of 100.00 MB
+
+remote: error: File Archive/Models/20181202/snapshot_model_100000_20181202.npz is 484.48 MB; 
+
+this exceeds GitHub's file size limit of 100.00 MB
 
 
 ```
