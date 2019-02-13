@@ -8,19 +8,22 @@ categories: 工作
 
 今天 push code 到 Github 被拒绝了，真是比较恼火。Fix 这个问题花了好久，这里记录下怎么修复。
 
-```Bash
-
-remote: error: File Archive/Models/20181201/snapshot_model_100000.npz is 484.52 MB; this exceeds GitHub's file size limit of 100.00 MB
-remote: error: File Archive/Models/20181202/snapshot_model_100000_20181202.npz is 484.48 MB; this exceeds GitHub's file size limit of 100.00 MB
-
-
-```
 
 <!--more-->
 
 # 原因
 
 具体的原因其实很简单就是因为 Github 限制可以同步文件的 size, 100 MB，如果你不购买 Github 的大文件存储服务。
+
+
+```Bash
+
+remote: error: File Archive/Models/20181201/snapshot_model_100000.npz is 484.52 MB; this exceeds GitHub's file size limit of 100.00 MB
+
+remote: error: File Archive/Models/20181202/snapshot_model_100000_20181202.npz is 484.48 MB; this exceeds GitHub's file size limit of 100.00 MB
+
+
+```
 
 # 解决办法
 
