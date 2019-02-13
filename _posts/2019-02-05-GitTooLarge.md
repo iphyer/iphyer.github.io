@@ -16,7 +16,7 @@ categories: 工作
 具体的原因其实很简单就是因为 Github 限制可以同步文件的 size, 100 MB，如果你不购买 Github 的大文件存储服务。
 
 
-```Bash
+```bash
 
 remote: error: File Archive/Models/20181201/snapshot_model_100000.npz is 484.52 MB; 
 
