@@ -6,13 +6,13 @@ comments: true
 categories: 美国生活
 ---
 
-##起因
+## 起因
 
 上周参加了微软在 UW-Madison 的 Campus Interview，这是我的一个真正意义伤的 Coding Interview，面试官也是华人小姐姐，非常 nice，给我十分详细地指导，所以这里记录下自己的面试过程和经验。
 
 <!--more-->
 
-##过程
+## 过程
 
 说起来微软真地对 UW-Madison 非常好，我其实只是在 School Info Session 和面试官谈了谈，他就给我发邮件提醒我注册面试。微软是派自己一线的 coder 来面试，所以还是非常贴近实战的。当然我的 case 比较特别，我直接告诉面试官我其实改变了自己的计划，已经开始读博，所以不会去微软实习或者工作。
 
