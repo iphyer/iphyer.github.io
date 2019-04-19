@@ -31,3 +31,17 @@ Chapter 1 introduces deep learning and talks about why you should learn deep lea
 Chapter 2 talks about some basics of deep learning to help newcomers learn the basics of this area which is quite concise and direct. The author focus on the differences between supervised learning and unsupervised learning. He also discusses parametric learning and non-parametric learning although I believe he can drop the parametric/non-parametric discussion since he actually completely omits discussion about the non-parametric part which means there is no need to put the notation non-parametric here. Also, a small suggestion, it would be great if he can discuss reinforcement learning a little bit since this is the most heated topic in both academic and industrial nowadays.
 
 ### Chapter 3
+
+First, a neural network is just another way to say how to do weighted sum of different input and there is nothing special here. We do not need to consider NN as a too complex thing it is just a way to say that you have different measure values and you want to come up with a better way to summarize them or represent them so you use NN to do a weighted sum of all those different values.
+
+Second, although we understand NN as a weighted sum of different values, it does not mean you can only do a sum for the input. Actually, there is completely normal that we have one input value but three output values. All you need is just a three components vector to represent the weights. So this is also a "weighted sum" although the form looks completely different.
+
+Thirdly, since NN can be understood as a form of weighted sum, it is natural to stack them layer by layer which leads to the name network. And still here is just a weighted sum of previous weighted sum.
+
+Finally, we need to understand how to use Numpy to vectorize all the computations in deep learning which is the great help in speed. 
+
+Key Point List:
+
+* **Input** is the *information* we have, **weight** is the *Knowledge* we know in advance, and **prediction** is the *final results* we want.
+* You can also understand NN as the NN gives scores for the inputs based on how similar they are to the weights. This is another way to understand the weighted sum.
+* The prediction of NN is also called forward propagation and it can be understood as a form of the weighted sum of information and previous knowledge.
