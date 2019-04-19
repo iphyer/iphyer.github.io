@@ -8,7 +8,7 @@ categories: 美国生活
 
 ## 起因
 
-上周参加了微软在 UW-Madison 的 Campus Interview，这是我的一个真正意义伤的 Coding Interview，面试官也是华人小姐姐，非常 nice，给我十分详细地指导，所以这里记录下自己的面试过程和经验。
+上周参加了微软在 UW-Madison 的 Campus Interview，这是我的一个真正意义上的 Coding Interview，面试官也是华人小姐姐，非常 nice，给我十分详细地指导，所以这里记录下自己的面试过程和经验。
 
 <!--more-->
 
