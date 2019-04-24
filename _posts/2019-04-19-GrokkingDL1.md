@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Reading Notes of Grokking Deep Learning"
-date: 2019-04-03 19:36
+title: "Reading Notes of Grokking Deep Learning Chapter 1 to 3"
+date: 2019-04-19 19:36
 comments: true
 categories: Deep Learning
 ---
