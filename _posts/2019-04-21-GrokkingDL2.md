@@ -6,7 +6,7 @@ comments: true
 categories: Deep Learning
 ---
 
-## Forwords
+## Foreword
 
 Following the last post, I will continue to summarize key points of Chapter 4 in this blog.\
 
@@ -18,8 +18,25 @@ so chapter 3 focus on predicting part and chapter will focus on comparing and le
 
 ## Chapter 4
 
+Simple Code and Simple Math but the concept is very important:
+
+### Learning in brief
+
+> Learning is adjusting the weight to reduce the error to 0!
+
+> With derivatives, you can pick any two variables in any formula, and know how they interact! It is the sensitivity between two variables.
+
+### Why learning rate alpha
+
+> the simplest way to prevent overcorrecting weight updates!
+
+Not solving the overshooting problem just a way to make weight update smaller. 
+
+### Transfer Learning Benefits
+
 The benefits of transfer learning:
-Transfer learning needs less training data
-Transfer learning makes the learned model generalizes better
-Transfer learning makes training process less brittle
-Transfer learning makes deep learning easier
+
+* Transfer learning needs less training data
+* Transfer learning makes the learned model generalizes better
+* Transfer learning makes training process less brittle
+* Transfer learning makes deep learning easier
