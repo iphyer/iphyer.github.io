@@ -8,7 +8,7 @@ categories: Deep Learning
 
 ## Foreword
 
-Following the last post, I will continue to summarize key points of Chapter 4 in this blog.\
+Following the last post, I will continue to summarize key points of Chapter 4 in this blog.
 
 Nearly all supervised learning projects can be divided into 3 parts,
 

@@ -1,0 +1,57 @@
+---
+layout: post
+title: "Fast.ai 如何设置带标签的测试集 Test data set"
+date: 2019-05-05 23:21
+comments: true
+categories: Deep Learning
+---
+
+## fast.ai 
+
+[fast.ai](https://www.fast.ai/) 是一个加州的创业公司，口号是  Making neural nets uncool again 。他们提供了一个针对深度学习的高级的调用接口。 通过调用 fast.ai 的程序，可以很方便的实现对于程序的设计和利用。这是非常好的。
+
+### 如何设置 Test  数据集
+
+我发现 fast.ai 的设计中的一个偏好，就是他们不设置 test data 而是只使用 validation data set 作为 CV 的测试。 这个当然没有问题，因为计算机视觉的项目在针对特别大的数据集时，都是默认将 Validation 集作为测试集的。但是对于很多的科研项目，因为你的数据量并不是特别多，所以很多时候你需要将 Validation 集和 Test 集分别开。
+
+当然这个问题也是有解决方法的，具体就是在训练的时候正常训练不实用测试集。在最后评估的时候用 Test 集替换 Validation 集然后测试，具体参考官方文档 [Add a test set](https://docs.fast.ai/data_block.html#Add-a-test-set)。
+
+> In the fastai framework test datasets have no labels - this is the unknown data to be predicted. If you want to validate your model on a test dataset with labels, you probably need to use it as a validation set, as in:
+
+```python3
+data_test = (ImageList.from_folder(path)
+        .split_by_folder(train='train', valid='test')
+        .label_from_folder()
+        ...)
+```
+
+> Another approach, where you do use a normal validation set, and then when the training is over, you just want to validate the test set w/ labels as a validation set, you can do this:
+
+```python3
+tfms = []
+path = Path('data').resolve()
+data = (ImageList.from_folder(path)
+        .split_by_pct()
+        .label_from_folder()
+        .transform(tfms)
+        .databunch()
+        .normalize() ) 
+learn = cnn_learner(data, models.resnet50, metrics=accuracy)
+learn.fit_one_cycle(5,1e-2)
+
+# now replace the validation dataset entry with the test dataset as a new validation dataset: 
+# everything is exactly the same, except replacing `split_by_pct` w/ `split_by_folder` 
+# (or perhaps you were already using the latter, so simply switch to valid='test')
+data_test = (ImageList.from_folder(path)
+        .split_by_folder(train='train', valid='test')
+        .label_from_folder()
+        .transform(tfms)
+        .databunch()
+        .normalize()
+       ) 
+learn.validate(data_test.valid_dl)
+```
+
+> Of course, your data block can be totally different, this is just an example.
+
+官方文档的解释还是非常倾向的，当然这个确实藏得很深，不太容易发现。
