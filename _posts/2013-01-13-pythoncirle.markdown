@@ -11,8 +11,10 @@ categories: Python
 这是我对于"The Practice of Computing Using Python"的读书笔记。
 总结了这本书很多有趣的编程题目。初次练手大家轻拍。
 
-# Python计算圆的周长和面积
 <!--more-->
+
+# Python计算圆的周长和面积
+
 这个程序比较简单，直接上程序了。
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
