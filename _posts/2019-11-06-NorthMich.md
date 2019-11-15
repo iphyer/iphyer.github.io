@@ -1,63 +1,72 @@
 ---
 layout: post
-title: "分清主次 保护时间 说到做到"
-date: 2019-09-07 01:44
+title: "USA印象11:北密游记"
+date: 2019-11-13 14:44
 comments: true
-categories: 生活
+categories: 美国生活
 ---
 
 ## 前言
 
-最近生活中的一点思考，一点心得。
+十月初去了一趟北密赏红叶，回来之后一直忙忙最近才有时间整理游记。这里记录下来。
+
 
 <!--more-->
 
-## 分清主次
+## 北密 -- 密歇根州上半岛 (Michigan Upper Peninsula)
 
-说起来，人生就是一道道选择题，取决于你如何选择。
+大家一般都说北密，其实说得是密歇根州上半岛，英文是 Michigan Upper Peninsula。 密歇根州被密歇根湖分割成两个部分，一个是北密 (Michigan Upper Peninsula)，一个是密歇根下半岛(Michigan Lower Peninsula)。 因为北密，人烟稀少，地广人稀，所以一般大家说密歇根州，都是说下半岛，这儿有州府，也有很好的学校，比如密歇根大学安娜堡分校。
 
-如何选择就需要标准。
+![Michigan Map](/images/NorthMichigan/NorthNorthMichigan.png)
 
-你选择什么作为自己最重要的部分？
+当然，也正是因为人烟稀少，所以北密就连中西部常见的农业都不太发达，主要是以伐木为主，所以保留了大量的森林和成片的密林。到了秋季，万山红遍，层林尽染。在美国一直有，北密归来不看红叶的说法。
 
-同一个时间，各种事情，各个问题，各种情况，谁先谁后？
+## 行程
 
-所以你必须心中知道各个事情的优先级。
+这趟行程还是比较满意的，充分做到了合理规划和实施特别是回来的时候空出一天时间在威斯康星的一个湖区看到了比北密更好地红叶。
 
-## 保护时间
+首先，最重要的就是检查红叶的程度。因为每年的气温不同，每年的风景也不同，很多时候是需要查看预报制定行程的。当然要是时间不够，那就出发吧，一路上的红叶可能不是特别绚烂但是也足够饱览。
 
-优先级高的事情，不能够被打断。
+然后就是浏览路线，下图就是这次浏览的总结还是非常不错的。
 
-你必须保护自己的时间，说是集中在某件事情上就是集中在某件事情上。
+![Plan](/images/NorthMichigan/plan.JPG)
 
-对你重要的事情，不能被打断，不能被降级，不能被减少。
+特别推荐 H-41 去野猪山的那段路，太漂亮了。
 
-## Say No
+## 云之湖和野猪山
 
-如果还是有被打扰的情况怎么办？
+其实云之湖是野猪山公园的一个景点，但是太有名了以至于大家就把两者并列。
 
-Say No!~
+![云之湖](/images/NorthMichigan/cloud.jpg)
 
-Say No!~
+![云之湖2](/images/NorthMichigan/cloud2.jpg)
 
-Say No!~
+野猪上的另一个景点就是 Summit Peak, 其实就是一个木制的观景点，看起来确实是很漂亮。
 
-## 说到做到
+![peak](/images/NorthMichigan/peak.JPG)
 
-其实计划列了好多，很多都没做到，看起来往往也是很沮丧。
+## Cooper Harbor
 
-比如 
+Cooper Harbor 就是伸入苏必利尔湖的半岛，因为半岛没有什么重工业而且人口稀少，所以有大片大片的密林，特别是到了半岛的顶端时，路变窄同时两边的树木非常密集，所以漂亮至极。
 
-* 体重
-* Leetcode
-* 复习
+![Cooper Harbor 1](/images/NorthMichigan/cooper2.JPG)
 
-原因是什么？
+![Cooper Harbor 2](/images/NorthMichigan/Habor3.jpeg)
 
-说到做到啊，很多事情，你说要做到，那就做到。
+## Presque Isle
 
-只要能想到办法就不要找接口, No Excuse!
+第三天时间没那么赶，所以再威斯康星找了一个公园参观了下，发现这儿完全不输 Cooper Harbor 和北密红叶也完全不相上下，下次其实完全可以去这儿。 
 
-你没办到就是不睡觉也要解决，不解决老实认怂，接着想办法再干！~
+Presque Isle 也是威斯康星的 State Park，所以景色相当不错，强力推荐不想跑长途的同学们。
 
-不能放弃，不能退让，对自己就要狠一点！
+![Presque Isle 1](/images/NorthMichigan/scene1.JPG)
+
+甚至路边的一个无名景点也非常不错，
+
+![Unknown Scenery](/images/NorthMichigan/scene2.jpeg)
+
+## 后记
+
+北密红叶确实是名不虚传，这里记录下，也拍张自己的车，CR-V 确实是不错的，难怪北美销量常年位居前列。
+
+![CR-V](/images/NorthMichigan/scene3.jpeg)
