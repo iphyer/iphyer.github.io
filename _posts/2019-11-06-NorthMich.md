@@ -17,7 +17,7 @@ categories: 美国生活
 
 大家一般都说北密，其实说得是密歇根州上半岛，英文是 Michigan Upper Peninsula。 密歇根州被密歇根湖分割成两个部分，一个是北密 (Michigan Upper Peninsula)，一个是密歇根下半岛(Michigan Lower Peninsula)。 因为北密，人烟稀少，地广人稀，所以一般大家说密歇根州，都是说下半岛，这儿有州府，也有很好的学校，比如密歇根大学安娜堡分校。
 
-![Michigan Map](/images/NorthMichigan/NorthNorthMichigan.png)
+![Michigan Map](/images/NorthMichigan/NorthMichigan.png)
 
 当然，也正是因为人烟稀少，所以北密就连中西部常见的农业都不太发达，主要是以伐木为主，所以保留了大量的森林和成片的密林。到了秋季，万山红遍，层林尽染。在美国一直有，北密归来不看红叶的说法。
 
