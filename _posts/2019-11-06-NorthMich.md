@@ -39,7 +39,7 @@ categories: 美国生活
 
 ![云之湖](/images/NorthMichigan/cloud.jpg)
 
-![云之湖2](/images/NorthMichigan/cloud2.jpg)
+![云之湖2](/images/NorthMichigan/cloud2.JPG)
 
 野猪上的另一个景点就是 Summit Peak, 其实就是一个木制的观景点，看起来确实是很漂亮。
 
