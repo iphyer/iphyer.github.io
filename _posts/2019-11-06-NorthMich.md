@@ -51,7 +51,7 @@ Cooper Harbor 就是伸入苏必利尔湖的半岛，因为半岛没有什么重
 
 ![Cooper Harbor 1](/images/NorthMichigan/cooper2.JPG)
 
-![Cooper Harbor 2](/images/NorthMichigan/Habor3.jpeg)
+![Cooper Harbor 2](/images/NorthMichigan/Harbor3.jpeg)
 
 ## Presque Isle
 
