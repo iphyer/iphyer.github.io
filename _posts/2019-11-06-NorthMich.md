@@ -55,13 +55,13 @@ Cooper Harbor 就是伸入苏必利尔湖的半岛，因为半岛没有什么重
 
 ## Presque Isle
 
-第三天时间没那么赶，所以再威斯康星找了一个公园参观了下，发现这儿完全不输 Cooper Harbor 和北密红叶也完全不相上下，下次其实完全可以去这儿。 
+第三天时间没那么赶，所以在威斯康星找了一个公园玩了下，发现这儿完全不输 Cooper Harbor 和北密红叶也完全不相上下，下次完全可以去这儿。 
 
-Presque Isle 也是威斯康星的 State Park，所以景色相当不错，强力推荐不想跑长途的同学们。
+Presque Isle 是威斯康星的 State Park，所以景色相当不错，强力推荐不想跑长途的威州同学们。
 
 ![Presque Isle 1](/images/NorthMichigan/scene1.JPG)
 
-甚至路边的一个无名景点也非常不错，
+甚至路边的一个无名景点也非常不错，当然旅途中有时候去路边的小道上也有很不错的景色，
 
 ![Unknown Scenery](/images/NorthMichigan/scene2.jpeg)
 
