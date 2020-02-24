@@ -29,7 +29,9 @@ Obviously, it is easy to plot the X,Y fails in the same range cases because, it 
 
 Well that needs to be careful, so although there are several posts online about individual pieces of how to plot parity plot but there is no integrated demos, so after check the [PredictionError](https://www.scikit-yb.org/en/latest/_modules/yellowbrick/regressor/residuals.html#PredictionError) function in [Yellowbrick document](https://www.scikit-yb.org/en/latest/api/regressor/peplot.html), I will an example dataset and code to generate parity plot.
 
-[data and code](/upload/files/parityplot.zip)
+Download [data and code](/upload/files/parityplot.zip).
+
+The used codes is as following, 
 
 ```python
 """
