@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Plot Parity Plot?"
+title: "Research Notes1: How to Plot Parity Plot?"
 date: 2020-02-24 14:59
 comments: true
 categories: 科研
