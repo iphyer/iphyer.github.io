@@ -8,7 +8,10 @@ categories: Research
 
 ## Introduction
 
-Some tips I learnt durning the academic presentation experience. He
+Some tips I learnt durning the academic presentation experience. 
+
+
+<!--more-->
 
 ## Put Your Conclusion First Every Slide 
 
@@ -25,3 +28,38 @@ This is more the American way of spoken English. For example,
 OR
 
 > Yes, I agree with you. Let me elaborate on it.
+
+
+## Slide
+
+* For each slide, think before present it.
+* Show conclusion
+* show problems and how to solve
+* At lease what you are planning to do to solve it, then the question goes to whether the solution is reasonable or not. How to improve it. This is much more important!
+* DO NOT ONLY PRESENT the problem but do solve it or propose how to solve it.
+
+
+## Reading Paper
+
+* Whenever read a paper, prepare a slide to summarize it
+* Track and easy to trace and share to others
+
+## Others
+
+ConclusionFirst slide with conclusion / summary first 
+
+Review of the project / complete the loop / have something to show people
+
+Done the whole thing / of course there are things to do 
+
+Stop complaining and keep working together
+
+Take responsibility
+
+Emailing your questions and collect responses
+
+not be caught in
+
+have a good story to tell where you are
+
+organize the project

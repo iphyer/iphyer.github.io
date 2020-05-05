@@ -10,6 +10,9 @@ categories: 科研
 
 I have encountered this problem several times but I have not fully solved it until today when I was preparing a talk, I suddenly realized that I had to get this fixed. So after several trials and googling, I summarize all the codes you need to plot parity plot in this blog.
 
+
+<!--more-->
+
 ## Parity Plot
 
 Details can be found in Wikipedia here [Parity Plot](https://en.wikipedia.org/wiki/Parity_plot), so I will only mention some tiny pieces that will be overlooked when you just try plain Python codes to generate figures.

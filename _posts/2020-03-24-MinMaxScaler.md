@@ -10,6 +10,9 @@ categories: 科研
 
 Today I met this problem and had to slow down my work to rerun some of my models to make sure everything works as expected when I tried to train the machine learning model. The problem is that when I trained the neural network, I forgot to save the preprocessing results like the `MinMaxScaler()` I used, so this caused a huge problem that I had to retrain everything to make sure the model works correctly. 
 
+
+<!--more-->
+
 ## Deploy Machine Learning Models
 
 Although this is not an error, it is a big pitfall in your typical training of machine learning. The typical machine learning course tends to focus on the algorithm and mathematical reasoning behind the model, it does not tell you how to deploy the model. This is reasonable because actually nowadays, there are no golden rules about how to deploy machine learning models.

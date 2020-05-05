@@ -23,6 +23,9 @@ So in the official answer, to get the column maximum values of each column, the 
 
 The Output is `[9, 4, 8, 7]` which is correct but why?
 
+
+<!--more-->
+
 ## Answer
 
 Usually, `zip(*var)` is used for unzipping some list of tuples, so it is like what was described in this post [Transpose/Unzip Function (inverse of zip)?](https://stackoverflow.com/questions/19339/transpose-unzip-function-inverse-of-zip) because the list is iterable, so each list in the list will be iterated to generate the new list? And it is not required that the iterable must be a tuple, and then actually col is a tuple.
