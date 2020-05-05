@@ -8,7 +8,7 @@ categories: Research
 
 ## Introduction
 
-Some tips I learnt durning the academic presentation experience. 
+Some tips I learnt during the academic presentation experience. 
 
 
 <!--more-->
