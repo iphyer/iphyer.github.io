@@ -1,3 +1,3 @@
 The website of iphyer's blog.
 
-Visit [iphyer.github.io] for more
+Visit (my blog)[iphyer.github.io] for more
