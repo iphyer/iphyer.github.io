@@ -8,4 +8,8 @@ categories: 科研
 
 I have passed my preliminary examination and now I am officaial the [dissertator](https://grad.wisc.edu/documents/dissertator-status/) now, no longer Ph.D student any more.
 
-Keep Fighting!
+Keep Fighting!!
+
+## Updates on 2020-11-02
+
+I have also applied for M.S. in MSE today. Cheers!
