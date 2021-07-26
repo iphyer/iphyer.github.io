@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "英语易错集锦，"
+title: "英语易错集锦"
 date: 2021-06-14 23:49
 comments: true
 categories: 生活
