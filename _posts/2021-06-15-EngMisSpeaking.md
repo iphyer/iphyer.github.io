@@ -14,10 +14,6 @@ categories: 生活
 
 中文一般 3x4x5 的矩阵我们会说 3乘4乘5 的矩阵，但是英语虽然也可以用 times 这个词，但是更多的时候用的是 3 by 4 by 5。
 
-## 氨基酸 Amino acid
-
-说起来这个词的第一个 a 不发音，所以读音和词形的配合需要跳过这个不发音的 a。Amino acid
-
 ## read powers and roots
 
 [How do you read powers and roots?](https://english.stackexchange.com/questions/282074/how-do-you-read-powers-and-roots/282077#282077?newreg=220bd35832864c75bd95180ad6559f58)
