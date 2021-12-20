@@ -43,9 +43,9 @@ categories: GRE
 
 展示一下，来自再要你命3000的微博，都是微臣上课的同学提供的默写照片，版权属于他们。
 
-![样例1](https://github.com/iphyer/Crack3kGREWords/blob/master/ScreenShot/example1.jpg)
+![样例1](https://github.com/iphyer/Crack3kGREWords/blob/master/ScreenShot/example1.jpg?raw=true)
 
-![样例2](https://github.com/iphyer/Crack3kGREWords/blob/master/ScreenShot/example2.jpg)
+![样例2](https://github.com/iphyer/Crack3kGREWords/blob/master/ScreenShot/example1.jpg?raw=true)
 
 因为我自己的默写成绩很惨就不单独列出来了。不过我的同桌倒是每次都能够得到接近满分的成绩，非常佩服！
 
@@ -107,6 +107,7 @@ URL : https://pan.baidu.com/s/1pJqRN4n
 3. 然后生成两个txt文件，其中Eng.txt是所有的单词，而Chn.txt包含全部的对应Eng.txt英文的单词中文解释。
 4. 这样你就可以用任何你喜欢的编辑器默写中文，对照订正。同时，你既可以使用电子版本默写订正比如利用word，WPS等文字处理软件，也可以分栏之后打印出来，使用纸质版默写订正。
 5. 当然你如果新建一个ChnNew.txt默写中文，在Linux下就可以使用Linux的`diff`命令，自动化检查。Windows用的不多，征求大家建议看有什么好的检查方法。
+
 
 ### 2
 
