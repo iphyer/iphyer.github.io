@@ -75,7 +75,7 @@ categories: 美国
 
 # 错题总结
 
-下面是我自己联系的时候的错误题目，都截图总结下来，这里分享下。
+下面是我自己练习时候的错误题目，都截图了，这里分享下。
 
 ![TiMu1](/images/DrivingKnowledgeTest/1.png)
 
