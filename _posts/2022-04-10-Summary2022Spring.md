@@ -41,6 +41,8 @@ categories: 生活 学习
 * Leetcode Hard 题目增加
 * N?B 5月咨询
 
+Check List:
+
 - [x] 入职，工作: E2A
 - [x] Tax Return: 04/10/2022
 - [x] Reviewer: 5 MICCAI
