@@ -21,13 +21,14 @@ categories: 生活 学习
 
 ## 对照 2022 计划进度 
 
-|Status|Item|Notes|
-|---|---|---|
-|&check;|入职，工作|E2A|
-|_|LeetCode|543 -> 583|
-|&check;|Reviewer|5 MICCAI|
-|_|XPCS|Not Pushed Forward|
-|_|Wegiths|5 libs|
+- [x] 入职，工作: E2A
+- [x] Tax Return: 04/10/2022
+- [x] Reviewer: 5 MICCAI
+- [ ] XPCS: Focous!
+- [ ] LeetCode: 543 -> 583
+- [ ] Wegiths: 5 lbs
+
+
 
 ## 下一阶段计划
 
@@ -40,5 +41,15 @@ categories: 生活 学习
 * Leetcode Hard 题目增加
 * N?B 5月咨询
 
-
+- [x] 入职，工作: E2A
+- [x] Tax Return: 04/10/2022
+- [x] Reviewer: 5 MICCAI
+- [ ] XPCS: Focous!
+- [ ] LeetCode: 543 -> 583
+- [ ] Wegiths: 5 lbs
+- [ ] House Renting
+- [ ] Moving to TX
+- [ ] N?E1?2 Info
+- [ ] Family
+- [ ] OPT Extension
 
