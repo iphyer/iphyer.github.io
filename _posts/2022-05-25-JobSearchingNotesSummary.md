@@ -50,6 +50,10 @@ OPT 需要注意报告如下事项,
 
 ![Big O 4 Algo](/images/JobSearchingNotes/BigO4Algo.jpeg)
 
+## 经验 7
+
+[简历中Project的写法](https://aaronk9.gitbooks.io/programmer/content/projectde-xie-fa.html)
+
 
 ## Final Summary
 
