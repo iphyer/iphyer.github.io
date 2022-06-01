@@ -54,6 +54,22 @@ OPT 需要注意报告如下事项,
 
 [简历中Project的写法](https://aaronk9.gitbooks.io/programmer/content/projectde-xie-fa.html)
 
+## 经验 8
+
+Python Starting Notes
+
+![Python 1](/images/JobSearchingNotes/Python1.jpeg)
+
+![Python 2](/images/JobSearchingNotes/Python2.jpeg)
+
+![Python 3](/images/JobSearchingNotes/Python3.jpeg)
+
+![Python 4](/images/JobSearchingNotes/Python4.jpeg)
+
+![Python 5](/images/JobSearchingNotes/Python5.jpeg)
+
+![Python 6](/images/JobSearchingNotes/Python6.jpeg)
+
 
 ## Final Summary
 
