@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "麦迪逊搬家地址更新总结"
+title: "搬家记录1：麦迪逊搬家地址更新总结"
 date: 2018-08-07 13:11
 comments: true
 categories: 美国生活

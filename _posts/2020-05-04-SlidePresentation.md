@@ -58,8 +58,6 @@ Take responsibility
 
 Emailing your questions and collect responses
 
-not be caught in
-
 have a good story to tell where you are
 
 organize the project
