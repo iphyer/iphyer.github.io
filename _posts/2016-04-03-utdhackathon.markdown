@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "UTD Hackathon总结"
+title: "UTD Hackathon 总结"
 date: 2016-04-03 10:42
 comments: true
 categories: Hackathon
@@ -11,7 +11,7 @@ categories: Hackathon
 
 这是在TAMU的同学邀请一起去往往的，我主要负责了爬虫这个部分。所以这里主要讲讲我的工作。其他我不了解的部分也就不多说了，不要布鼓雷门了。
 
-这个项目的出发点就是我们希望开发一个类似12306抢票助手的工具来预约驾照考试。主要是我同学提出的需求，原来美帝和我们买火车票一样，需要先预约驾照考试。但是这儿存在一个什么冒顿呢，TAMU所在的college town人特别多，就和春运火车票一样需要不断刷预约。
+这个项目的出发点就是我们希望开发一个类似12306抢票助手的工具来预约驾照考试。主要是我同学提出的需求，原来美帝和我们买火车票一样，需要先预约驾照考试。但是这儿存在一个什么矛盾呢，TAMU所在的college town人特别多，就和春运火车票一样需要不断刷预约。
 
 <!--more-->
 
@@ -21,16 +21,16 @@ categories: Hackathon
 
 [HackUTD : Find Available Driving Test Appointment](https://github.com/njuyangyang/Drive-test-schedule-system)
 
-#原 理
+## 原 理
 
-首先如果你希望自动话一个功能，那么你一定要能够手动实现这个功能。如果你没有很高的AI设计，计算机是很难自己自动实现某些功能的。
+首先如果你希望自动化一个功能，那么你一定要能够手动实现这个功能。如果你没有很高的AI设计，计算机是很难自己自动实现某些功能的。
 
-首先计算机的预约过程是打开[ Texas Department of Public Safety ](https://booknow.securedata-trans.com/1qed83ds/),如下图所示，然后选择服务，一般都是小车预约。当然这里我们已经选择好了所在城市2571 North Earl Rudder Freeway
+首先计算机的预约过程是打开[Texas Department of Public Safety ](https://booknow.securedata-trans.com/1qed83ds/),如下图所示，然后选择服务，一般都是小车预约。当然这里我们已经选择好了所在城市2571 North Earl Rudder Freeway
 Bryan, TX 77803,也就是TAMU所在的college town。
 
 ![tu1](/images/UTDhackathon/DPS.png)
 
-然后就会出现一个时间表，这个表中灰色的是已经预约满了的，白色的是可以预约的点击即可。值得注意的不能预约当天，同时不能预约超过90天的。
+然后就会出现一个时间表，这个表中灰色的是已经预约满了的，白色的是可以预约的点击即可。值得注意的是不能预约当天，同时不能预约超过90天的。
 
 ![tu2](/images/UTDhackathon/date.png)
 
@@ -46,11 +46,11 @@ Bryan, TX 77803,也就是TAMU所在的college town。
 1. 你直接得到相应的脚本，然后对于脚本返回的信息(一般是XML或者JSON)做解析
 2. 直接模拟浏览器，因为浏览器对于用户呈现的数据一定是静态HTML的。
 
-我选择第二个方法，使用selenium 的 webdriver 功能来实现解析。这样，通过率模拟浏览器的点击等行为我们可以方便的进行交互。
+我选择第二个方法，使用selenium 的 webdriver 功能来实现解析。这样，通过模拟浏览器的点击等行为我们可以方便的进行交互。
 
-然后得到了需要的静态HTML之后只要进行相应的解析处理即可。主要来说所有需要的信息是日期和是不是可以注册，所以只要针对这个日期标的数据做解析即可，而DPS的这个网页的写得非常规范，所有日期分成四个种类，calendar-closed 这是指当天,calendar-notavailable这是已经过去的日期和超过90天的日期，calendar-fullday这是虽然在90天内但是注册满了的日期，calendar-available顾名思义就是可以注册的日期。所以爬取信息也很简单直接通过class得到这几个属性即可。最后得到的结果放到数据库中，给其他程序使用。
+然后得到了需要的静态HTML之后只要进行相应的解析处理即可。主要来说所有需要的信息是日期和是不是可以注册，所以只要针对这个日期标的数据做解析即可，而 [Texas Department of Public Safety ](https://booknow.securedata-trans.com/1qed83ds/)的这个网页写得非常规范，所有日期分成四个种类，calendar-closed 这是指当天,calendar-notavailable 这是已经过去的日期和超过 90 天的日期，calendar-fullday 这是虽然在90天内但是注册满了的日期，calendar-available 顾名思义就是可以注册的日期。所以爬取信息也很简单直接通过 class 得到这几个属性即可。最后得到的结果放到数据库中，给其他程序使用。
 
-# 程序整体思路
+## 程序整体思路
 
 ![tu3](/images/UTDhackathon/Software.jpg)
 
@@ -58,13 +58,13 @@ Bryan, TX 77803,也就是TAMU所在的college town。
 
 ![tu4](/images/UTDhackathon/UI1.png)
 
-后端实现一个每过10min扫描一遍预约信息网站的更新脚本。然后如果检测到不同且该日期属于注册用户的指定日期那么调用发用邮件程序给该用户发送可以预约信息的邮件，提醒用户赶快上网预约。
+后端实现一个每过10 分钟扫描一遍预约信息网站的更新脚本。然后如果检测到不同且该日期属于注册用户的指定日期，那么调用发送邮件程序给该用户发送可以预约的邮件，提醒用户赶快上网预约。
 
-# 总结
+## 总结
 
-这个任务其实比较简单，但是能够连贯起来还是非常不错的。当然对于一般用户而言，我们不需要暴露这么多细节。事实上做成一个网站就可以了，让用户使用的主要是前段部分。后端应该都放在网上。
+这个任务其实比较简单，但是能够连贯起来还是非常不错的。当然对于一般用户而言，我们不需要暴露这么多细节。事实上做成一个网站就可以了，让用户使用的主要是前端部分。
 
-当然要是方便的话，实现iOS或者Andriod客户端就更好了。
+当然要是方便的话，实现 iOS 或者 Andriod 客户端就更好了。
 
 这个留待以后解决。
 
@@ -85,7 +85,7 @@ return value
 0 nothing changed
 """
 
-#import needed package
+# import needed package
 from selenium import webdriver # web action
 from pyvirtualdisplay import Display
 from datetime import date
