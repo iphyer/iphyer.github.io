@@ -25,4 +25,6 @@ We need to make sure we understand each other clearly and set proper scoping esp
 
 ## Write Record to track your progress
 
+## You do not need to know the whole map, you can push forward by knowing what to do for the next step.
+
 
