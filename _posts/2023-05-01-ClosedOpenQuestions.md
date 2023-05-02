@@ -6,7 +6,6 @@ comments: true
 categories: 生活 工作
 ---
 
-<!--more-->
 
 在工作中，提问是非常重要的技能。而如何提问则更为重要，应该根据对象的不同选择合适的提问方式。在向上汇报问题时，我们应该选择 Closed Question；而向下传递问题时，则需要使用 Open Question。
 
