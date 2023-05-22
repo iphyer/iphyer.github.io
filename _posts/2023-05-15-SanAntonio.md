@@ -41,7 +41,6 @@ categories: 生活
 
 
 
-
 ## 阿拉莫纪念馆 （The Alamo）
 
 阿拉莫纪念馆是圣安东尼奥最著名的景点之一。这座历史悠久的建筑曾经是一座西班牙教堂，后来成为墨西哥军事前哨，也是阿拉莫战役的发生地。如今，游客可以参观这座纪念馆，了解阿拉莫战役的历史和意义。在参观过程中，你将有机会看到珍贵的展品和文物，感受那段曾经的历史氛围。
@@ -49,11 +48,6 @@ categories: 生活
 ## 地下溶洞景区 （Natural Bridge Caverns）
 
 圣安东尼奥附近有一个令人惊叹的地下溶洞景区，被称为“Natural Bridge Caverns”。根据[TripAdvisor](https://www.tripadvisor.com/Attraction_Review-g60956-d169799-Reviews-Natural_Bridge_Caverns-San_Antonio_Texas.html)上的评论，这里有壮观的钟乳石和洞穴系统，游客可以进入地下深处，探索这个神奇的地下世界。这是一次难忘的探险之旅，你将在暗洞通道中感受到神秘和壮丽的景观。
-
-<video width="600" height="480" controls>
-  <source src="video.mp4" type="images/SanAntonio/IMG_2115.MOV">
-  Your browser does not support the video tag.
-</video>
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/A2szktf0aAw" frameborder="0" allowfullscreen>
