@@ -22,7 +22,7 @@ categories: 生活
 
 市区风景
 
-<iframe width="860" height="400" src="https://www.youtube.com/embed/PSpNgVwzYSY
+<iframe width="400" height="860" src="https://www.youtube.com/embed/PSpNgVwzYSY
 " frameborder="0" allowfullscreen>
 </iframe>
 
@@ -47,5 +47,5 @@ categories: 生活
 圣安东尼奥附近有一个令人惊叹的地下溶洞景区，被称为“Natural Bridge Caverns”。根据[TripAdvisor](https://www.tripadvisor.com/Attraction_Review-g60956-d169799-Reviews-Natural_Bridge_Caverns-San_Antonio_Texas.html)上的评论，这里有壮观的钟乳石和洞穴系统，游客可以进入地下深处，探索这个神奇的地下世界。这是一次难忘的探险之旅，你将在暗洞通道中感受到神秘和壮丽的景观。
 
 
-<iframe width="860" height="400" src="https://www.youtube.com/embed/A2szktf0aAw" frameborder="0" allowfullscreen>
+<iframe width="400" height="860" src="https://www.youtube.com/embed/A2szktf0aAw" frameborder="0" allowfullscreen>
 </iframe>
