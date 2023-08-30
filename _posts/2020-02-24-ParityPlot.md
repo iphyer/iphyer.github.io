@@ -30,7 +30,7 @@ The key idea in parity plot is that if your prediction model works very well, it
 
 Obviously, it is easy to plot the X,Y fails in the same range cases because, it is easy to adjust, however, how about your prediction algorithm works poorly and you X,Y relationship is bad. 
 
-Well that needs to be careful, so although there are several posts online about individual pieces of how to plot parity plot but there is no integrated demos, so after check the [PredictionError](https://www.scikit-yb.org/en/latest/_modules/yellowbrick/regressor/residuals.html#PredictionError) function in [Yellowbrick document](https://www.scikit-yb.org/en/latest/api/regressor/peplot.html), I will an example dataset and code to generate parity plot.
+Well that needs to be careful, so although there are several posts online about individual pieces of how to plot parity plot but there is no integrated demos, so after check the [PredictionError](https://www.scikit-yb.org/en/latest/_modules/yellowbrick/regressor/residuals.html#PredictionError) function in [Yellowbrick document](https://www.scikit-yb.org/en/latest/api/regressor/peplot.html), I will use an example dataset and code to generate parity plot.
 
 Download [data and code](/upload/files/parityplot.zip).
 
