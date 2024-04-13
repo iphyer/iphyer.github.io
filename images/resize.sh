@@ -1,10 +1,10 @@
-#! /bin/bash 
+#! /bin/bash
 
 #获取脚本所在文件目录
-#大于1M图片缩小一半
+#大于1M 图片缩小一半
 
 for file in  `find ./ -name "*.[jJ][pP][gG]"`;
-    do    	
+    do
     	if [ `du -k "$file" | cut -f1` -gt 1000 ]
 		then
     		echo $file
@@ -14,7 +14,7 @@ for file in  `find ./ -name "*.[jJ][pP][gG]"`;
 	done
 
 for file in  `find ./ -name "*.[pP][nN][gG]"`;
-    do 
+    do
     	if [ `du -k "$file" | cut -f1` -gt 1000 ]
 		then
     		echo $file
