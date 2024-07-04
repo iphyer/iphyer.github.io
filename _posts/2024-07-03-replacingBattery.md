@@ -12,7 +12,7 @@ categories: 生活
 
 还好上网搜索下了，有人和我一模一样的问题，
 
-![CR-V same issue](/images/battery/info.jpg)
+![CR-V same issue](/images/battery/Info.jpg)
 
 这里写个博客简单记录下，也提醒自己，汽车电池都是易耗品，一般 3 ～ 4 年就需要更换，我的电池已经用了 5 年了，其实 it did a good job。
 
