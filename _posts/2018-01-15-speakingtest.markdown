@@ -43,7 +43,7 @@ categories: 学习
 
 其实每次考试的时候我都很奇怪，这个考试是怎么出的题目。
 
-这个考试看起来就特别有 ETS 的风格，前面的知道，两个人评分然后取平均都是 ETS 的风格。同时这个考试的试题特别像我初中的口语考试。当然了初中的考试非常简单，但是这个也差不多。
+这个考试看起来就特别有 ETS 的风格,题目出的特别 ETS，然后是两个人评分取平均都是 ETS 的风格。同时这个考试的试题特别像我初中的口语考试。当然了初中的考试非常简单，但是这个也差不多。
 
 说起来这个考试的试题来源还真是 ETS, 是 ETS 在多年之前开发的一个项目，[Speaking Proficiency English Assessment Kit](https://en.wikipedia.org/wiki/SPEAK_(test))。
 
@@ -53,15 +53,17 @@ categories: 学习
 
 因为 ETS 不再支持了，所以现在在 ETS 的官网上也只能找到一个关于这个考试的[报告](https://www.ets.org/research/policy_research_reports/publications/report/1995/hxqb)。但是具体的备考建议和如何准备则只字不提。说实话 ETS 的报告又臭又长，还都是那种文科统计分析 Style，大概重要的部分就是这个关于如何打分的报告表了。
 
-不过事实上各个学校也就是用用这个考试 Format,他们打分还是主要关注你的口语是不是能够让美国同学不太费力的听懂。这个更多的是一种总体评价而不是细分项目。
+不过事实上各个学校也就是用用这个考试 Format,他们打分还是主要关注你的口语是不是能够让美国同学不太费力地听懂。这个更多的是一种总体评价而不是细分项目。
 
 ![pingjia](/images/speaking/pin.png)
 
-不过不少学校的 ESL 项目倒是给出了不少准备的方法，就是没有给出答案。所以让人非常不爽这个最后的结果。现在我就在想是不是准备一个答案来看下是不是可以。
+不过不少学校的 ESL 项目倒是给出了不少准备的方法，就是没有给出参考答案。所以让人非常不爽。
+
+所以这个帖子给一些干货，我搜索到的帮助大家备考。
 
 ## 备考建议
 
-用上面的关键词谷歌下，你就可以找到很多的链接，不过大部分都是一样的内容，主要是是 TA 口语考试流程。大概只有少部分学校给了链接帮助你复习这个考试。所以这儿推荐我比较欣赏的两个比较好的视频。
+用上面的关键词谷歌下，你就可以找到很多的链接，不过大部分都是一样的内容，主要是是 TA 口语考试流程。只有少部分学校给了链接帮助你复习这个考试。这儿推荐我比较欣赏的两个。
 
 来自 Iowa 大学的视频
 
@@ -83,7 +85,7 @@ Ohio 居然有贴心地准备了一个网页给出了很多细心的建议，详
 
 > The book reviewed here promises to maximize the performance of non-native English speakers on another test produced by ETS, the Test of Spoken English (TSE), or its institutional version, the Speaking Proficiency English Assessment Kit (SPEAK).
 
-特别是这本书还给出了参考答案，实在是喜出望外。如果需要请认真复习。
+特别是这本书还给出了参考答案，实在是喜出望外。如果需要请参考复习。
 
 ## 口语试题解析
 
