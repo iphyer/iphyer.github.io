@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "推荐《大规模语言模型：从理论到实践》"
+title: "[书评] 推荐《大规模语言模型：从理论到实践》"
 date: 2025-08-15 20:54
 comments: true
 categories: 学习
