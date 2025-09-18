@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "书评：《Generative AI with Amazon Bedrock》"
+title: "[书评]《Generative AI with Amazon Bedrock》"
 date: 2025-09-17 20:54
 comments: true
 categories: 学习
