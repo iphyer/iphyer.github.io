@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "[书评] Generative AI with Amazon Bedrock"
+title: "书评：《Generative AI with Amazon Bedrock》"
 date: 2025-09-17 20:54
 comments: true
 categories: 学习
 ---
-
-# 书评：《Generative AI with Amazon Bedrock》
 
 最近读完了 *Generative AI with Amazon Bedrock: Build, scale, and secure generative AI applications using Amazon Bedrock*。
 在豆瓣已要求实名记录阅读的情况下，还是用博客写书评吧。
